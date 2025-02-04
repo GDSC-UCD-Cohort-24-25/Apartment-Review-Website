@@ -53,8 +53,10 @@ if __name__ == "__main__":
         test_apartment = Apartment(
             name="Test Apartment",
             address="123 Main St, Davis, CA",
+            website = "test.com",
             latitude=38.5449,
             longitude=-121.7405,
+            contact_phone= "999999999",
             contact_email="test@example.com",
         )
         db.session.add(test_apartment)
