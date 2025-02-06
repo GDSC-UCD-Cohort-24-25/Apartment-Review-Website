@@ -3,6 +3,15 @@ from flask import request, jsonify
 from config import app, db
 from models import Apartment, ApartmentLayout, User
 
+"""@app.route('/login', methods =["POST"])
+def login ():
+    data = request.json
+    email = data.get("email", "")
+
+    if email.endswith("@ucdavis.edu"):
+        return jsonify({"message": "Login successful"}), 200
+    else: 
+        return jsonify({"error": "Only UC Davis emails are allowed"}), 403"""
 
 @app.route("/apartments", methods=["GET"])
 def get_contacts():
