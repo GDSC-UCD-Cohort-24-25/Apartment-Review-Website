@@ -1,74 +1,122 @@
-# CRUD (create, read, update, delete)
 from flask import request, jsonify
-from config import app, db
-from models import Apartment, ApartmentLayout, User
+import requests
+from config import app, supabase, GOOGLE_API_KEY
 
 
 @app.route("/apartments", methods=["GET"])
-def get_contacts():
-    contacts = Apartment.query.all()
-    json_contacts = list(map(lambda x: x.to_json(), contacts))
-    return jsonify({"contacts": json_contacts})
+def get_all_apartment():
+    response = supabase.table('apartments').select('*').execute()
+    return jsonify({"apartments": response.data})
+
+
+@app.route("/apartments/<int:apartment_id>", methods=["GET"])
+def get_apartment(apartment_id):
+    # Fetch the specific apartment by ID from the 'apartments' table
+    response = supabase.table('apartments').select('*').eq('id', apartment_id).execute()
+
+    if response.data:
+        # Return the apartment data as JSON
+        return jsonify({"apartment": response.data})
+    else:
+        # Return an error if the apartment with the specified ID was not found
+        return jsonify({"error": "Apartment not found"}), 404
 
 
 @app.route("/add_apartment", methods=["POST"])
-def create_contact():
-    # Extract the apartment details from the request JSON
-    name = request.json.get("name")
-    address = request.json.get("address")
-    latitude = request.json.get("latitude")
-    longitude = request.json.get("longitude")
-    contact_email = request.json.get("contact_email")
+def add_apartment():
+    # Extract apartment details from the request JSON
+    data = request.json
+    name = data.get("name")
+    latitude = data.get("latitude")
+    longitude = data.get("longitude")
+    website = data.get("website")
+    contact_email = data.get("contact_email")
+    contact_phone = data.get("contact_phone")
 
     # Validate required fields
-    if not name or not address or latitude is None or longitude is None:
-        return jsonify({"message": "You must include name, address, latitude, and longitude"}), 400
-    
-    # Create a new Apartment object
-    new_apartment = Apartment(
-        name=name,
-        address=address,
-        latitude=latitude,
-        longitude=longitude,
-        contact_email=contact_email,
-    )
-    try:
-        # Add the new apartment to the database and commit
-        db.session.add(new_apartment)
-        db.session.commit()
-    except Exception as e:
-        return jsonify({"message": str(e)}), 400
+    if not name or latitude is None or longitude is None or not website:
+        return jsonify({"message": "Missing required fields: name, latitude, longitude, or website"}), 400
 
-    return jsonify({"message": "Apartment added successfully!"}), 201
+    # Prepare data for insertion
+    apartment_data = {
+        "name": name,
+        "latitude": latitude,
+        "longitude": longitude,
+        "website": website,
+        "contact_email": contact_email,
+        "contact_phone": contact_phone,
+    }
+
+    # Insert the apartment data into the database
+    response = supabase.table("apartments").insert(apartment_data).execute()
+
+    # Handle insertion response
+    if response.data:
+        return jsonify({"message": "Apartment added successfully", "data": response.data}), 201
+    else:
+        return jsonify({"message": "Error inserting apartment", "error": response.error.message}), 500
+
+@app.route("/apartments/<int:apartment_id>/layouts", methods=["GET"])
+def get_apartment_layouts(apartment_id):
+    # Fetch all layouts associated with the given apartment ID from the 'layouts' table
+    response = supabase.table('layouts').select('*').eq('apartment', apartment_id).execute()
+
+    if response.data:
+        # Return the layouts data as JSON
+        return jsonify({"layouts": response.data})
+    else:
+        # Return an error if no layouts were found for the given apartment ID
+        return jsonify({"error": "No layouts found for the specified apartment"}), 404
 
 
+@app.route('/compute-route', methods=['POST'])
+def compute_route():
+    # Get origin and destination from the request JSON
+    data = request.json
+    origin = data.get('origin')
+    destination = data.get('destination')
+
+    # Construct the request body
+    request_body = {
+        "origin": {"location": {"latLng": {"latitude": origin['latitude'],"longitude": origin['longitude']}}},
+        "destination": {"location": {"latLng": {"latitude": destination['latitude'],"longitude": destination['longitude']}}},
+        "travelMode": "DRIVE",
+        "routingPreference": "TRAFFIC_AWARE",
+        "computeAlternativeRoutes": False,
+        "routeModifiers": {
+            "avoidTolls": False,
+            "avoidHighways": False,
+            "avoidFerries": False
+        },
+        "languageCode": "en-US",
+        "units": "IMPERIAL"
+    }
+
+    # Google Maps Routes API URL
+    url = 'https://routes.googleapis.com/directions/v2:computeRoutes'
+
+    headers = {
+        'Content-Type': 'application/json',
+        'X-Goog-Api-Key': GOOGLE_API_KEY,
+        'X-Goog-FieldMask': 'routes.duration,routes.distanceMeters,routes.polyline.encodedPolyline'
+    }
+
+    # Make the POST request to the Google API
+    response = requests.post(url, json=request_body, headers=headers)
+
+    if response.status_code == 200:
+        route_data = response.json()
+        
+        # You can extract specific information such as duration, distance, and polyline here
+        route_info = {
+            'duration': route_data['routes'][0]['duration'],
+            'distanceMeters': route_data['routes'][0]['distanceMeters'],
+            'encodedPolyline': route_data['routes'][0]['polyline']['encodedPolyline']
+        }
+        return jsonify(route_info)
+    else:
+        return jsonify({'error': 'Failed to compute route', 'message': response.text}), response.status_code
 
 if __name__ == "__main__":
-    with app.app_context():
-        # Reset the database
-        db.drop_all()
-        db.create_all()
-
-        # Add a test apartment
-        test_apartment = Apartment(
-            name="Test Apartment",
-            address="123 Main St, Davis, CA",
-            website = "test.com",
-            latitude=38.5449,
-            longitude=-121.7405,
-            contact_phone= "999999999",
-            contact_email="test@example.com",
-        )
-        db.session.add(test_apartment)
-        db.session.commit()
-
-        test_layout = ApartmentLayout(
-            apartment_id=test_apartment.apartment_id,  # Assuming the apartment_id is already set after the apartment is added
-            total_cost=1500.00,
-            square_footage=800.0,
-        )
-        db.session.add(test_apartment)
-        db.session.add(test_layout)
-        db.session.commit()
-
+    # supabase.table("apartment")
     app.run(debug=True)
