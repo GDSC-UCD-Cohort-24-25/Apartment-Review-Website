@@ -1,6 +1,9 @@
+import os
 from flask import request, jsonify
 import requests
-from config import app, supabase, GOOGLE_API_KEY
+from config import app, supabase
+from dotenv import load_dotenv
+load_dotenv()
 
 """@app.route('/login', methods =["POST"])
 def login ():
@@ -106,7 +109,7 @@ def compute_route():
 
     headers = {
         'Content-Type': 'application/json',
-        'X-Goog-Api-Key': GOOGLE_API_KEY,
+        'X-Goog-Api-Key': os.environ.get("GOOGLE_API_KEY"),
         'X-Goog-FieldMask': 'routes.duration,routes.distanceMeters,routes.polyline.encodedPolyline'
     }
 
@@ -125,6 +128,33 @@ def compute_route():
         return jsonify(route_info)
     else:
         return jsonify({'error': 'Failed to compute route', 'message': response.text}), response.status_code
+
+
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    email = data.get('email')
+    password = data.get('password')
+
+    if not email or not password:
+        return jsonify({'error': 'Email and password are required'}), 400
+
+    try:
+        # Attempt to sign in using Supabase
+        # user = supabase.auth.sign_in_with_password(email=email, password=password)
+        response = supabase.auth.sign_up(
+            {"email": email, "password": password}
+        )
+        # print(response)
+        # print(response.model_dump_json)
+        if response:
+            return jsonify({'success': True, 'message': 'Login successful!', 'user': response.model_dump_json()}), 200
+        else:
+            return jsonify({'success': False, 'message': 'Invalid email or password'}), 401
+
+    except Exception as e:
+        print(e)
+        return jsonify({'success': False, 'message': str(e)}), 500
 
 if __name__ == "__main__":
     # supabase.table("apartment")

@@ -1,3 +1,5 @@
 backend/instance
 backend/__pycache__
 *keys*
+*env*
+*node_modules*
