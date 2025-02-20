@@ -1,8 +1,19 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.navbar {
+  background-color: #333;
+  padding: 1rem;
 }
 
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
 
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
