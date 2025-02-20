@@ -1,15 +1,20 @@
 import { useState } from 'react'
 import './App.css'
+import Home from "./pages";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
 
   return (
-    <>
-
-      <h1>Welcome to Davis Housing Website!</h1>
-
-    </>
-  )
+    <Router>
+      <Navbar />
+      
+    <Router>
+  );
 }
 
-export default App
+export default App;
