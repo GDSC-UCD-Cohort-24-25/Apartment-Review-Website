@@ -1,24 +1,14 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./navbar.jsx";
+import Home from "./home.jsx";
+import About from "./about.jsx";
+import Contact from "./contact.jsx";
 import './App.css';
 
 function App() {
   return (
     <Router>
-      <nav className="navbar">
-        <ul className="navbar-links">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
-
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -26,18 +16,6 @@ function App() {
       </Routes>
     </Router>
   );
-}
-
-function Home() {
-  return <h1>Welcome to the Home Page</h1>;
-}
-
-function About() {
-  return <h1>About Us</h1>;
-}
-
-function Contact() {
-  return <h1>Contact Us</h1>;
 }
 
 export default App;
