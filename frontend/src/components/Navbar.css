@@ -1,0 +1,39 @@
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .navbar-left .logo-img {
+    height: 40px; /* Adjust the size of your logo */
+  }
+  
+  .navbar-center .search-bar {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    border: none;
+    width: 300px;
+  }
+  
+  .navbar-center .search-bar::placeholder {
+    color: #aaa;
+  }
+  
+  .navbar-right .login-icon {
+    text-decoration: none;
+  }
+  
+  .navbar-right .login-icon:hover {
+    color: #ddd;
+  }
+  
+  /* Optional: Hover effect for search bar */
+  .search-bar:focus {
+    outline: none;
+    border: 2px solid #007bff;
+  }
+  
