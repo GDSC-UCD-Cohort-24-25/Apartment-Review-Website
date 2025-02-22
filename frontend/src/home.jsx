@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ListingBox from './ListingBox'; // Ensure correct import
 import Sidebar from './Sidebar';
-import './home.css';
+import './Home.css';
 
 
 const Home = () => {

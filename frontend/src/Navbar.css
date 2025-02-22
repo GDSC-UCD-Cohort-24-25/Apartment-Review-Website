@@ -32,7 +32,7 @@
 }
 
 .navbar-icon:hover {
-  color: pink;
+  color: #ff69b4;
 }
 
 .search-bar {
@@ -68,7 +68,8 @@
 }
 
 .search-bar button:hover {
-  color: pink;
+  color: #ff69b4;
+  
 }
 
 .logo {

@@ -28,3 +28,17 @@
   margin-left: 250px;
   padding: 20px;
 }
+
+.sidebar a {
+  text-decoration: none; /* Remove underline */
+  color: #333;  /* Default text color */
+  font-size: 16px;
+  display: block; /* Makes the link fill the list item */
+  padding: 10px 20px;
+  border-radius: 5px;  /* Optional: rounded corners for links */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+.sidebar a:hover {
+  color: #ff69b4;  /* Pink text on hover */
+}

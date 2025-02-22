@@ -1,9 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';  // useLocation imported here
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
-import Home from './Home';  // Example Home component
-import Login from './Login';  // Example Login component
+import Home from './Home';
+import Login from './Login';
 import Sidebar from './Sidebar';
+import Listing from './AllListing'; 
+import Map from './Mapview';
+import Ranking from './Ranking';
+import About from './About';
 
 import './App.css';
 
@@ -11,22 +15,21 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Content />
+      <div className="page-container">
+        {/* Render Sidebar for all pages */}
+        <Sidebar />
+        <div className="content-container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/listing" element={<Listing />} />
+            <Route path="/map" element={<Map />} />
+            <Route path="/ranking" element={<Ranking />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </div>
+      </div>
     </Router>
-  );
-}
-
-function Content() {
-  const location = useLocation();  // useLocation hook is now inside the Content component
-
-  return (
-    <div className="page-container">
-      {location.pathname === '/' && <Sidebar />}  {/* Only show Sidebar on Home page */}
-      <Routes>
-        <Route path="/" element={<Home />} />  {/* Use element instead of component */}
-        <Route path="/login" element={<Login />} />  {/* Use element instead of component */}
-      </Routes>
-    </div>
   );
 }
 
