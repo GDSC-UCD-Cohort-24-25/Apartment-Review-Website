@@ -1,6 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #313638;
+    --subtext-color: #59636E;
+    --primary-color: #78b2a3;
+    --link-hover-color: #ff69b4;
+    --nav-bar-height: 60px;
+    --side-bar-width: 200px;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  color: var(--text-color);
+}
+
+* {
+  font-family: 'inter', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.page-container {
+  margin-top: var(--nav-bar-height); 
+  margin-left: var(--side-bar-width);
+  padding: 30px; /* padding of the main page content */
+}
+
+h2 {
+  font-size: 28px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h1 {
+  font-size: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+a:hover{
+  color: var(--link-hover-color);
 }

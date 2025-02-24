@@ -1,62 +1,54 @@
 /* Navbar.css */
 .navbar {
-  background-color: #FFFFFF;     /* Change the color of the top navigation bar */
-  padding: 1rem;
+  background-color: #FFFFFF; /* Change the color of the top navigation bar */
+  height: var(--nav-bar-height);
+  padding: 10px 40px 10px 40px;
   position: fixed; /* Fix the navbar at the top */
   top: 0;
   width: 100%; /* Ensure it takes the full width */
   z-index: 1000; /* Keep it on top */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-bottom: 1px solid #ccc; /* Optional: Border at the bottom */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow underneath */
 }
 
-.page-container {
-  padding: 20px;
-}
-
 .navbar-container {
   display: flex;
+  gap: 20px;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .navbar-icon {
-  color: #78B2A3;           /* Change the icon of the Logo and the Log in Icon */
-  margin-right: 20px;
+  color: #78B2A3; /* Change the icon of the Logo and the Log in Icon */
   text-decoration: none;
   display: flex;
+  flex-shrink: 0;
   align-items: center; /* This vertically aligns the icon and text */
   gap: 8px; /* Adjust space between the icon and the text */
 }
 
-.navbar-icon:hover {
-  color: #ff69b4;
-}
-
 .search-bar {
   display: flex;
-  margin-left: 100px;
-  margin-right: 100px;
-  justify-content: center;    /* Centers the item horizontally */
+  justify-content: space-between; /* Centers the item horizontally */
   align-items: center;
   border-radius: 25px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc;  
   outline: none;
   transition: border-color 0.3s;
+  flex-basis: 500px; /* set default length of search bar  */
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .search-bar input {
   font-size: 14px;
-  margin-right: 10px;
   background-color: white;
   color: black;
   outline: none;
   border: none;
-  padding: 0.5rem;
-  border-radius: 25px;
-  width: 200px;
 }
 
 .search-bar button {
@@ -69,7 +61,7 @@
 
 .search-bar button:hover {
   color: #ff69b4;
-  
+
 }
 
 .logo {

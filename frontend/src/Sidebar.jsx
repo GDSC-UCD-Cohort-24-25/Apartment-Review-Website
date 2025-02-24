@@ -2,11 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import './Sidebar.css';
-
 const Sidebar = () => {
-
-
-    console.log("Sidebar is redning");
   return (
     <div className="sidebar">
       <ul>

@@ -17,12 +17,13 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <Sidebar />
       <main className="content">
-      <h2 className="featured-title">Featured</h2>  {/* Add "Featured" text */}
-
+      <div>
+        <h2>Featured</h2>  {/* Add "Featured" text */}
         <div className="image-gallery">
-          {['apartments/thedrakeandanderson/the-drake-and-anderson-court-davis-ca-primary-photo.jpg', 'apartments/almondwood/almondwood-apartments-20200519-064.jpg', 'apartments/sycamorelane/RB209244_HDR_Edit(20220221215739348).jpg'].map((image, index) => (
+          {['apartments/thedrakeandanderson/the-drake-and-anderson-court-davis-ca-primary-photo.jpg', 
+            'apartments/almondwood/almondwood-apartments-20200519-064.jpg', 
+            'apartments/sycamorelane/RB209244_HDR_Edit(20220221215739348).jpg'].map((image, index) => (
             <ListingBox
               key={index}
               image={image}
@@ -32,9 +33,10 @@ const Home = () => {
             />
           ))}
         </div>
-
+      </div>
+      <div>
         {/* High Rated Section */}
-        <h2 className="section-title">High Rated</h2>
+        <h2>High Rated</h2>
         <div className="image-gallery">
         {['apartments/thedrakeandanderson/the-drake-and-anderson-court-davis-ca-primary-photo.jpg', 'apartments/almondwood/almondwood-apartments-20200519-064.jpg', 'apartments/sycamorelane/RB209244_HDR_Edit(20220221215739348).jpg'].map((image, index) => (
             <ListingBox
@@ -46,6 +48,7 @@ const Home = () => {
             />
           ))}
         </div>
+      </div>
       </main>
     </div>
   );

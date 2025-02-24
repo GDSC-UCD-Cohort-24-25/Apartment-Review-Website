@@ -2,7 +2,7 @@ import React from "react";
 
 function Listing() {
   return (
-    <div className="page-container">
+    <div>
       <h1>All Listings Page</h1>
     </div>
   );
