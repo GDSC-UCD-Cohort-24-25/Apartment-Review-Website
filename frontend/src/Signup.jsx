@@ -9,35 +9,17 @@ const Signup = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState("");
-  
 
-    const handleClick = async () => {
-        const { data, error } = await supabase.auth.getSession()
-        console.log(data)
-        console.log("Button clicked!");
-    };
-
-    
-    const logOut = async () => {
-        const { error } = await supabase.auth.signOut()
-        console.log("Button clicked!");
-    };
-    
     const handleSubmit = async (event) => {
         event.preventDefault();
-
         setMessage("");
         setEmail("");
         setPassword("");
 
         const { data, error } = await supabase.auth.signUp({email: email, password: password, });
-        if (error) { 
-            setMessage(error.message); return; 
-        }
-        if (data) { 
-            setMessage("User account created!"); 
-        }
-  };    
+        if (error) { setMessage(error.message); return;}
+        if (data) { setMessage("User account created!"); return; }
+    };    
   
     return (
       <div className="Signup-page">
@@ -61,15 +43,12 @@ const Signup = () => {
             <button type="submit">Create Account</button>
             
         </form> 
-        <p className="text-center mt-4">
+        <p className="">
         Already have an account?{" "}
-        <Link to="/login" className="text-blue-500 hover:underline">
-          Log in
+        <Link to="/login" className="">
+          Login
         </Link>
-        </p> 
-        <button onClick={handleClick}>Click Me</button>
-        <button onClick={logOut}>Log out </button>
-      
+        </p>       
     </div>
     );
 };

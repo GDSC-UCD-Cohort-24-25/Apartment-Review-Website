@@ -9,10 +9,11 @@ const ProfileAuth = ({ children }) => {
 
     useEffect(() => {
         const getSession = async () => {
+            setLoading(true);
             const { data: { session } } = await supabase.auth.getSession();
-            if (!session) setAuthenticated(false);
-            setAuthenticated(session.user.id === userid);   
+            setAuthenticated(session && session.user.id === userid); 
             setLoading(false);
+
         };
         getSession();
     }, []);

@@ -10,13 +10,30 @@
     border-right: 1px solid #ccc;  /* Adds a subtle grayish line to the right */
   }
   
-  .sidebar ul {
-    list-style: none;
-    display:flex;
-    flex-direction: column;
-    gap: 30px; 
+
+@media (max-width: 768px) {
+  .sidebar span {
+    display: none; /* Hide the text */
   }
+  .sidebar > ul div {
+    justify-content: center;
+  }
+}
+
   
+.sidebar ul {
+  list-style: none;
+  display:flex;
+  flex-direction: column;
+  gap: 30px; 
+}
+  
+
+.sidebar > ul div{
+  display: flex;
+  align-items: center;
+  gap:10px; 
+}
 .sidebar a {
   text-decoration: none; /* Remove underline */
   color: #333;  /* Default text color */

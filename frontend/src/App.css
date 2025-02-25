@@ -6,9 +6,17 @@
     --subtext-color: #59636E;
     --primary-color: #78b2a3;
     --link-hover-color: #ff69b4;
+
     --nav-bar-height: 60px;
     --side-bar-width: 200px;
+    --side-bar-closed-width: 50px; /* Smaller sidebar width for small screens */
     --card-border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --side-bar-width: var(--side-bar-closed-width); 
+  }
 }
 
 body {

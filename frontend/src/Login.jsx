@@ -15,23 +15,15 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
       e.preventDefault();
-      try {
-          const { data, error } = await supabase.auth.signInWithPassword({
-              email: email,
-              password: password,
-          });
+      setMessage("");
+      setEmail("");
+      setPassword("");
 
-        
-          if (error) { setMessage(error.message); return; }
-          
-          if (data) { navigate('/profile'); return; }
-         
-      } catch (err) {
-        // console.log(err)
-        setError('Invalid email or password');
-      }
+      const { data, error } = await supabase.auth.signInWithPassword({ email: email, password: password });
+      if (error) { setMessage(error.message); return; }
+      if (data) { navigate(`/profile/${data.session.user.id}`); return; }         
+
     };
-
 
   return (
       <div className="Login-page">
