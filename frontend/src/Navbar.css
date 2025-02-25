@@ -1,16 +1,16 @@
 /* Navbar.css */
-.navbar {
-  background-color: #FFFFFF; /* Change the color of the top navigation bar */
-  height: var(--nav-bar-height);
-  padding: 10px 40px 10px 40px;
-  position: fixed; /* Fix the navbar at the top */
-  top: 0;
-  width: 100%; /* Ensure it takes the full width */
-  z-index: 1000; /* Keep it on top */
-  display: flex;
-  border-bottom: 1px solid #ccc; /* Optional: Border at the bottom */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow underneath */
-}
+  .navbar {
+    background-color: #FFFFFF; /* Change the color of the top navigation bar */
+    height: var(--nav-bar-height);
+    padding: 10px 40px 10px 40px;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    width: 100%; /* Ensure it takes the full width */
+    z-index: 1000; /* Keep it on top */
+    display: flex;
+    border-bottom: 1px solid #ccc; /* Optional: Border at the bottom */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow underneath */
+  }
 
 .navbar-container {
   display: flex;
@@ -21,17 +21,32 @@
 }
 
 .navbar-icon {
-  color: #78B2A3; /* Change the icon of the Logo and the Log in Icon */
   text-decoration: none;
+  color: var(--text-color);
   display: flex;
   flex-shrink: 0;
   align-items: center; /* This vertically aligns the icon and text */
   gap: 8px; /* Adjust space between the icon and the text */
 }
 
+.logo-name {
+  background: linear-gradient(to right, #78B2A3, #118193);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.login-icon {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  font-size: 14px;
+
+}
 .search-bar {
   display: flex;
-  justify-content: space-between; /* Centers the item horizontally */
+  justify-content:flex-start; /* Centers the item horizontally */
   align-items: center;
   border-radius: 25px;
   border: 1px solid #ccc;  
@@ -39,8 +54,9 @@
   transition: border-color 0.3s;
   flex-basis: 500px; /* set default length of search bar  */
   height: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+  gap:15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .search-bar input {

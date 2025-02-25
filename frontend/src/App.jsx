@@ -8,6 +8,8 @@ import Listing from './AllListing';
 import Map from './Mapview';
 import Ranking from './Ranking';
 import About from './About';
+import Signup from './Signup';
+import Profile from './Profile';
 
 import './App.css';
 
@@ -26,6 +28,8 @@ function App() {
             <Route path="/map" element={<Map />} />
             <Route path="/ranking" element={<Ranking />} />
             <Route path="/about" element={<About />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/profile/:userid" element={<Profile/>} />
           </Routes>
         </div>
       </div>

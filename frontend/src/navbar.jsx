@@ -20,26 +20,30 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Home Icon linking to home page */}
         <Link to="/" className="navbar-icon">
-          <FaHome size={24} />
-          <span>Davis Housing</span>
+          <img src="../public/house.svg" alt="logo" />
+          <span className="logo-name">davis housing</span>
         </Link>
 
         {/* Search Bar */}
         <form onSubmit={handleSearchSubmit} className="search-bar">
+          <button type="submit">
+            <img src="../public/search.svg" alt="logo" />
+          </button>
           <input
             type="text"
             value={searchQuery}
             onChange={handleSearchChange}
             placeholder="Search..."
           />
-          <button type="submit">
-            <FaSearch size={20} />
-          </button>
+
         </form>
 
         {/* Login Icon linking to login page */}
         <Link to="/login" className="navbar-icon">
-          <FaUser size={24} />
+        <div className="login-icon">
+          <img src="../public/user.svg" alt="logo" />
+          <div>Account</div>
+        </div>
         </Link>
       </div>
     </nav>

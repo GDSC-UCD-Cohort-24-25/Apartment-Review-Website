@@ -8,6 +8,7 @@
     --link-hover-color: #ff69b4;
     --nav-bar-height: 60px;
     --side-bar-width: 200px;
+    --card-border-radius: 16px;
 }
 
 body {
@@ -39,6 +40,9 @@ h1 {
   padding-bottom: 10px;
 }
 
+input::placeholder {
+  color:var(--text-color)
+}
 a:hover{
   color: var(--link-hover-color);
 }
