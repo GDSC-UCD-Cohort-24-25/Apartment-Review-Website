@@ -1,0 +1,45 @@
+.ranking-container {
+    display: flex;
+  }
+  
+.ranking-content {
+    flex: 1;
+    padding: 20px;
+}
+  
+.ranking-image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+  
+.ranking-listing-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+}
+  
+.ranking-listing-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+  
+.ranking-listing-description {
+    padding: 10px;
+}
+  
+.ranking-like-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+.ranking-like-button:hover {
+    background-color: #0056b3;
+}
+  
