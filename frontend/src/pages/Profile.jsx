@@ -1,6 +1,6 @@
-import ProfileAuth from "./ProfileAuth";
+import ProfileAuth from "../components/ProfileAuth";
 import React, { useEffect, useState } from "react";
-import supabase from "./supabase-client";
+import supabase from "../supabase-client";
 import { useParams } from "react-router-dom";
 
 const Profile = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Signup.css';
-import supabase from './supabase-client';
+import supabase from '../supabase-client';
 import { useState } from "react";
 import { Link } from "react-router-dom";
 

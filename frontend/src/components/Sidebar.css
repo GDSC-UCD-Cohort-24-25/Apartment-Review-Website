@@ -6,11 +6,10 @@
     width: var(--side-bar-width);
     padding: 30px; /* Space between the nav bar and first link */
     height: 100vh;  /* Full height of the screen */
-    background-color: white;  /* Color of sidebar */
     border-right: 1px solid #ccc;  /* Adds a subtle grayish line to the right */
   }
   
-
+/* specifies styles when the side bar collapses */
 @media (max-width: 768px) {
   .sidebar span {
     display: none; /* Hide the text */
@@ -20,25 +19,21 @@
   }
 }
 
-  
 .sidebar ul {
   list-style: none;
-  display:flex;
+  display: flex;
   flex-direction: column;
   gap: 30px; 
 }
   
-
 .sidebar > ul div{
   display: flex;
   align-items: center;
-  gap:10px; 
+  gap: 10px; 
 }
+
 .sidebar a {
   text-decoration: none; /* Remove underline */
-  color: #333;  /* Default text color */
-  font-size: 16px;
-  display: block; /* Makes the link fill the list item */
-  border-radius: 5px;  /* Optional: rounded corners for links */
+  color: var(--main-text-color);  /* Default text color */
   transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }

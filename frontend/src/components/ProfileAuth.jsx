@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import supabase from "./supabase-client";
+import supabase from "../supabase-client";
 
 const ProfileAuth = ({ children }) => {
     const [authenticated, setAuthenticated] = useState(false);

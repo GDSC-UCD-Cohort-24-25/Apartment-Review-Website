@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';  // Using Link for navigation
-import supabase from './supabase-client';
+import supabase from '../supabase-client';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -66,11 +66,9 @@ const Navbar = () => {
             </button>
           )}
           {/* Login Icon linking to login page */}
-          <Link to={userId ? `/profile/${userId}` : "/login"} className="navbar-icon">
-          <div className="login-icon">
+          <Link to={userId ? `/profile/${userId}` : "/login"} className="login-icon">
             <img src="/user.svg" alt="logo" />
             <div>{userId ? 'Account' : 'Login'}</div>
-          </div>
           </Link>
         </div>
       </div>

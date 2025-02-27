@@ -51,6 +51,7 @@ h1 {
 input::placeholder {
   color:var(--text-color)
 }
+
 a:hover{
   color: var(--link-hover-color);
 }
