@@ -1,0 +1,90 @@
+body {
+    background-color: #f3f4f6;
+    font-family: Arial, sans-serif;
+  }
+  
+  .map-main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .map-listings {
+    width: 50%;
+    padding: 16px;
+    overflow-y: auto;
+  }
+  
+  .map-listings h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  
+  .map-listing {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+  }
+  
+  .map-listing img {
+    width: 100%;
+    height: 192px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .map-listing h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .map-listing p {
+    color: #6b7280;
+    margin-bottom: 8px;
+  }
+  
+  .map-rating {
+    display: flex;
+    align-items: center;
+    color: #f59e0b;
+  }
+  
+  .map-rating i {
+    margin-right: 4px;
+  }
+  
+  .map-map {
+    width: 50%;
+    position: relative;
+  }
+  
+  .map-map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .map-map-prices {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .map-price {
+    background-color: white;
+    border-radius: 9999px;
+    padding: 8px 16px;
+    margin: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
