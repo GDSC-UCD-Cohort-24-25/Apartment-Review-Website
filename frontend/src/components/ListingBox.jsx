@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ListingBox = ({ image, description, liked, onLike }) => {
+const ListingBox = ({ image, description, liked, onLike , phone,address }) => {
     console.log("Rendering ImageBox:", image, description);
     return (
       <div className="image-card">
@@ -10,7 +10,9 @@ const ListingBox = ({ image, description, liked, onLike }) => {
             {liked ? '❤️' : '🤍'}
           </span>
         </div>
-        <p>{description}</p>
+        <h3>{description}</h3>
+        <p>{phone}</p>
+        <p>{address}</p>
       </div>
     );
   };
