@@ -1,8 +1,6 @@
 import React, { useState , useEffect } from 'react';
-import ListingBox from '../components/ListingBox'; // Ensure correct import
-import Sidebar from '../components/Sidebar';
+import ListingBox from '../components/ListingBox';
 import './Home.css';
-
 
 const Home = () => {
   const [liked, setLiked] = useState([false, false, false]);
@@ -13,7 +11,7 @@ const Home = () => {
       .then(response => response.json())
       .then(data => {
         setApartments(data.apartments);
-        setLiked(new Array(data.apartments.length).fill(false)); // Initialize liked state based on number of apartments
+        setLiked(new Array(data.apartments.length).fill(false));
       })
       .catch(error => console.error('Error fetching apartments:', error));
   }, []);
@@ -33,16 +31,16 @@ const Home = () => {
         <h2>Featured</h2>  {/* Add "Featured" text */}
         <div className="image-gallery">
         {apartments.map((apartment, index) => (
-              <ListingBox
-                key={apartment.id}
-                image={apartment.photo}
-                description={apartment.name}
-                phone = {apartment.phoneNumber}
-                address = {apartment.shortAddress}
-                liked={liked[index]}
-                onLike={() => handleLike(index)}
-              />
-            ))}
+          <ListingBox
+            key={apartment.id}
+            image={apartment.photo}
+            description={apartment.name}
+            phone = {apartment.phoneNumber}
+            address = {apartment.shortAddress}
+            liked={liked[index]}
+            onLike={() => handleLike(index)}
+          />
+        ))}
         </div>
       </div>
       <div>

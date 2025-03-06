@@ -48,6 +48,12 @@ h1 {
   padding-bottom: 10px;
 }
 
+h3 {
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 input::placeholder {
   color:var(--text-color)
 }
