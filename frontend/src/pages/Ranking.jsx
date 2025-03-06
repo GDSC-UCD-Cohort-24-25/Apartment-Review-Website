@@ -23,11 +23,14 @@ const Ranking = () => {
             'apartments/sycamorelane/RB209244_HDR_Edit(20220221215739348).jpg'].map((image, index) => (
               <div key={index} className="ranking-listing-box">
                 <img src={image} alt={`Top Ranked Image ${index + 1}`} className="ranking-listing-image" />
+                <span
+                  className={`ranking-heart-icon ${liked[index] ? 'liked' : ''}`}
+                  onClick={() => handleLike(index)}
+                >
+                  ♥
+                </span>
                 <div className="ranking-listing-description">
                   <p>Description of Top Ranked Image {index + 1}</p>
-                  <button onClick={() => handleLike(index)} className="ranking-like-button">
-                    {liked[index] ? 'Unlike' : 'Like'}
-                  </button>
                 </div>
               </div>
             ))}
@@ -41,11 +44,14 @@ const Ranking = () => {
             'apartments/sycamorelane/RB209244_HDR_Edit(20220221215739348).jpg'].map((image, index) => (
               <div key={index + 3} className="ranking-listing-box">
                 <img src={image} alt={`Most Popular Image ${index + 1}`} className="ranking-listing-image" />
+                <span
+                  className={`ranking-heart-icon ${liked[index + 3] ? 'liked' : ''}`}
+                  onClick={() => handleLike(index + 3)}
+                >
+                  ♥
+                </span>
                 <div className="ranking-listing-description">
                   <p>Description of Most Popular Image {index + 1}</p>
-                  <button onClick={() => handleLike(index + 3)} className="ranking-like-button">
-                    {liked[index + 3] ? 'Unlike' : 'Like'}
-                  </button>
                 </div>
               </div>
             ))}
@@ -57,4 +63,3 @@ const Ranking = () => {
 };
 
 export default Ranking;
-
