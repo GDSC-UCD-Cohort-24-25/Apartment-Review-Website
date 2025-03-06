@@ -50,6 +50,13 @@ const Map = () => {
               location: 'West Davis Manor',
               price: '650/month',
               rating: 4.5
+            },
+            {
+              image: 'apartments/thedrakeandanderson/the-drake-and-anderson-court-davis-ca-primary-photo.jpg',
+              title: 'Drake and Anderson Court',
+              location: 'West Davis Manor',
+              price: '650/month',
+              rating: 4.5
             }
           ].map((listing, index) => (
             <div key={index} className="image-card">

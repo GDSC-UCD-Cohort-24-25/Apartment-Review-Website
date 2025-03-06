@@ -1,14 +1,15 @@
 .map-main-content {
   display: flex;
-  position: relative;
   height: 100vh;
+  overflow: hidden;
 }
 
 .map-listings {
   width: 50%;
   padding: 20px;
-  overflow-y: auto;
+  overflow-y: auto; /* Enable vertical scrolling */
   height: 100vh;
+  box-sizing: border-box;
 }
 
 .image-gallery {
@@ -62,6 +63,7 @@
   top: 0;
   width: 50%;
   height: 100vh;
+  z-index: 1;
 }
 
 .map-rating {
