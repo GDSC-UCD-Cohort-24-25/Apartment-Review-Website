@@ -30,7 +30,7 @@ const Home = () => {
       <div>
         <h2>Featured</h2>  {/* Add "Featured" text */}
         <div className="listing-container">
-        {apartments.slice(0,6).map((apartment, index) => (
+        {apartments.slice(0,15).map((apartment, index) => (
           <ListingBox
             key={apartment.id}
             image={apartment.photo}
