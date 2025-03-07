@@ -9,48 +9,10 @@
   flex-direction: column;
   gap: 10px
 }
-.image-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Responsive grid layout */
-  gap: 24px;
+
+.card-text {
+  padding: 5px;
 }
 
-.image-card {
-  aspect-ratio: 3/2; /* Makes the height the same as the width */
-  position: relative; /* Ensure the heart icon is positioned correctly */
-  box-shadow: 0px 4px 10px 0px rgba(210, 210, 217, 1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: var(--card-border-radius);
-  display: grid;
-  grid-template-rows: 3fr 2fr; 
-}
 
-.image-card-text {
-  padding: 1rem;
-}
-
-.image-card:hover {
-  transform: scale(1.05);  /* Zoom effect on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-.image-container {
-  border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
-  background-repeat: no-repeat;  /* Prevents the image from repeating */
-  background-position: center center;  /* Ensures the bottom center of the image is always in the same place */
-  background-size: cover;  /* Ensures the image covers the element while maintaining its aspect ratio */
-
-}
-
-.heart-icon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.heart-icon:hover {
-  transform: scale(1.2);
-}
 

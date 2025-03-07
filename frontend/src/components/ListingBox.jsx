@@ -10,7 +10,7 @@ const ListingBox = ({ image, description, liked, onLike , phone,address }) => {
             {liked ? '❤️' : '🤍'}
           </span>
         </div>
-        <div className='image-card-text'>
+        <div className='card-text'>
         <h3>{description}</h3>
         <p>{phone}</p>
         <p>{address}</p>

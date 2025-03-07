@@ -15,12 +15,16 @@ function Listing() {
   };
 
   return (
+    
     <div className="listing-page">
+        <FilterBar />
+      <div className='listing-body'>
       <h1>All Listings Page</h1>
       
       {/* Render the FilterBar */}
-      <FilterBar />
-
+      {/* <div className='filter-section'>
+        <FilterBar />
+      </div> */}
       {/* Sample ListingBox */}
       <div className="listing-container">
         {['apartments/thedrakeandanderson/the-drake-and-anderson-court-davis-ca-primary-photo.jpg', 
@@ -34,6 +38,7 @@ function Listing() {
             onLike={() => handleLike(index)}  // Pass the correct index for each ListingBox
           />
         ))}
+      </div>
       </div>
     </div>
   );

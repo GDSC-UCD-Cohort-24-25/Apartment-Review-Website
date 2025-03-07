@@ -29,8 +29,8 @@ const Home = () => {
       <main className="content">
       <div>
         <h2>Featured</h2>  {/* Add "Featured" text */}
-        <div className="image-gallery">
-        {apartments.map((apartment, index) => (
+        <div className="listing-container">
+        {apartments.slice(0,6).map((apartment, index) => (
           <ListingBox
             key={apartment.id}
             image={apartment.photo}
@@ -46,7 +46,7 @@ const Home = () => {
       <div>
         {/* High Rated Section */}
         <h2>High Rated</h2>
-        <div className="image-gallery">
+        <div className="listing-container">
         {['apartments/thedrakeandanderson/the-drake-and-anderson-court-davis-ca-primary-photo.jpg', 'apartments/almondwood/almondwood-apartments-20200519-064.jpg', 'apartments/sycamorelane/RB209244_HDR_Edit(20220221215739348).jpg'].map((image, index) => (
             <ListingBox
               key={index + 3}  // Offset index to avoid duplicate keys

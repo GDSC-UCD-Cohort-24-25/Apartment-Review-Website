@@ -2,9 +2,7 @@
   
   /* FilterBar - Position it right next to the sidebar and below the navbar */
   .filter-bar {
-    position: relative;
-    top: 60px; /* Start the filter bar below the navbar */
-    left: 200px; /* Position it next to the sidebar */
+    position: fixed;
     width: 250px;
     height: calc(100% - 60px); /* Adjust height to take full screen except navbar */
     background-color: #f8f9fa;
