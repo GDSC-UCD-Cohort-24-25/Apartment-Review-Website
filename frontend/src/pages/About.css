@@ -1,0 +1,37 @@
+/* Specific container for the About section */
+.about-container {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* Main heading for About page only */
+  .about-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Subheading for About page only */
+  .about-container h4 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  /* Paragraph text for About page only */
+  .about-container p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  
+  /* Add some spacing between sections */
+  .about-container > h1, .about-container > h4, .about-container > p {
+    margin-bottom: 20px;
+  }
+  
