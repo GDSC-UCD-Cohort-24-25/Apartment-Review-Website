@@ -13,7 +13,23 @@ import Profile from './pages/Profile';
 
 import './App.css';
 
+const Layout = ({ children }) => {
+  const location = useLocation();
+  const hideSidebar = location.pathname === '/listings'; // Hide sidebar on All Listings page
+
+  return (
+    <div className="app-container">
+      <Navbar />
+      <div className="main-content">
+        {!hideSidebar && <Sidebar />} {/* Sidebar only hides on /listings */}
+        <main className="content">{children}</main>
+      </div>
+    </div>
+  );
+};
+
 function App() {
+  
   return (
     <Router>
       <Navbar />

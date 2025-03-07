@@ -1,4 +1,6 @@
 import React from 'react';
+import './ListingBox.css';  // Ensure you have a Listing.css file for styling
+
 
 const ListingBox = ({ image, description, liked, onLike , phone,address }) => {
     return (
