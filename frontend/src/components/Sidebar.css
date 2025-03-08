@@ -3,8 +3,11 @@
     position: fixed;  /* Keep it fixed on the side */
     top: var(--nav-bar-height);
     left: 0;
-    width: var(--side-bar-width);
-    padding: 30px; /* Space between the nav bar and first link */
+    /* width: var(--side-bar-width); */ 
+    width: 236px;
+    padding-left: 8px; /* Space between the nav bar and first link */
+    padding-top: 34px; 
+    padding-right: 8px; 
     height: 100vh;  /* Full height of the screen */
     border-right: 1px solid #ccc;  /* Adds a subtle grayish line to the right */
   }
@@ -23,17 +26,33 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 30px; 
+  gap: 24px; 
+  display: flex;
+  width: 140px;
+  align-items: flex-start;
+  padding: 10px; 
 }
   
 .sidebar > ul div{
   display: flex;
   align-items: center;
-  gap: 10px; 
+  gap: 8px; 
 }
 
 .sidebar a {
   text-decoration: none; /* Remove underline */
   color: var(--main-text-color);  /* Default text color */
   transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* .sidebar > ul div:hover {
+  display: flex;
+  width: 220px;
+  height: 34px;
+  padding: 10px 130.202px 10px 12px;
+  align-items: flex-start;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: rgba(120, 178, 163, 0.20);
 }

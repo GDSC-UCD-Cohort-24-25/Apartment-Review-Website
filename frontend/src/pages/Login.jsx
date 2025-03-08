@@ -27,23 +27,27 @@ const Login = () => {
 
   return (
       <div className="Login-page">
-          <h1>Login</h1>
+        <div class = "frame"> 
+          <div class = "header">
+            <h1>Welcome</h1>
+            <button class = "largeButton">Sign Up</button>
+          </div>
           <form className="auth" onSubmit={handleSubmit}>
-            <input 
+            <input class = "input"
               type="email" 
-              placeholder="Email" 
+              placeholder="Enter your email*" 
               value={email} 
               onChange={(e) => setEmail(e.target.value)} 
               required
             />
-            <input 
+            <input class = "input"
               type="current-password" 
-              placeholder="Password" 
+              placeholder="Password*" 
               value={password} 
               onChange={(e) => setPassword(e.target.value)} 
               required
             />
-            <button type="submit"> Login </button>
+            <button class = "loginButton" type="submit"> Login </button>
             {message && <span>{message}</span>}
           </form>
 
@@ -53,6 +57,7 @@ const Login = () => {
               Sign up
             </Link>
           </p>
+        </div>
       </div>
   );
 };
