@@ -48,16 +48,17 @@ const Navbar = () => {
 
         {/* Search Bar */}
         <form onSubmit={handleSearchSubmit} className="search-bar">
-          <button type="submit">
+          <div class = "contentsFrame">
+            <button type="submit">
             <img src="/search.svg" alt="logo" />
-          </button>
-          <input
+            </button>
+            <input
             type="text"
             value={searchQuery}
             onChange={handleSearchChange}
-            placeholder="Search..."
-          />
-
+            placeholder="Search"
+            />
+          </div> 
         </form>
         <div className='user-info'>
           {userId && (
@@ -68,7 +69,7 @@ const Navbar = () => {
           {/* Login Icon linking to login page */}
           <Link to={userId ? `/profile/${userId}` : "/login"} className="login-icon">
             <img src="/user.svg" alt="logo" />
-            <div>{userId ? 'Account' : 'Login'}</div>
+            <div class = "accountText">{userId ? 'Account' : 'Account'}</div>
           </Link>
         </div>
       </div>

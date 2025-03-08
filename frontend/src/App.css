@@ -8,7 +8,7 @@
     --link-hover-color: #ff69b4;
 
     --nav-bar-height: 60px;
-    --side-bar-width: 200px;
+    --side-bar-width: 236px;
     --side-bar-closed-width: 50px; /* Smaller sidebar width for small screens */
     --card-border-radius: 16px;
 }
@@ -33,19 +33,26 @@ body {
 .page-container {
   margin-top: var(--nav-bar-height); 
   margin-left: var(--side-bar-width);
-  padding: 30px; /* padding of the main page content */
+  padding-left: 30px; /* padding of the main page content */
+  padding-top: 44px; 
 }
 
 h2 {
-  font-size: 28px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  color: #313638;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 h1 {
-  font-size: 32px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  color: #313638;
+  font-family: Inter;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;  
 }
 
 h3 {
