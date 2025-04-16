@@ -19,6 +19,25 @@ const Profile = () => {
     getSession();
   }, []);
 
+  const profileSections = [
+    {
+      title: "Edit Profile",
+      description: "Update your personal information, add a bio, and change your profile photo.",
+    },
+    {
+      title: "Saved Apartments",
+      description: "View and manage all the apartments you've bookmarked while browsing.",
+    },
+    {
+      title: "Your Matches",
+      description: "See apartment listings that align with your preferences and lifestyle.",
+    },
+    {
+      title: "Delete Account",
+      description: "Permanently remove your profile and all associated data from our system.",
+    },
+  ];
+
   return (
     <div className="profile-page">
       <ProfileAuth>
@@ -38,21 +57,12 @@ const Profile = () => {
 
           {/* Right: Info Boxes */}
           <div className="profile-right">
-            {[
-              "Edit Profile",
-              "Saved Apartments",
-              "Your Matches",
-              "Delete Account",
-            ].map((title, index) => (
-              <div key={index} className="info-box">
-                <h3>{title}</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Nunc molestie a in
-                  dictum rutrum donec turpis lacinia. Nibh turpis dui ultrices eu
-                  feugiat sapien. Dui at blandit netus.
-                </p>
-              </div>
-            ))}
+          {profileSections.map((section, index) => (
+            <div key={index} className="info-box">
+                <h3>{section.title}</h3>
+                <p>{section.description}</p>
+            </div>
+           ))}
           </div>
         </div>
       </ProfileAuth>
