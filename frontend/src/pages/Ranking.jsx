@@ -27,7 +27,7 @@ const Ranking = () => {
 
   // Fetch the ranking data from the Python backend (/rankings endpoint)
   useEffect(() => {
-    fetch('http://127.0.0.1:5000')
+    fetch('http://127.0.0.1:5000/reviews')
       .then(response => response.json())
       .then(data => {
         console.log("Fetched Rankings Data:", data);  // Check the fetched data in your console.
