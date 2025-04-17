@@ -56,6 +56,12 @@ h1 {
   line-height: normal;  
 }
 
+h3 {
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 input::placeholder {
   color:var(--text-color)
 }

@@ -21,6 +21,8 @@
   line-height: normal;
 }
 
+
+
 .navbar-container {
   display: flex;
   gap: 20px; /* specific min padding when page width decreases */

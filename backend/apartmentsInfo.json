@@ -1,0 +1,1990 @@
+[
+    {
+        "name": "Academy Lane Apartment Homes",
+        "googleId": "ChIJ8cA3dKIphYAREie0GPKQfY4",
+        "location": {
+            "latitude": 38.5551655,
+            "longitude": -121.74247690000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=10267522094945543954",
+        "websiteUri": "https://www.academylane.com/?utm_source=GBP&utm_medium=organic",
+        "address": "1124 F St, Davis, CA 95616, USA",
+        "shortAddress": "1124 F St, Davis",
+        "phoneNumber": "(530) 290-6165",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGemIg-MnKYwnEHtsYNNFY4ULao0Q1I1wcnPxLylZQswL5_zHDuA1UrH3kIVBCPJUg2Qtl0UUIetKnhJmlCO3brbYNsgKmcaok=s4800-w400-h400"
+    },
+    {
+        "name": "Orchard Park Apartments",
+        "googleId": "ChIJ____s1QohYARuH1x_SWGQxo",
+        "location": {
+            "latitude": 38.5448052,
+            "longitude": -121.765171
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1892503766149725624",
+        "websiteUri": "https://housing.ucdavis.edu/apartments/orchard-park/",
+        "address": "Orchard Park Cir, Davis, CA 95616, USA",
+        "shortAddress": "Orchard Park Cir, Davis",
+        "phoneNumber": "(530) 747-7224",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq35O6XB9FUnF_Sbm52xVGPBOzcgLKQ6IFLZb5PiNXIHNs8U5E5z_0bnHzI_WzOfO3KzS6q3CeLK9dhiVloL70wxg5qTAAaZdvylkiscbX1R2SD60dtFGsk2q2o9hQHHu7Kw5fr_=s4800-w400-h400"
+    },
+    {
+        "name": "Lakeshore",
+        "googleId": "ChIJ04O3_z8ohYARgaJauWhiZQk",
+        "location": {
+            "latitude": 38.553548000000006,
+            "longitude": -121.78843350000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=677055520914973313",
+        "websiteUri": "http://www.lakeshoreapt.com/",
+        "address": "1175 Lake Blvd, Davis, CA 95616, USA",
+        "shortAddress": "1175 Lake Blvd, Davis",
+        "phoneNumber": "(530) 757-7926",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHoBaVZ3ebrSRvaEZ9OJmnBAL2gX7ZT3iQ7qDiepUyR61dQpXrxN7Hx6Z5pNtBHEIC_lgb3X7Vzr9JsIBsjaTcBkNinKZWCyYM=s4800-w400-h400"
+    },
+    {
+        "name": "Avalon Apartments",
+        "googleId": "ChIJM2kdNmEphYAR68NUO5j-vkk",
+        "location": {
+            "latitude": 38.538311,
+            "longitude": -121.72467800000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=5313964540127658987",
+        "websiteUri": "http://www.liveavalondavis.com/",
+        "address": "1617 Valdora St, Davis, CA 95618, USA",
+        "shortAddress": "1617 Valdora St, Davis",
+        "phoneNumber": "(530) 231-5719",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGL-TrRIBWPpSqsu1yrjSQm7buOoOktKZ1Lfkob9HYAEj9qyxohY2FYhhcBQvbB0g9K6jJ1M8qUvfh1ubSekq5s8_t2r-9LOk4=s4800-w400-h400"
+    },
+    {
+        "name": "Sherwood & Forest Arms Apartments",
+        "googleId": "ChIJpey5BRMphYAR83JKZxGrBTE",
+        "location": {
+            "latitude": 38.5485591,
+            "longitude": -121.7653588
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=3532417573977748211",
+        "websiteUri": "https://www.rentingdavis.com/sherwood-arms-apartments/",
+        "address": "1411 Wake Forest Dr, Davis, CA 95616, USA",
+        "shortAddress": "1411 Wake Forest Dr, Davis",
+        "phoneNumber": "(530) 758-8711",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHM63nncAb5YLQD23uZYMS6MtA4TeoHkezLZeOBtGyRivT1cIE-1UK1EWkdBTeuRkXz0BOknoxHcUcQ7FwUuEMPRS7AucvhQRM=s4800-w400-h400"
+    },
+    {
+        "name": "J Street Apartments",
+        "googleId": "ChIJn7a_apgphYARO2cksvcxY6Q",
+        "location": {
+            "latitude": 38.5568567,
+            "longitude": -121.74148710000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=11845366384829949755",
+        "websiteUri": "https://www.jstapts.com/",
+        "address": "1111 J St, Davis, CA 95616, USA",
+        "shortAddress": "1111 J St, Davis",
+        "phoneNumber": "(530) 756-2100",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFo25RV427JxU2BRnSae6gfqoHqYiRu1fKg3qOpD15ICjLiBc-HV_e1LcqR709WvyAfQZbXSLd27WEfDaU1rZSf7LUClPUfJgY=s4800-w400-h400"
+    },
+    {
+        "name": "The U Apartments",
+        "googleId": "ChIJmRQHw30phYARr125i_BW_Sg",
+        "location": {
+            "latitude": 38.5496102,
+            "longitude": -121.7208849
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=2953612521761234351",
+        "websiteUri": "https://www.theudavis.com/?67805&utm_source=obl&utm_medium=organic",
+        "address": "625 Cantrill Dr, Davis, CA 95618, USA",
+        "shortAddress": "625 Cantrill Dr, Davis",
+        "phoneNumber": "(530) 513-6145",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGyj3QGNLjumrxsLwxkFbmpA0qpa_JI7uak2rWpDGS_Kadcs3ieeMw3DlibNPsWCu52KhZhiNxFu3NetbN1CaXEA0GceTeGjuM=s4800-w400-h400"
+    },
+    {
+        "name": "Davisville Management Company",
+        "googleId": "ChIJ3aiNr30phYARup-W1ucKKg4",
+        "location": {
+            "latitude": 38.548474999999996,
+            "longitude": -121.72145750000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1020640256406757306",
+        "websiteUri": "https://www.davisapartmentsforrent.com/",
+        "address": "2525 2nd St, Davis, CA 95618, USA",
+        "shortAddress": "2525 2nd St, Davis",
+        "phoneNumber": "(530) 758-5800",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqG-rJlpQmtMxJuRZGu2LBToh-irOmbNUWf0VQkOIwE7rdO4HIxtwBZTvNB4HV0QngDCmLoNM0rIZ_f-s1yV2kPvAHBM_5ulmOw=s4800-w400-h400"
+    },
+    {
+        "name": "Alvarado Parkside Apartments",
+        "googleId": "ChIJBy7qubkphYARIXNuAHFhLMQ",
+        "location": {
+            "latitude": 38.5613515,
+            "longitude": -121.75182029999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=14135780468375581473",
+        "websiteUri": "https://www.rentingdavis.com/alvarado-parkside",
+        "address": "520 Alvarado Ave, Davis, CA 95616, USA",
+        "shortAddress": "520 Alvarado Ave, Davis",
+        "phoneNumber": "(530) 758-7070",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGi1U1yeT9FJKStMwNlwjurdDZKz4XM1hQfP2cktugTic7aducudyNchzpSFsfDY-LJo8qtMRJXmzdaZU3ZW70OIwXUS50thsU=s4800-w400-h400"
+    },
+    {
+        "name": "Greystone",
+        "googleId": "ChIJg472R34phYARi59rxmWwmVI",
+        "location": {
+            "latitude": 38.5530083,
+            "longitude": -121.7205796
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=5951982333713948555",
+        "websiteUri": "http://www.greystoneapts.com/",
+        "address": "2505 5th St, Davis, CA 95618, USA",
+        "shortAddress": "2505 5th St, Davis",
+        "phoneNumber": "(530) 758-2200",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFK75cUCLlHONKaj5TR-Z5WPc9E9ibIwrAOCsqSPw57LIzNz9KQVVdV2fh8m80bICab_GfOPpFcaR2BbRSFDv7C9P8pi0bSd2Q=s4800-w400-h400"
+    },
+    {
+        "name": "University House",
+        "googleId": "ChIJod6MxnYphYARhVIIvjnCuUA",
+        "location": {
+            "latitude": 38.546600999999995,
+            "longitude": -121.73460589999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=4663972442376000133",
+        "websiteUri": "https://www.simmonsre.net/university-house",
+        "address": "320 K St, Davis, CA 95616, USA",
+        "shortAddress": "320 K St, Davis",
+        "phoneNumber": "(530) 753-3636",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHgVJgFwIkViwQVCgrnYALyG1LBiij4_3OWrZcJv21voluOo1RAo1SltnBPsXcKbXotf1JK9jLqp3feMAQe3qE7iX3_VbGvOec=s4800-w400-h400"
+    },
+    {
+        "name": "MarCo at the Cannery Apartments",
+        "googleId": "ChIJ0wd3iGcphYAReQJ19phA8Pg",
+        "location": {
+            "latitude": 38.5616422,
+            "longitude": -121.74235929999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=17937908341530755705",
+        "websiteUri": "https://www.marcocanneryliving.com/",
+        "address": "2500 Cannery Loop, Davis, CA 95616, USA",
+        "shortAddress": "2500 Cannery Loop, Davis",
+        "phoneNumber": "(530) 404-0568",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFRr-xHSz_Xt5HZXCuwC1rQE2lAxa1dKnMjtDjh-aH6uLyVlG86QB9UmZdntX3lI2BIxeazBXtkbhC9coSFGLRbk_f8_Mp0uew=s4800-w400-h400"
+    },
+    {
+        "name": "Cottages on 5th",
+        "googleId": "ChIJu95lSl4phYARLiKU8T-0u5k",
+        "location": {
+            "latitude": 38.549568099999995,
+            "longitude": -121.72605129999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=11077645895176823342",
+        "websiteUri": "https://www.daviscottages.com/?switch_cls[id]=95024&utm_source=google%20-%20entratammb&utm_medium=organic&utm_campaign=gmb&utm_content=website%20click",
+        "address": "500 Pole Line Rd, Davis, CA 95618, USA",
+        "shortAddress": "500 Pole Line Rd, Davis",
+        "phoneNumber": "(530) 758-3240",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHN09qpRdBqW3UXpUrrriQgTBLfgRT9ULDsTOe16US7LH_yRlcVVLlXraa74o_605sRllBpW4x9hLg6csIOqX0gD49nBOQsUTk=s4800-w400-h400"
+    },
+    {
+        "name": "Sorrento Apartments",
+        "googleId": "ChIJM2kdNmEphYAR7NZl0zc4HI0",
+        "location": {
+            "latitude": 38.5395013,
+            "longitude": -121.7230862
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=10168063871116760812",
+        "websiteUri": "http://www.livesorrentodavis.com/",
+        "address": "1540 Valdora St, Davis, CA 95618, USA",
+        "shortAddress": "1540 Valdora St, Davis",
+        "phoneNumber": "(530) 290-8359",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGLaLBmuXWWZV_ylkjrTnzUxwqOOOsHjuAZPzSoFmUIG5JPx8zct6NywyX4Fgx8-cpyq7PgMpDPhMoGpAlJ5iLUeuWkkv7qS6E=s4800-w400-h400"
+    },
+    {
+        "name": "Identity Davis",
+        "googleId": "ChIJxcWb-DIphYARCZ1kIWKXqAA",
+        "location": {
+            "latitude": 38.5469483,
+            "longitude": -121.76469110000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=47454243810221321",
+        "websiteUri": "https://www.identitydavis.com/?utm_perq=gbp",
+        "address": "525 Oxford Cir, Davis, CA 95616, USA",
+        "shortAddress": "Sigma Nu Fraternity, 525 Oxford Cir, Davis",
+        "phoneNumber": "(208) 261-1851",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGkUNgRycLBT3X6rhD8i0ORTQMy_VF33P9Juf1V2Et5BKPRAj2yOpsRqZjy_9ynCNfXruadlNgN5ABMzXOn7P_JcEIwuJV2-b8=s4800-w400-h400"
+    },
+    {
+        "name": "College Street Apartments",
+        "googleId": "ChIJCSCSxIIphYARxFx_9719V_U",
+        "location": {
+            "latitude": 38.5536962,
+            "longitude": -121.72994340000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=17678737117120781508",
+        "websiteUri": "https://www.rentingdavis.com/college-street-apartments/",
+        "address": "1805 E 8th St, Davis, CA 95616, USA",
+        "shortAddress": "1805 E 8th St, Davis",
+        "phoneNumber": "(530) 757-7368",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFbdDnYB_CXo9wwnjQjR0JlbePAb1HE64uH4ap9ARAYBEPQTFMgxESsMYLUkx9dHJcFZyabkvw0H1-H4qP9zWJ0mPLCO5xVA_g=s4800-w400-h400"
+    },
+    {
+        "name": "Seville at Mace Ranch",
+        "googleId": "ChIJTSs8QMorhYARiWoNxCBjc2Y",
+        "location": {
+            "latitude": 38.5596885,
+            "longitude": -121.69675439999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=7382353206569691785",
+        "websiteUri": "https://www.liveattheseville.com/",
+        "address": "4501 Alhambra Dr, Davis, CA 95618, USA",
+        "shortAddress": "4501 Alhambra Dr, Davis",
+        "phoneNumber": "(530) 461-5118",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFT6uOkYuVznPOHzEuAV0t5GeKC6nKRAErJlf8oGCakg4aGHXVkXc0pjTT3GB4MvOZbHd8IZI17cFY0-g04CONZ805x49e6-2o=s4800-w400-h400"
+    },
+    {
+        "name": "DaVinci",
+        "googleId": "ChIJGZAau2gphYARkH52E12WjYM",
+        "location": {
+            "latitude": 38.5366114,
+            "longitude": -121.73174669999997
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=9479398117187419792",
+        "websiteUri": "https://www.liveatdavinci.com/",
+        "address": "1666 Da Vinci Ct, Davis, CA 95618, USA",
+        "shortAddress": "1666 Da Vinci Ct, Davis",
+        "phoneNumber": "(530) 750-5100",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHn1PJvtGIe1ArDrwf8rPLz_wLmCHzwR5Ntnb1cbmnRFaomlzhaes-svfOj4622pWrvT1e2QjJ6kXtyvAHONnhOm17z4duRT_8=s4800-w400-h400"
+    },
+    {
+        "name": "Westwood",
+        "googleId": "ChIJp0GiuU0ohYARaAseYnYqzLA",
+        "location": {
+            "latitude": 38.5511641,
+            "longitude": -121.7686749
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=12739604133864934248",
+        "websiteUri": "https://www.westwoodaptliving.com/",
+        "address": "800 Adams St, Davis, CA 95616, USA",
+        "shortAddress": "800 Adams St, Davis",
+        "phoneNumber": "(530) 753-3441",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHEz4O-C6odyWwebJKMSCZVaEY5Hc4iwSaXJObuTis9c1DgTGEkdc3lwlquK5YYr7-0xyi6jUQM3DNpaCAmNhDyRG190187NPk=s4800-w400-h400"
+    },
+    {
+        "name": "La Casa de Flores Apartments",
+        "googleId": "ChIJ9W1Cs6wphYAR13YDcrf1ezs",
+        "location": {
+            "latitude": 38.5469627,
+            "longitude": -121.7651901
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=4286289638613808855",
+        "websiteUri": "http://www.lacasadeflores.com/",
+        "address": "517 Oxford Cir, Davis, CA 95616, USA",
+        "shortAddress": "517 Oxford Cir, Davis",
+        "phoneNumber": "(530) 756-7699",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGHUh4mZsOw_dAVeMI5IkPZHLZmZtDTt2YJljqv9gTC2zn6HXqRCasghZeVC3DMIFUllzCqd0ag-hmpYDMY7DxYQOGIm6Jb-pU=s4800-w400-h400"
+    },
+    {
+        "name": "University Court",
+        "googleId": "ChIJo5IZgKwphYARFtrVdwa4DBo",
+        "location": {
+            "latitude": 38.5469777,
+            "longitude": -121.76250990000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1877077482626472470",
+        "websiteUri": "http://universitycourt.net/?utm_source=google%20-%20entratammb&utm_medium=organic&utm_campaign=gmb&utm_content=website%20click",
+        "address": "515 Sycamore Ln, Davis, CA 95616, USA",
+        "shortAddress": "515 Sycamore Ln, Davis",
+        "phoneNumber": "(530) 753-5429",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqF7hZ9rCGHpiz4vYq65I--LF1Ct6UqC9puqaDBRDYrMYAU8JqnVES4s6QfeM79ciEPY3MavRpdQ_IgeanNCb4-Jw-VFtBz5Apw=s4800-w400-h400"
+    },
+    {
+        "name": "Chaparral Apartments",
+        "googleId": "ChIJK9jJFzMohYAR1Nzt-XoRrBY",
+        "location": {
+            "latitude": 38.566287,
+            "longitude": -121.76664000000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1633699984705445076",
+        "websiteUri": "http://chaparral.tandemproperties.com/",
+        "address": "2689 Sycamore Ln, Davis, CA 95616, USA",
+        "shortAddress": "2689 Sycamore Ln, Davis",
+        "phoneNumber": "(877) 837-6795",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGSYiWoOBS8pdPPSisFYzUNIUoqpHkWQ-6VgnfGl8cxG-U1_mbenX5BvnYd2rCaBY5t-eNiQ_m57uc_RpA3ylmRLiCGGYRdng0=s4800-w400-h400"
+    },
+    {
+        "name": "B St Apartments by Brittain Commercial",
+        "googleId": "ChIJezwfeeYphYARDsguds_h8tk",
+        "location": {
+            "latitude": 38.5431452,
+            "longitude": -121.74491799999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=15704863131751598094",
+        "websiteUri": "https://www.brittaincommercial.net/",
+        "address": "217 B St, Davis, CA 95616, USA",
+        "shortAddress": "217 B St, Davis",
+        "phoneNumber": "(860) 785-2168",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq3wCH0BUaqOsJDvYalopxMi7SnFQf8MOf9NRcC5R7Q4KgqTqlFoxMtmAN1L5Hvr5ztpH0YN7ICm1D44MM7gn5USx3E6TH9wq-7R4V9FV_yBwvij_uA2MGMkibsPuo29KiQlQCpnJw=s4800-w400-h400"
+    },
+    {
+        "name": "298 Celadon",
+        "googleId": "ChIJFf2xaAAphYARscgIUp9UPVQ",
+        "location": {
+            "latitude": 38.5425344,
+            "longitude": -121.77310100000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=6070100916018137265",
+        "websiteUri": "",
+        "address": "298 Celadon St, Davis, CA 95616, USA",
+        "shortAddress": "298 Celadon St, Davis",
+        "phoneNumber": "",
+        "photo": ""
+    },
+    {
+        "name": "Almondwood Apartments",
+        "googleId": "ChIJZ7Ynh8ophYARuLLFYMVw1SM",
+        "location": {
+            "latitude": 38.561346,
+            "longitude": -121.76352299999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=2582093954401284792",
+        "websiteUri": "https://www.davisapartmentsforrent.com/almondwood/",
+        "address": "1212 Alvarado Ave, Davis, CA 95616, USA",
+        "shortAddress": "1212 Alvarado Ave, Davis",
+        "phoneNumber": "(530) 753-2115",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqH4gjYCoFhLBXlgG_5CbeMag3iUXVLmIGeVbQJ3xwM6oENUqt79LXLy7hEFLdAumv0UqMbn--jxutAFP37V0qfgZa4esH1Fe0s=s4800-w400-h400"
+    },
+    {
+        "name": "The Celeste",
+        "googleId": "ChIJlXmXLeIrhYARbzx_kLtHink",
+        "location": {
+            "latitude": 38.55001610000001,
+            "longitude": -121.70357240000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=8757891296284064879",
+        "websiteUri": "http://liveatceleste.com/",
+        "address": "3820 Chiles Rd, Davis, CA 95618, USA",
+        "shortAddress": "3820 Chiles Rd, Davis",
+        "phoneNumber": "(530) 564-3820",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFrHrhe9Fuld2KjYye467k1I8DtG7YvkIL89fciN4WcBPKIg_8Xt21E1RH8jJSgTjzbAm3y7rhRhKv3Am5xmq5E31-gCS8dg4k=s4800-w400-h400"
+    },
+    {
+        "name": "The Green at West Village",
+        "googleId": "ChIJNd_8UdcphYAR16TqXuG4uzM",
+        "location": {
+            "latitude": 38.541814699999996,
+            "longitude": -121.77679789999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=3727776394678805719",
+        "websiteUri": "https://thegreen.ucdavis.edu/",
+        "address": "2228 Tilia St, Davis, CA 95616, USA",
+        "shortAddress": "2228 Tilia St, Davis",
+        "phoneNumber": "(530) 752-2033",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq2cZ_8Br3BGh5p4CavEQGvLs29VJA2djX2rN5uXOobhhFLNZ1kB-QKfemCyhk4NPSmdJ66G4Ii6WcKeymPw3QyvCvnBlN0lDRqb4iTbdcIK1L5wvUPXtLN5xvQQLSEFHbOvpt_KUA=s4800-w400-h400"
+    },
+    {
+        "name": "Casitas",
+        "googleId": "ChIJkX8cEcophYARn7C4DKmhyzg",
+        "location": {
+            "latitude": 38.5623164,
+            "longitude": -121.75822850000002
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=4092542433831202975",
+        "websiteUri": "http://casitas.tandemproperties.com/",
+        "address": "717 Alvarado Ave, Davis, CA 95616, USA",
+        "shortAddress": "717 Alvarado Ave, Davis",
+        "phoneNumber": "(877) 850-5994",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFFV-0OTDWJcvP7n0kdyGEiMeffwPzuHqgTfk6PAWQwyvHM99dKQTPkHjXaTZa2-cmA-UGVbs6MWsjC2d5AT11MgYBI3iSwWvM=s4800-w400-h400"
+    },
+    {
+        "name": "The Spoke",
+        "googleId": "ChIJ122ZHp8phYARQqRhM7SaH0w",
+        "location": {
+            "latitude": 38.5536155,
+            "longitude": -121.7400588
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=5485272969907381314",
+        "websiteUri": "https://livethespoke.com/?switch_cls[id]=98512",
+        "address": "801 J St, Davis, CA 95616, USA",
+        "shortAddress": "801 J St, Davis",
+        "phoneNumber": "(530) 513-6375",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGGPzbrevPE5vv2Tc3RK2ZutmlBqZn7F-b9rMJspsgKqdUSSx_sNLORM2zohi2U17S8nrYUD-hHSBZ5TudyVIAc4kLdfySxgdM=s4800-w400-h400"
+    },
+    {
+        "name": "Temescal",
+        "googleId": "ChIJ5ZxFpjQohYARyY84fIoPrXU",
+        "location": {
+            "latitude": 38.5646434,
+            "longitude": -121.76602739999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=8479450760872497097",
+        "websiteUri": "https://www.temescalapartments.com/?utm_source=GBP&utm_medium=organic",
+        "address": "2477 Sycamore Ln, Davis, CA 95616, USA",
+        "shortAddress": "2477 Sycamore Ln, Davis",
+        "phoneNumber": "(530) 298-7698",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFff0qtvauGxTzA9EjOWXi6TeIRtYYYJdO_G_51t8YkCIRon45DCoIu16DJ69OO9_i57cEwi-mw53BZ74F7c37SzU9VeZOr7nA=s4800-w400-h400"
+    },
+    {
+        "name": "Sycamore Lane Apartments",
+        "googleId": "ChIJtR5SbKwphYARO32tiMzpHzI",
+        "location": {
+            "latitude": 38.5481719,
+            "longitude": -121.76038360000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=3611862490850098491",
+        "websiteUri": "https://www.sycamorelanedavis.com/",
+        "address": "614 Sycamore Ln, Davis, CA 95616, USA",
+        "shortAddress": "614 Sycamore Ln, Davis",
+        "phoneNumber": "(530) 756-4186",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHPv8fZPf3UC__vwiaXJHUjKy5G_PR7rO_G6rCpm8YZpEbzU1UsD3u7Om_gSzS7yiqVPkkXOHkaI0jDLF9f8VE2OJL2hHl7Hno=s4800-w400-h400"
+    },
+    {
+        "name": "Eleanor Roosevelt Circle",
+        "googleId": "ChIJaXpOtLUphYARJBR4L0CBFp0",
+        "location": {
+            "latitude": 38.5509351,
+            "longitude": -121.72055060000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=11319376826116609060",
+        "websiteUri": "",
+        "address": "675 Cantrill Dr, Davis, CA 95618, USA",
+        "shortAddress": "675 Cantrill Dr, Davis",
+        "phoneNumber": "",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq3X3wAcvQ5_OTyfyXhtazb8O-g0QJfJFYt1lv3u1isZVX8yk-8zlBag9P-nJauGeH_X6rliRDVUZo7THE26PUEdBBOMzBz4zp-51DYy-OFkc-xGHmITuPnzhI7gohK9fSjCVbeDYw=s4800-w400-h400"
+    },
+    {
+        "name": "Cascade Apartments",
+        "googleId": "ChIJzch2lHgphYARdX1Ydrncyuw",
+        "location": {
+            "latitude": 38.552854499999995,
+            "longitude": -121.72751740000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=17062692827359116661",
+        "websiteUri": "https://www.rentingdavis.com/cascade-apartments/",
+        "address": "771 Pole Line Rd, Davis, CA 95618, USA",
+        "shortAddress": "771 Pole Line Rd, Davis",
+        "phoneNumber": "(530) 758-4601",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHcrQHBTW9w7kxJjvRyfVaBjsy3Bd-zUJ6DERJ0inItwboSY9xbyDvOrU6u06H3NvFrz4QAhWJUHcV7Ew5OVvpJNK8zBU_NE2k=s4800-w400-h400"
+    },
+    {
+        "name": "Pinecrest Apartments",
+        "googleId": "ChIJlaApdJcphYARsF0W43Y_9vk",
+        "location": {
+            "latitude": 38.5591405,
+            "longitude": -121.7407546
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=18011653539563462064",
+        "websiteUri": "https://www.pinecrest-davis.com/?utm_source=GMB&utm_medium=organic",
+        "address": "920 Cranbrook Ct, Davis, CA 95616, USA",
+        "shortAddress": "920 Cranbrook Ct, Davis",
+        "phoneNumber": "(844) 890-0837",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGF_OtHldwsYwwbccUv-6RyaDh5xjN64qs9lbpbKHtAkJQdaEhzVZ6nHiJE_a7Ji5CfnX-nLzShNCvvYU_L4VTF3Ino6NTJY1Q=s4800-w400-h400"
+    },
+    {
+        "name": "Russell Park Apartments",
+        "googleId": "ChIJwc8ZF6sphYARRKqVv_P4hSo",
+        "location": {
+            "latitude": 38.543923,
+            "longitude": -121.763966
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=3064128847270488644",
+        "websiteUri": "http://russellpark.tandemproperties.com/",
+        "address": "Russell Park Community Center, 400 Russell Park, Davis, CA 95616, USA",
+        "shortAddress": "Russell Park Community Center, 400 Russell Park, Davis",
+        "phoneNumber": "(877) 801-7285",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFTkoYUYBzClmFDYQtFWNCM2pLrO5mLPlhFm1bGslVL2mzeglPKp7qwoGLDxE0Tq77pdwz4PKy28yD0r5JyDL1HPyKUFarhxLY=s4800-w400-h400"
+    },
+    {
+        "name": "Gate Way Properties",
+        "googleId": "ChIJJQJ6H9YrhYARy8pnBTT1NsI",
+        "location": {
+            "latitude": 38.548491899999995,
+            "longitude": -121.7214735
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=13994642495878187723",
+        "websiteUri": "",
+        "address": "2525 2nd St, Davis, CA 95618, USA",
+        "shortAddress": "2525 2nd St, Davis",
+        "phoneNumber": "(530) 758-7666",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqE60m4-wkAZ5WKWYLADPRYRbBVwQX7T2tjezl3uxIntcH0jQEZwhJPurOCBWaNPL9AiicGkZrwaW9CyCEjnCV_I3IM7tyFFWfw=s4800-w400-h400"
+    },
+    {
+        "name": "Cannery Village",
+        "googleId": "ChIJW51y_b0phYARxXOyrKpTfdE",
+        "location": {
+            "latitude": 38.5622477,
+            "longitude": -121.74289739999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=15095313518522692549",
+        "websiteUri": "http://www.bartlettcommons.com/",
+        "address": "900 Jacobsen Ln, Davis, CA 95616, USA",
+        "shortAddress": "900 Jacobsen Ln, Davis",
+        "phoneNumber": "(530) 368-4825",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq0PZ7cWySr-jXRlRp1sIZR_XJcOXgmX5Ho9T-2_TPHw03N-kia31hwLhzvrfnOPdOqd4rw7gcsrZlROezC6S8C2p68GRqUhxzTNN2BJFqp6XDQsjWsfvw5mXiEUXB5txGb_Ezn6=s4800-w400-h271"
+    },
+    {
+        "name": "Axis at Davis",
+        "googleId": "ChIJJV9eSnQphYARUikHeRQTfyk",
+        "location": {
+            "latitude": 38.545555900000004,
+            "longitude": -121.72338970000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=2990129656248084818",
+        "websiteUri": "http://axisdavis.com/",
+        "address": "2555 Research Park Dr, Davis, CA 95618, USA",
+        "shortAddress": "2555 Research Park Dr, Davis",
+        "phoneNumber": "(530) 297-8580",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqE3ifcRprzSBPoZE6o7UI2-OFbQqq1TWme5fxBuqhucbuM6RaMb9AcYMLfoZvpjvgvwXzNBesCbnbWjfpt1pRj1wLHrZVDlU20=s4800-w400-h400"
+    },
+    {
+        "name": "Suntree Apartments",
+        "googleId": "ChIJeZ06nL4phYARJVaBYB2KiJM",
+        "location": {
+            "latitude": 38.561521,
+            "longitude": -121.74621799999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=10630898779185829413",
+        "websiteUri": "http://suntree.tandemproperties.com/",
+        "address": "2033 F St, Davis, CA 95616, USA",
+        "shortAddress": "2033 F St, Davis",
+        "phoneNumber": "(877) 893-5860",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqEgDZ6sQs8t5D0co9WrHmjdUjm94v0ghZgrPIyOKsN6Rgt7ItdhIii44ZgymELjSXZEu2Bz7K-_ICdpbPys1wsxlyyTKRZKfG0=s4800-w400-h400"
+    },
+    {
+        "name": "Tandem Properties",
+        "googleId": "ChIJeX5D7cQphYARCntqlQe17c8",
+        "location": {
+            "latitude": 38.572792299999996,
+            "longitude": -121.7495613
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=14982830579507690250",
+        "websiteUri": "http://www.tandemproperties.com/",
+        "address": "3500 Anderson Rd, Davis, CA 95616, USA",
+        "shortAddress": "3500 Anderson Rd, Davis",
+        "phoneNumber": "(530) 756-5075",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq2_mmCl249C1ZD77WiRfiU8ZUThA_zpcs3WvPOYA_H2dkCvYD-9tQmwNdcs9uDSstMivg3hzoNkPTY8-FeNbsqOSKSkGWXSg5EHdxROcRHdlUyQKjLIK4kb-Ftv9JkFotrp8xw=s4800-w400-h400"
+    },
+    {
+        "name": "La Salle Apartments",
+        "googleId": "ChIJcREk9LUphYARqIpyijZUK1E",
+        "location": {
+            "latitude": 38.5614457,
+            "longitude": -121.760459
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=5848861134298450600",
+        "websiteUri": "http://www.lasalleapts.com/",
+        "address": "880 Alvarado Ave, Davis, CA 95616, USA",
+        "shortAddress": "880 Alvarado Ave, Davis",
+        "phoneNumber": "(530) 753-5155",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq0_hOGCiTaf-GZCyT1G50r8rcfttPDZvFKOJwE4B-TBj77OocDSi2VfpXbOfr3Y_USaMgDTy965ERmozX5AvabqoBNvUyUL5HCdiosjq7628wkBRAkpCaJFAhB_YDc4k9oiahuj=s4800-w400-h400"
+    },
+    {
+        "name": "Portage Bay",
+        "googleId": "ChIJ_6XTBmoohYAR_o1LOALacKY",
+        "location": {
+            "latitude": 38.5494164,
+            "longitude": -121.78774849999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=11993325510756896254",
+        "websiteUri": "http://www.portagebayapts.com/",
+        "address": "2949 Portage Bay W, Davis, CA 95616, USA",
+        "shortAddress": "2949 Portage Bay W, Davis",
+        "phoneNumber": "(530) 758-3190",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqF6YRCXFkh8LhdgoSU-P2Nsq1FZ6Xkwm6CpNlShHiTv861aTx2ZNt7s07-8U_14FuaIZKh6Pq0pCgZ_91wz1rRsQVPTtiT6z8U=s4800-w400-h400"
+    },
+    {
+        "name": "Greenbriar",
+        "googleId": "ChIJM0FB-KEphYARhFoKwZDW5g0",
+        "location": {
+            "latitude": 38.552799199999995,
+            "longitude": -121.74320979999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1001723884338829956",
+        "websiteUri": "http://www.greenbriardavis.com/",
+        "address": "581 9th St, Davis, CA 95616, USA",
+        "shortAddress": "581 9th St, Davis",
+        "phoneNumber": "(530) 753-0710",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq1Tl-gEBEr5u42YjEHisTIIU9aUMkowWLIB_ZdPGwYe2eqXug-ccKDtrLtjmh0zlY2sSzoa8yTSjTiALks-LomZajolJxYbKQd5hB5DNGZA33B6KOIEjjKUPY2PHPfMPOCqY4Z4tg=s4800-w400-h400"
+    },
+    {
+        "name": "\u6000\u4ec1\u5802",
+        "googleId": "ChIJYYtVXwAphYARzLrTEXeorrU",
+        "location": {
+            "latitude": 38.537448999999995,
+            "longitude": -121.77113499999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=13091586396166273740",
+        "websiteUri": "",
+        "address": "1721 Hutchison Dr, Davis, CA 95616, USA",
+        "shortAddress": "University of California Davis West Village, 1721 Hutchison Dr, Davis",
+        "phoneNumber": "",
+        "photo": ""
+    },
+    {
+        "name": "Ryder on Olive",
+        "googleId": "ChIJn3ZNdCgphYARUcREfrSP3cs",
+        "location": {
+            "latitude": 38.54303850000001,
+            "longitude": -121.7357688
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=14690055564927747153",
+        "websiteUri": "http://ryderonolive.com/",
+        "address": "1133 Olive Dr, Davis, CA 95616, USA",
+        "shortAddress": "1133 Olive Dr, Davis",
+        "phoneNumber": "(530) 513-6357",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqEMVsKGMwQX0Kp2vOvJGkJBRCMeFc1sQecax08Jy5fhj6Mh-dfX3REKbbV6hzT-0MDTqDLpxrXKtyJwm0tgtjqOMSGTLa6WUZE=s4800-w400-h400"
+    },
+    {
+        "name": "Lexington Apartments",
+        "googleId": "ChIJx30F7XEphYAR1Q0SSQtQZ-U",
+        "location": {
+            "latitude": 38.542049399999996,
+            "longitude": -121.73550409999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=16530268966687477205",
+        "websiteUri": "http://thelex.net/",
+        "address": "1100 Olive Dr, Davis, CA 95616, USA",
+        "shortAddress": "1100 Olive Dr, Davis",
+        "phoneNumber": "(530) 758-1541",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqG1bxmncsSab0lLgGNILlMOLEDjwNM2iESQfEWTEzE31fcAVUxHPl6xHcBOVg1aVAb83eZowRtCEPcT6i1MuzKTBdhd-O5pK_E=s4800-w400-h400"
+    },
+    {
+        "name": "Eastlake",
+        "googleId": "ChIJbyEL2j8ohYARwjk2NQJMucA",
+        "location": {
+            "latitude": 38.5558814,
+            "longitude": -121.78692489999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=13887214498340026818",
+        "websiteUri": "http://www.eastlakeapts.com/",
+        "address": "1420 Lake Blvd, Davis, CA 95616, USA",
+        "shortAddress": "1420 Lake Blvd, Davis",
+        "phoneNumber": "(530) 758-5253",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGU0lLc0Z20CjjWyyv4F8TZ633NofkQGwtbN6xHDYkpttDbnENEUfn_mml13FXJc5QuGTsYI5X9ROVIByh-wwJ0Rm1gf6-ZEPw=s4800-w400-h400"
+    },
+    {
+        "name": "The Colleges at La Rue Apartments",
+        "googleId": "ChIJ_U9p9QAphYARItEorYXUibY",
+        "location": {
+            "latitude": 38.5411742,
+            "longitude": -121.76214509999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=13153277857313116450",
+        "websiteUri": "http://colleges.tandemproperties.com/",
+        "address": "164 Orchard Park Dr, Davis, CA 95616, USA",
+        "shortAddress": "164 Orchard Park Dr, Davis",
+        "phoneNumber": "(877) 857-7521",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFq7R0CxrB27c1cgxQ33tsGdW7T7YtnUGxz_Cp1weksw1rJApECEk17huJvOmCt4ixCGB_Tcbrje2hme95q5PX3nf15Bu2xI98=s4800-w400-h400"
+    },
+    {
+        "name": "Cesar Chavez Plaza",
+        "googleId": "ChIJlcViuHEphYAReAvL0zyQ1eg",
+        "location": {
+            "latitude": 38.5424437,
+            "longitude": -121.73476069999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=16777474577764387704",
+        "websiteUri": "https://jsco.net/property/cesar-chavez-plaza/",
+        "address": "1220 Olive Dr apt 141, Davis, CA 95616, USA",
+        "shortAddress": "1220 Olive Dr apt 141, Davis",
+        "phoneNumber": "(530) 759-9887",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq1HakX6WDsL8MZa3gP9-9N99wxWN5V1UiERS-hX1mv31HBF58xG-92mqtnlDu1brFG3fKQvEF1FDC_UyYOOpbp2SK6dNGl41c4FCOXAzNc9u4tzOsJfey6AeHeE807yNWNIT2Nt=s4800-w400-h400"
+    },
+    {
+        "name": "Terracina at Wildhorse | Affordable Apartments",
+        "googleId": "ChIJvfPPNY0phYARhsujf5fzqRc",
+        "location": {
+            "latitude": 38.5709369,
+            "longitude": -121.7300407
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1705161765943495558",
+        "websiteUri": "https://terracinawildhorse.usamfm.com/?utm_source=GMB&utm_medium=organic",
+        "address": "1800 Moore Blvd, Davis, CA 95618, USA",
+        "shortAddress": "1800 Moore Blvd, Davis",
+        "phoneNumber": "(530) 758-1267",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq3EHDNO_LgOiRmPfWY6pD7YxwvvKV0mgBKSVmwN2IoK0q9asbVLODLwbcsG1SIWS74TsfNEStqov028I2CQB3y3T0c5NwmF493WvJQzDgLiCpw1ROdu0HeDIzMSiy_PPbg5UYZBXg=s4800-w400-h400"
+    },
+    {
+        "name": "Greenhaus Apartments",
+        "googleId": "ChIJI93s-xcphYARzxOUL4W-y0w",
+        "location": {
+            "latitude": 38.5416496,
+            "longitude": -121.73101360000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=5533726046392947663",
+        "websiteUri": "https://greenhausdavis.com/",
+        "address": "1720 Research Park Dr, Davis, CA 95618, USA",
+        "shortAddress": "1720 Research Park Dr, Davis",
+        "phoneNumber": "(844) 794-9601",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqE9p0PyJWbPjNKy-Lz6JrMYfapxKvMDctl1wx0b4w_cX9lPtWyIA659bRp-RtOmaf4SBDiswOPJVu7ssTYJ9IcpNswjSbOnPOc=s4800-w400-h400"
+    },
+    {
+        "name": "Alvarado Sunset",
+        "googleId": "ChIJnYdJf7cphYARjndRGrUnkjc",
+        "location": {
+            "latitude": 38.5611648,
+            "longitude": -121.7530136
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=4004306677469902734",
+        "websiteUri": "https://www.alvaradosunset.com/?utm_source=GMB&utm_medium=organic",
+        "address": "606 Alvarado Ave, Davis, CA 95616, USA",
+        "shortAddress": "606 Alvarado Ave, Davis",
+        "phoneNumber": "(530) 756-1220",
+        "photo": ""
+    },
+    {
+        "name": "Stonegate Village Apartments",
+        "googleId": "ChIJiZCtekIohYARFbxHzuZ3_5Q",
+        "location": {
+            "latitude": 38.5474229,
+            "longitude": -121.78719009999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=10736431869861542933",
+        "websiteUri": "http://www.stonegatevillageapt.com/",
+        "address": "2950 Portage Bay W, Davis, CA 95616, USA",
+        "shortAddress": "2950 Portage Bay W, Davis",
+        "phoneNumber": "(530) 756-2950",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHfz-v--MVI86OPayB9ty_GJBzKIp34dZQfB0y9LjENhxok6yGR4fTECEZ_GweFLPkUYxrCtCx7Crhb_MGHqbnXvujaxrXQTtE=s4800-w400-h400"
+    },
+    {
+        "name": "Clubside Apartments",
+        "googleId": "ChIJtVr5FUAohYARl-H8GJK3DxE",
+        "location": {
+            "latitude": 38.552646599999996,
+            "longitude": -121.7870178
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1229403061407768983",
+        "websiteUri": "http://www.clubsideapartment.com/",
+        "address": "1050 Lake Blvd, Davis, CA 95616, USA",
+        "shortAddress": "1050 Lake Blvd, Davis",
+        "phoneNumber": "(530) 753-6507",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqE2iyIWvof44M_B7qqBhBw5EjmuGhAyNyC0qJY_SJFkOVb7g1mhn21u5n7ewHbFH8BHoz48njnEt8bjs_ft7Kq_9q0n08aKiVw=s4800-w400-h400"
+    },
+    {
+        "name": "Renaissance Park Apartments",
+        "googleId": "ChIJkQggWtkrhYARo1k5qkUxiiY",
+        "location": {
+            "latitude": 38.5425458,
+            "longitude": -121.7147354
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=2777086295505721763",
+        "websiteUri": "https://www.renaissancepark-davis.com/?utm_source=GMB&utm_medium=organic",
+        "address": "3000 Lillard Dr, Davis, CA 95618, USA",
+        "shortAddress": "3000 Lillard Dr, Davis",
+        "phoneNumber": "(833) 531-2813",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqEyNvBK_y1U4_F9a2FYJIsMYbT3AcqkiUeRQVOKORSg7cKUC24K6BNUdWK7hIVpdmrpFwBHCckck_tNXSoKwPIjXoSyneFqgbg=s4800-w400-h400"
+    },
+    {
+        "name": "Adobe At Evergreen Apartments",
+        "googleId": "ChIJJZ9VaDYohYARyucU7yZq_tE",
+        "location": {
+            "latitude": 38.560068,
+            "longitude": -121.771035
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=15131648513463871434",
+        "websiteUri": "http://adobe.tandemproperties.com/",
+        "address": "1500 Shasta Dr, Davis, CA 95616, USA",
+        "shortAddress": "1500 Shasta Dr, Davis",
+        "phoneNumber": "(877) 850-5991",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHsCPfmiQyJycDupSxKZ1KKGc58DML9UYpKCfRvlmyQD00nxcx4vpauAEcKfkuuPFHSttfKqJdD70ucqW_DGCPFnFyAfM4Ogfk=s4800-w400-h400"
+    },
+    {
+        "name": "Heather Glen Apartments",
+        "googleId": "ChIJDyPh3x0phYARO2bzWqmHNiI",
+        "location": {
+            "latitude": 38.5545683,
+            "longitude": -121.78044860000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=2465307007477048891",
+        "websiteUri": "https://www.chochousing.org/heather-glen",
+        "address": "56 Shasta Dr, Davis, CA 95616, USA",
+        "shortAddress": "56 Shasta Dr, Davis",
+        "phoneNumber": "(530) 757-4440",
+        "photo": ""
+    },
+    {
+        "name": "Meadow Ridge",
+        "googleId": "ChIJnWW8XccrhYARwGIsg52Aup8",
+        "location": {
+            "latitude": 38.5489369,
+            "longitude": -121.69709350000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=11509653211697668800",
+        "websiteUri": "https://meadowridgedavis.com/",
+        "address": "4447 Cowell Blvd, Davis, CA 95618, USA",
+        "shortAddress": "4447 Cowell Blvd, Davis",
+        "phoneNumber": "(530) 753-7800",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFET-FRehNrhJy6BBSvgHjzgykthA7VfEqIcpI6e-cUxVLOZGb5UwYR1b6d0k3A8P_tguPaQarFS53cMkWV1XMVhMDur3N7-P4=s4800-w400-h400"
+    },
+    {
+        "name": "Pepperwood",
+        "googleId": "ChIJOYVD18ophYARSApJ5N1xeZU",
+        "location": {
+            "latitude": 38.5627999,
+            "longitude": -121.7645154
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=10770765181664954952",
+        "websiteUri": "https://www.pepperwoodapartments.com/?utm_source=GBP&utm_medium=organic",
+        "address": "2222 Sycamore Ln, Davis, CA 95616, USA",
+        "shortAddress": "2222 Sycamore Ln, Davis",
+        "phoneNumber": "(530) 298-7691",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHtf39zcTsnMWF4B_S6IdCi8FWDCkvRwWoAA67xtBFluJCIz06b_it7CwxQqMQx3kc-VPmbH9Cr6zLhOvQrwIzggL71waekEhg=s4800-w400-h400"
+    },
+    {
+        "name": "Homestead",
+        "googleId": "ChIJF6ashtUrhYARNS2CWMj5XRY",
+        "location": {
+            "latitude": 38.5530329,
+            "longitude": -121.71916920000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1611718880542207285",
+        "websiteUri": "http://www.chochousing.org/homestead",
+        "address": "2610 Grambling Ct, Davis, CA 95618, USA",
+        "shortAddress": "2610 Grambling Ct, Davis",
+        "phoneNumber": "(530) 758-2177",
+        "photo": ""
+    },
+    {
+        "name": "187 Mint Street",
+        "googleId": "ChIJVZyujCAphYARMb2UpKG6gnY",
+        "location": {
+            "latitude": 38.540599199999996,
+            "longitude": -121.7767849
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=8539593046861593905",
+        "websiteUri": "",
+        "address": "187 Mint St, Davis, CA 95616, USA",
+        "shortAddress": "187 Mint St, Davis",
+        "phoneNumber": "",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq0JdrMMc6CJHRKgVDoFNVOsy37xed32Gay2nVYcUPhbWUcOxYGkG_KbMVfZyKj-dnEV36ckltdm3bqMY3FaC3fCrleJ-cKAk2jLKrNA5_D167-seEqMoYo8y5Ry0eZVNisfM6WA=s4800-w400-h400"
+    },
+    {
+        "name": "Atriums at La Rue Park",
+        "googleId": "ChIJD754sqsphYARu7BVyD8Jt6s",
+        "location": {
+            "latitude": 38.5450185,
+            "longitude": -121.76387129999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=12373368670772375739",
+        "websiteUri": "http://atriums.tandemproperties.com/",
+        "address": "400 Russell Park, Davis, CA 95616, USA",
+        "shortAddress": "Russell Park Community Center, 400 Russell Park, Davis",
+        "phoneNumber": "(877) 801-7285",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHKdv8EXVgroCBaI9LkkjWGaOTgDKTZER7YEPGBIzml9oShrk0jC-0nGHDdL60Ndf6wOk7tpwKY7I4YbzBZ5Lxb7Y8B95VPTf0=s4800-w400-h400"
+    },
+    {
+        "name": "Sterling 5th Street",
+        "googleId": "ChIJWVbWfdcphYARU0vPoxXYMgk",
+        "location": {
+            "latitude": 38.5488044,
+            "longitude": -121.7240223
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=662829682631068499",
+        "websiteUri": "https://sterling5thstreet.com/",
+        "address": "2100 5th St, Davis, CA 95618, USA",
+        "shortAddress": "2100 5th St, Davis",
+        "phoneNumber": "(530) 446-2285",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHjQi58nX9lhQySwqsR9OMDRIzMit8thpydJvGdC8oQgDpvFu1pgt8D-g09otvO2C5FTE6OXKCSAN_xF_aFJNSPutdlrLrIyXA=s4800-w400-h400"
+    },
+    {
+        "name": "Aggie Square Apartments",
+        "googleId": "ChIJmVyds7cphYAROS8Y7UPbX_w",
+        "location": {
+            "latitude": 38.5614166,
+            "longitude": -121.75657960000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=18185494905132429113",
+        "websiteUri": "https://www.davisapartmentsforrent.com/aggiesquare/",
+        "address": "644 Alvarado Ave, Davis, CA 95616, USA",
+        "shortAddress": "644 Alvarado Ave, Davis",
+        "phoneNumber": "(530) 758-4752",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGCnEdQOJJqlfmve6qZFk1oivze1QxQ7DXFdd6Csy7gmzvKezFjJmgFW4mreQ9fvETMOmF5fuXaB5P_Pwe1z9qY0xRRcme8PyI=s4800-w400-h400"
+    },
+    {
+        "name": "Octave",
+        "googleId": "ChIJV0DzlmYphYAR1BoYiWRUFVA",
+        "location": {
+            "latitude": 38.5376185,
+            "longitude": -121.72771009999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=5770611288318679764",
+        "websiteUri": "https://www.liveatoctaveindavis.com/?utm_source=apartmentseo&utm_medium=googlepost&utm_campaign=aseogooglemybusinesspost",
+        "address": "1659 Drew Cir, Davis, CA 95618, USA",
+        "shortAddress": "1659 Drew Cir, Davis",
+        "phoneNumber": "(530) 554-4210",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHqVU6XjHX9hk53hcOPWPLFxJAIeg19ew2Lo03WAENxaeiExtzxaPCTn1qUC5Gd04WWDRP_a2JF6ueysrB43Q4L7C8KA7cMLYI=s4800-w400-h400"
+    },
+    {
+        "name": "Arlington Farm",
+        "googleId": "ChIJJUBZI0IohYARcV6dIR8Xe1U",
+        "location": {
+            "latitude": 38.548782599999996,
+            "longitude": -121.78596619999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=6159542337834671729",
+        "websiteUri": "http://arlingtonfarm.tandemproperties.com/",
+        "address": "2901 Portage Bay W, Davis, CA 95616, USA",
+        "shortAddress": "2901 Portage Bay W, Davis",
+        "phoneNumber": "(877) 872-2317",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGsf98ohPuqaheFZKs_gzl8dkSFZzVI81XwMhEElQ0Baz4auNK3X025G8_faEqhOfjMQU7s3Udr0JfJwZCkmTpUB_2Q_ungtLg=s4800-w400-h400"
+    },
+    {
+        "name": "Chautauqua Apartments",
+        "googleId": "ChIJkX8cEcophYARcp8qx9hopGM",
+        "location": {
+            "latitude": 38.5626823,
+            "longitude": -121.75948500000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=7179978986199097202",
+        "websiteUri": "http://chautauqua.tandemproperties.com/",
+        "address": "717 Alvarado Ave, Davis, CA 95616, USA",
+        "shortAddress": "717 Alvarado Ave, Davis",
+        "phoneNumber": "(877) 850-8611",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqEXmvFngsTX0LpilUUwFvc9KpVpsf3YXixFYhArU4ZPNMmDxvLiApJOgN8aP-yIbTUMDuVQ8RoE-RngbOJcL-QTCi_xJV346c8=s4800-w400-h400"
+    },
+    {
+        "name": "Viking Apartments",
+        "googleId": "ChIJiyaOg6EphYARNSLLt99mhps",
+        "location": {
+            "latitude": 38.551454199999995,
+            "longitude": -121.7447921
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=11206757833805341237",
+        "websiteUri": "https://www.rentingdavis.com/viking-apartments/",
+        "address": "801 D St, Davis, CA 95616, USA",
+        "shortAddress": "801 D St, Davis",
+        "phoneNumber": "(530) 756-4200",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFHdW7QD-AH39Jm7eHXmer_rrq9Gt5dLY7REE4bzVV7rESmdxUoYIIua3_UU7gMt7IWBABmUerWTcrG-U6rPMsWe9SA9GDDSrg=s4800-w400-h400"
+    },
+    {
+        "name": "Anderson Place Apartments",
+        "googleId": "ChIJG4xaErcphYARIkeEArPa0bY",
+        "location": {
+            "latitude": 38.5591733,
+            "longitude": -121.7551798
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=13173550847411636002",
+        "websiteUri": "http://andersonplace.tandemproperties.com/",
+        "address": "1850 Hanover Dr, Davis, CA 95616, USA",
+        "shortAddress": "1850 Hanover Dr, Davis",
+        "phoneNumber": "(877) 816-3627",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFi1frZlF1arPgylO6FcDJ9IcaFx3v73p5gxCG1_oHh9bs12KiHayGRT52Z7ecOCu8XjwOlCS3mmnQLC9NAYgbOOhzFnJdO9pE=s4800-w400-h400"
+    },
+    {
+        "name": "Sharps & Flats Apartment Homes",
+        "googleId": "ChIJz7h3wGYphYARR5Hw4Tl_jjI",
+        "location": {
+            "latitude": 38.5376785,
+            "longitude": -121.7262296
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=3642989035169812807",
+        "websiteUri": "https://www.liveatsharpsandflats.com/?utm_source=Homes%20eo&utm_medium=googlepost&utm_campaign=aseogooglemybusinesspost",
+        "address": "1660 Drew Cir, Davis, CA 95618, USA",
+        "shortAddress": "1660 Drew Cir, Davis",
+        "phoneNumber": "(530) 867-9219",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHgjh68h-Z8xCIzKJJp7Q6jgGB8kd1eZBaRSRja20443qhpQlljwq_46BLSG19oRvj-mC6E2cTUUzsGTsIhbIIE-e2FhuBIaGg=s4800-w400-h400"
+    },
+    {
+        "name": "Triebhaus",
+        "googleId": "ChIJXwNyr4gphYARBgGilAM-dNI",
+        "location": {
+            "latitude": 38.5497483,
+            "longitude": -121.76940539999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=15164814030362771718",
+        "websiteUri": "",
+        "address": "691 Adams St, Davis, CA 95616, USA",
+        "shortAddress": "691 Adams St, Davis",
+        "phoneNumber": "",
+        "photo": ""
+    },
+    {
+        "name": "Sundance Apartments",
+        "googleId": "ChIJkcC-MVIohYARtjInWB9Q5Ng",
+        "location": {
+            "latitude": 38.5473607,
+            "longitude": -121.76995050000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=15628704702435635894",
+        "websiteUri": "http://sundance.tandemproperties.com/",
+        "address": "510 Arthur St, Davis, CA 95616, USA",
+        "shortAddress": "510 Arthur St, Davis",
+        "phoneNumber": "(877) 885-1506",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqG719XgDG9KDWRrYpR3dK0uByy3WyiGXLUMjTkDq-9Mjoe8KTZ0X8KetqYIQGAGbUql6ifMPaVeZzbuV5VlQLR0B8aX6Z-LIms=s4800-w400-h400"
+    },
+    {
+        "name": "Cranbrook Apartments",
+        "googleId": "ChIJOTKOzpcphYARNM7Qr4n25mA",
+        "location": {
+            "latitude": 38.560062699999996,
+            "longitude": -121.7414117
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=6982539343505182260",
+        "websiteUri": "http://cranbrook.tandemproperties.com/",
+        "address": "955 Cranbrook Ct, Davis, CA 95616, USA",
+        "shortAddress": "955 Cranbrook Ct, Davis",
+        "phoneNumber": "(877) 814-2706",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHSTCYTLk5Ia_mPDynjyMBILRG8XZvSBxA04gsWbBpXVD4e8a0QGASRg06rXjtsy0qfwi9-CjC55sOiKMmycVXIHRKtziOzjCU=s4800-w400-h400"
+    },
+    {
+        "name": "Cambridge House",
+        "googleId": "ChIJEx0H5HgphYARy_0pNYsm21s",
+        "location": {
+            "latitude": 38.550741699999996,
+            "longitude": -121.7275043
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=6618926456685329867",
+        "websiteUri": "https://www.cambridgehousedavis.com/",
+        "address": "619 Pole Line Rd, Davis, CA 95618, USA",
+        "shortAddress": "619 Pole Line Rd, Davis",
+        "phoneNumber": "(530) 756-4020",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHDnjG4YfBvIC_nal3LEpgknqgAghMr1q5QduesFlyCf5sczdvcawt4tXgSQHgKeuwi9MMVqL70KFXb2_4Qwhhs-gxhei1m7vg=s4800-w400-h400"
+    },
+    {
+        "name": "The Drake and Anderson Court Apartments",
+        "googleId": "ChIJOSifeLYphYAR-e-9Gw5XAls",
+        "location": {
+            "latitude": 38.5601501,
+            "longitude": -121.7594711
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=6557899725511454713",
+        "websiteUri": "https://www.thedrakedavis.com/",
+        "address": "1905 Anderson Rd, Davis, CA 95616, USA",
+        "shortAddress": "1905 Anderson Rd, Davis",
+        "phoneNumber": "(530) 756-4488",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFs9r1CTDRuuk5TwP8tvvtPGksicdOCW1d9Sq1DThRigZTvtVwrKqSRyVF5w_cb36gFFuIUc-fMOeD0ol074PVG6DBwoDlRw0g=s4800-w400-h400"
+    },
+    {
+        "name": "South Community Center",
+        "googleId": "ChIJ8duHZgAphYARnMU3fFHWjoM",
+        "location": {
+            "latitude": 38.5445315,
+            "longitude": -121.76516939999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=9479749911126197660",
+        "websiteUri": "https://housing.ucdavis.edu/apartments/orchard-park/",
+        "address": "Orchard Park Apartments, 5002 Orchard Park Cir, Davis, CA 95616, USA",
+        "shortAddress": "Orchard Park Apartments, 5002 Orchard Park Cir, Davis",
+        "phoneNumber": "",
+        "photo": ""
+    },
+    {
+        "name": "The Willows",
+        "googleId": "ChIJS2lowD0ohYARIx2SYBqpECw",
+        "location": {
+            "latitude": 38.560379499999996,
+            "longitude": -121.7875684
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=3175223668050631971",
+        "websiteUri": "http://willows.tandemproperties.com/",
+        "address": "1959 Lake Blvd, Davis, CA 95616, USA",
+        "shortAddress": "1959 Lake Blvd, Davis",
+        "phoneNumber": "(888) 315-7214",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqG8rej7hrzwkwoy39_fwqobM1_nTh2__3RkCS4bgL2jpmj2J-GEurPonqMXaKjsAbA9GJflvdP0XZIwx_oKm5LCHfnrwg7pcUg=s4800-w400-h400"
+    },
+    {
+        "name": "The Grove at Davis",
+        "googleId": "ChIJY5VLcUAohYARvCnFBGaju8g",
+        "location": {
+            "latitude": 38.5536994,
+            "longitude": -121.7859725
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=14464334286792501692",
+        "websiteUri": "https://www.thegroveapartmentsatdavis.com/",
+        "address": "1333 Arlington Blvd, Davis, CA 95616, USA",
+        "shortAddress": "1333 Arlington Blvd, Davis",
+        "phoneNumber": "(530) 298-6927",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqHGXnLMUwxPLSGPi0dF80XCRcXww-zRdJchWlRcj8-UYRpYtPZlyJk2Ffb4392mLdPB23fDmfvNQjaKpQmKF6xEslJhgmWhgC0=s4800-w400-h400"
+    },
+    {
+        "name": "The Alhambra at Mace Ranch",
+        "googleId": "ChIJs1yT5skrhYARvR7l35jAnyg",
+        "location": {
+            "latitude": 38.5571759,
+            "longitude": -121.69702950000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=2927270045638008509",
+        "websiteUri": "https://www.liveatalhambramaceranch.com/",
+        "address": "4500 Alhambra Dr, Davis, CA 95618, USA",
+        "shortAddress": "4500 Alhambra Dr, Davis",
+        "phoneNumber": "(844) 868-4851",
+        "photo": ""
+    },
+    {
+        "name": "Eighth Street Apartments.",
+        "googleId": "ChIJmz1G35wphYAR1QttwfblZ5A",
+        "location": {
+            "latitude": 38.553843799999996,
+            "longitude": -121.73221640000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=10405538312032685013",
+        "websiteUri": "https://www.simmonsre.net/8th-street",
+        "address": "1521 E 8th St, Davis, CA 95616, USA",
+        "shortAddress": "1521 E 8th St, Davis",
+        "phoneNumber": "(530) 758-2261",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFuBwKcqL_4hrZf9p-wt1mnC53jtrMSNzLau4G3IABSjG9XlDibkVkAikdh6_f_Q-_Ggf9Q_IU77oOiwML7w8UsDtZRsNbO1Ug=s4800-w400-h400"
+    },
+    {
+        "name": "The Arbors",
+        "googleId": "ChIJbTlaVHAphYARcEe1s1E60ok",
+        "location": {
+            "latitude": 38.5436955,
+            "longitude": -121.73385929999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=9931064250887128944",
+        "websiteUri": "https://www.thearbors.com/",
+        "address": "1280 Olive Dr, Davis, CA 95616, USA",
+        "shortAddress": "1280 Olive Dr, Davis",
+        "phoneNumber": "(530) 756-2424",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq1jPeUeChTSbMCzru5qswz-2GWb6-c8eZya47fdMkx-SIdmTD3ELSDNDT51dM4aHkupB_vB0l2eca_8bAaNdiSm-1_TvDC3m60uBnmvbBwIpQx83sdW-1s2Ti6J1nhkJkxOgiDEPg=s4800-w400-h400"
+    },
+    {
+        "name": "Tanglewood",
+        "googleId": "ChIJMbKjuWUphYARnv8bdCK5SyY",
+        "location": {
+            "latitude": 38.539514,
+            "longitude": -121.72895600000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=2759502754322579358",
+        "websiteUri": "https://www.tanglewooddavisliving.com/?utm_source=GBP&utm_medium=organic",
+        "address": "1880 Cowell Blvd, Davis, CA 95618, USA",
+        "shortAddress": "1880 Cowell Blvd, Davis",
+        "phoneNumber": "(530) 564-6795",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFXWxbRhsP4hAhJupFS3lisFpQPs7WXf9n1A5hqmh7_6KbTXVTRNY9ciZUUjgYwgwX0o0L_GiYXrHrOlxddoNUnY7bUMaO-yOI=s4800-w400-h400"
+    },
+    {
+        "name": "Lanai Garden Apartments",
+        "googleId": "ChIJKb-f7IIphYAR5pKImxCcIiE",
+        "location": {
+            "latitude": 38.5535632,
+            "longitude": -121.72938680000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=2387642347602612966",
+        "websiteUri": "",
+        "address": "1841 E 8th St, Davis, CA 95616, USA",
+        "shortAddress": "1841 E 8th St, Davis",
+        "phoneNumber": "(530) 753-5025",
+        "photo": ""
+    },
+    {
+        "name": "Clearwater Apartments",
+        "googleId": "ChIJc-688cYrhYAREaR2-KsYlxg",
+        "location": {
+            "latitude": 38.5483663,
+            "longitude": -121.70082279999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1771912105280578577",
+        "websiteUri": "https://werent.com/davis/",
+        "address": "4141 Cowell Blvd, Davis, CA 95618, USA",
+        "shortAddress": "4141 Cowell Blvd, Davis",
+        "phoneNumber": "(530) 758-2411",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq3GeoSLC2ZRrpZ9M2XPEbl90S8nlMgc3AzTP1eKMS9f39Z6sdsaxWJwVdviblPoAlUkiD2H72ZiE6YPnZ5wAg0mtMmk45ddLhD0namvbdtJUmfEypKynGWBlEG3lUK1PFqhr5yhkA=s4800-w400-h400"
+    },
+    {
+        "name": "8th & Wake",
+        "googleId": "ChIJm9ECk1IohYARInDvm706284",
+        "location": {
+            "latitude": 38.5485104,
+            "longitude": -121.76692269999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=14905571977752178722",
+        "websiteUri": "http://www.8thandwake.com/",
+        "address": "1440 Wake Forest Dr, Davis, CA 95616, USA",
+        "shortAddress": "1440 Wake Forest Dr, Davis",
+        "phoneNumber": "(530) 298-7777",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq2ypqQuCqyep0vUzyn1dtRBUfCJvtOwqhvCCP-KHvzdg6OM5WtnV7hVCgzmblMBKOFX9WdWDRoQTTZFothvx6QQkOR9dOQpsjThi7V4iR-L3HcztIRu67_47WHF-Yz2CPm6hWw=s4800-w400-h400"
+    },
+    {
+        "name": "Ellington Apartments",
+        "googleId": "ChIJ8fXcQ7krhYAR7_0nUIeGF4M",
+        "location": {
+            "latitude": 38.550199,
+            "longitude": -121.69121500000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=9446166659156409839",
+        "websiteUri": "https://www.ellington-apts.com/?utm_source=apartmentseo&utm_medium=gmb&utm_campaign=organicmaplisting",
+        "address": "4849 El Cemonte Ave, Davis, CA 95618, USA",
+        "shortAddress": "4849 El Cemonte Ave, Davis",
+        "phoneNumber": "(530) 270-3504",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFnTcsW4QQuTNW5XACiKrsNRJ71sgyjl2o00IipQBD0EiNb7L4x_dWXTnS6iw4NDvl_i_PnaiCxxDqDRmF-nL0Hlsq-l04Zlf8=s4800-w400-h400"
+    },
+    {
+        "name": "Fountain Circle Townhomes",
+        "googleId": "ChIJtSyz5sophYARFVILbDrrWzA",
+        "location": {
+            "latitude": 38.5622373,
+            "longitude": -121.76316219999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=3484637372854522389",
+        "websiteUri": "https://www.davisapartmentsforrent.com/fountaincircle/",
+        "address": "1213 Alvarado Ave, Davis, CA 95616, USA",
+        "shortAddress": "1213 Alvarado Ave, Davis",
+        "phoneNumber": "(530) 753-0408",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFCPM_ljt_z6VF4bFrbVGjfNAUlsh0IC3vLXQMTIZYOxp3RNyrDp1MRjAYaUAp3bGB6dwKXNTj8YHaT69y8Nu8PQXYBuMzqk6o=s4800-w400-h400"
+    },
+    {
+        "name": "New Harmony Mutual Housing Community",
+        "googleId": "ChIJl0Rs8NkrhYAR9jEI8pkHwtE",
+        "location": {
+            "latitude": 38.5474543,
+            "longitude": -121.71412509999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=15114651657180819958",
+        "websiteUri": "https://www.newharmonymutualhousing.com/",
+        "address": "3030 Cowell Blvd, Davis, CA 95618, USA",
+        "shortAddress": "3030 Cowell Blvd, Davis",
+        "phoneNumber": "(530) 758-2889",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq36w647xIWh6N_XCfYj65IIlqTSk6pPFgyG6pGRpOMbDPSxl_m_eQpvnoiYRrmlAAQtAo4jy7nN24yQ-WuR0NCWokBbJF05RPPETrraXmQ0IgGdmPVUfWBJ0ZVHq2k_Z9Pt6qAZOw=s4800-w400-h400"
+    },
+    {
+        "name": "Oakshade Commons-FPI Management",
+        "googleId": "ChIJgXFY3GMphYARZasTX_n0LAc",
+        "location": {
+            "latitude": 38.5401484,
+            "longitude": -121.7240277
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=517057409119923045",
+        "websiteUri": "https://www.oakshadecommons.com/",
+        "address": "2120 Cowell Blvd, Davis, CA 95618, USA",
+        "shortAddress": "2120 Cowell Blvd, Davis",
+        "phoneNumber": "(530) 747-0632",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFXJ1HYMqtVqPD0uuBnGEOi24j2Qcvt9_Y_9bdfI4lnxWjrpqGwoxnXRs29_R5j8hh2IA2cytW5Sp3MDjh0b6Fq_qA5TA57JNM=s4800-w400-h400"
+    },
+    {
+        "name": "Pennsylvania Place Apartments",
+        "googleId": "ChIJzVv6_54phYARBvJRnhsMHn8",
+        "location": {
+            "latitude": 38.5515057,
+            "longitude": -121.73943019999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=9159772004877988358",
+        "websiteUri": "https://aorealtycorp.com/848/pennsylvania-place-apartments-for-rent/davis/95616",
+        "address": "911 Pennsylvania Pl, Davis, CA 95616, USA",
+        "shortAddress": "911 Pennsylvania Pl, Davis",
+        "phoneNumber": "(530) 756-3355",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq20DlgNqhG1Qpe7ifzFT0BCKR0I8zNG1p0-QY7Yyn5RV8IXy7FsUvnPHJJWX32NbROG4Oj_c0qmivoF5BCPJMXXLh4pretYEMQcMQ_yX3O9NXBXVvsReSct_GleJVBlkwv3vQU=s4800-w400-h400"
+    },
+    {
+        "name": "Del Rio Live-Work Lofts",
+        "googleId": "ChIJ5QTuJtQrhYARMc4o1yD7gPE",
+        "location": {
+            "latitude": 38.551885899999995,
+            "longitude": -121.7159882
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=17402185078626897457",
+        "websiteUri": "",
+        "address": "2779 Del Rio Pl, Davis, CA 95618, USA",
+        "shortAddress": "2779 Del Rio Pl, Davis",
+        "phoneNumber": "(530) 304-7513",
+        "photo": ""
+    },
+    {
+        "name": "Creekside",
+        "googleId": "ChIJiXocb0ArhYARBge_UuDS4qA",
+        "location": {
+            "latitude": 38.5533748,
+            "longitude": -121.71186589999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=11593060251707836166",
+        "websiteUri": "https://jsco.net/property/creekside-davis-apartments/",
+        "address": "2990 5th St, Davis, CA 95618, USA",
+        "shortAddress": "2990 5th St, Davis",
+        "phoneNumber": "(530) 750-7900",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq0f830v2_2UuqGyOW-HsAHjtvYogwQqSTUE_7Ll03EArmCn4FnRBy6IyG0dbr_Etgoizrqj7iGh4hnskntW_4ajkhg9xtPRgp8G5yRKI5nM4qiLR4JKVZzlbVnydfUJEp8uoEJKTw=s4800-w400-h400"
+    },
+    {
+        "name": "Twin Pines Apartments",
+        "googleId": "ChIJuaOQwnQphYARsruxPRy6Cns",
+        "location": {
+            "latitude": 38.574205,
+            "longitude": -121.7480101
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=8866103446889151410",
+        "websiteUri": "https://www.twinpinesmutualhousing.com/",
+        "address": "3333 F St, Davis, CA 95616, USA",
+        "shortAddress": "3333 F St, Davis",
+        "phoneNumber": "(530) 792-0400",
+        "photo": ""
+    },
+    {
+        "name": "Brisa Villas",
+        "googleId": "ChIJp3hZPGEphYARdM95vKoD9lE",
+        "location": {
+            "latitude": 38.5385829,
+            "longitude": -121.72394029999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=5905911993184407412",
+        "websiteUri": "https://brisa-davis.com/",
+        "address": "1600 Valdora St, Davis, CA 95618, USA",
+        "shortAddress": "1600 Valdora St, Davis",
+        "phoneNumber": "(530) 758-2662",
+        "photo": ""
+    },
+    {
+        "name": "The Trees",
+        "googleId": "ChIJofDqwGkohYAR0LXKgdXMRn0",
+        "location": {
+            "latitude": 38.5476129,
+            "longitude": -121.78861789999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=9027127720488383952",
+        "websiteUri": "http://www.thetreesapartmentsdavis.com/",
+        "address": "510 Lake Blvd, Davis, CA 95616, USA",
+        "shortAddress": "510 Lake Blvd, Davis",
+        "phoneNumber": "(530) 758-8733",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq3FuawhE0Nc4egXw7hvpQpIE5aEgDa32-xXLpeyMin3SS7SGT-O8mXO-nbcYC16b6Yu3NOo-ymUKovGgZ72xl8moravLxBo2uYOlyWg9CCJEjH88hxj_Z34KcSsH65McA5x7Q4=s4800-w400-h400"
+    },
+    {
+        "name": "The Edge Apartments",
+        "googleId": "ChIJKymPxsUrhYAR73egFucVU4k",
+        "location": {
+            "latitude": 38.548624,
+            "longitude": -121.70258369999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=9895276888524355567",
+        "websiteUri": "https://www.theedgeaptsdavis.com/?rcstdid=Mg%3D%3D-YRjTEizZPgM%3D&utm_source=GBP&utm_medium=organic",
+        "address": "4005 Cowell Blvd, Davis, CA 95618, USA",
+        "shortAddress": "4005 Cowell Blvd, Davis",
+        "phoneNumber": "(888) 864-8935",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqECnVDVjjxhgKffqBM_xUKgmjbYm9gygKCeginD1LmnV3qK2eFDL3FFjtGqqtIuvVeP2rB55MsvreRKGlU0hGinw4KRx3NFHtI=s4800-w400-h400"
+    },
+    {
+        "name": "Third & C",
+        "googleId": "ChIJ9x2RvbUphYARg8dkivwEZc0",
+        "location": {
+            "latitude": 38.5439497,
+            "longitude": -121.74388549999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=14800241233123133315",
+        "websiteUri": "",
+        "address": "330 3rd St, Davis, CA 95616, USA",
+        "shortAddress": "330 3rd St, Davis",
+        "phoneNumber": "",
+        "photo": ""
+    },
+    {
+        "name": "Muir Commons",
+        "googleId": "ChIJKTTzf0cohYARcCj40vhPQ1Y",
+        "location": {
+            "latitude": 38.555968,
+            "longitude": -121.77940799999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=6215899840811378800",
+        "websiteUri": "",
+        "address": "2222 Muir Woods Pl, Davis, CA 95616, USA",
+        "shortAddress": "2222 Muir Woods Pl, Davis",
+        "phoneNumber": "(530) 758-5202",
+        "photo": ""
+    },
+    {
+        "name": "3rd & U Apartments",
+        "googleId": "ChIJEwRBuQsphYAROAu8IVPAv9Y",
+        "location": {
+            "latitude": 38.543864299999996,
+            "longitude": -121.74628349999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=15474298307949103928",
+        "websiteUri": "http://collegetownrealty.net/prod03.htm",
+        "address": "223 3rd St, Davis, CA 95616, USA",
+        "shortAddress": "223 3rd St, Davis",
+        "phoneNumber": "",
+        "photo": ""
+    },
+    {
+        "name": "Walnut Terrace Apartments",
+        "googleId": "ChIJ3ybeRNIrhYARwG_vxZUVQwg",
+        "location": {
+            "latitude": 38.5549581,
+            "longitude": -121.71008270000002
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=595343308758151104",
+        "websiteUri": "",
+        "address": "3101 5th St, Davis, CA 95618, USA",
+        "shortAddress": "3101 5th St, Davis",
+        "phoneNumber": "(530) 771-2379",
+        "photo": ""
+    },
+    {
+        "name": "Campus Manor",
+        "googleId": "ChIJBZca6gsphYARxxyQIXocjrE",
+        "location": {
+            "latitude": 38.543292699999995,
+            "longitude": -121.7466654
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=12794194902280838343",
+        "websiteUri": "",
+        "address": "230 A St, Davis, CA 95616, USA",
+        "shortAddress": "230 A St, Davis",
+        "phoneNumber": "",
+        "photo": ""
+    },
+    {
+        "name": "301 Citron",
+        "googleId": "ChIJI3lmq5MphYARJO6V9BPICpk",
+        "location": {
+            "latitude": 38.5426543,
+            "longitude": -121.7764783
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=11027846625603481124",
+        "websiteUri": "https://housing.ucdavis.edu/apartments/the-green/floor-plans/301-citron-street/",
+        "address": "301 Citron St, Davis, CA 95616, USA",
+        "shortAddress": "301 Citron St, Davis",
+        "phoneNumber": "(530) 752-2033",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq2nbu67WD10RxoiFf3QrQ5P7BtpcpbLZqlwzySdOcECM5nrIWKNv6WrgsCrke4EmSJIdTBw6dp4Xlxg17wAHT1sz7M6K0zziNfor5pNJphmEBiTvn5pI0dxrKqH4Cm_I0j2M1fxrA=s4800-w400-h400"
+    },
+    {
+        "name": "Chestnut Place Apartments",
+        "googleId": "ChIJQbeiLp0phYARtgcPtmZ3Spg",
+        "location": {
+            "latitude": 38.5536817,
+            "longitude": -121.73145249999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=10973714725066442678",
+        "websiteUri": "https://sites.google.com/view/chestnut-place-apartments",
+        "address": "1615 E 8th St, Davis, CA 95616, USA",
+        "shortAddress": "1615 E 8th St, Davis",
+        "phoneNumber": "(530) 753-0695",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGm4paIdkViy7O1U2w5jErCadJggBw_Nvnw9pXgSNFwUkmvbH5_NknrbyI24TNy2nF8lT8K22ZJWpHDC4ux_jzGy74eZzae8FU=s4800-w400-h400"
+    },
+    {
+        "name": "Saratoga West",
+        "googleId": "ChIJeYS7zzkohYARrle8w6TWIXs",
+        "location": {
+            "latitude": 38.560055899999995,
+            "longitude": -121.77688699999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=8872608744043468718",
+        "websiteUri": "https://saratogawest.yolopropertymanagement.com/",
+        "address": "2121 Glacier Dr, Davis, CA 95616, USA",
+        "shortAddress": "2121 Glacier Dr, Davis",
+        "phoneNumber": "(530) 297-0770",
+        "photo": ""
+    },
+    {
+        "name": "Silverstone Apartments",
+        "googleId": "ChIJpYvsN44phYARHSSzKG1kUUY",
+        "location": {
+            "latitude": 38.564516399999995,
+            "longitude": -121.72959870000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=5066941475765560349",
+        "websiteUri": "https://www.silverstone-davis.com/?utm_source=GMB&utm_medium=organic",
+        "address": "2400 Pole Line Rd, Davis, CA 95618, USA",
+        "shortAddress": "2400 Pole Line Rd, Davis",
+        "phoneNumber": "(844) 884-1475",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGADOLMZNL9bDKQ0_YnDnlIujhzh3sa86Wni6SWFdF99fZ-9Rqv6zMpVqFEgmQoHURmBbTXv0KwMN3KKEJ5o8N6iuWQA-DKAnY=s4800-w400-h400"
+    },
+    {
+        "name": "University Square",
+        "googleId": "ChIJT4l_s3YphYARR-kwKoFk-cI",
+        "location": {
+            "latitude": 38.5457393,
+            "longitude": -121.73566539999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=14049371018480380231",
+        "websiteUri": "https://aorealtycorp.com/805/university-square-apartments-apartments-for-rent/davis/95616",
+        "address": "300 J St, Davis, CA 95616, USA",
+        "shortAddress": "300 J St, Davis",
+        "phoneNumber": "(530) 753-3408",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq095X3YcDPJj-6qMOXXVATJdUsxULfrqJcVDoaoJpbdOlHiFQ88b7Df56VkL0stNq0u5yviBHhYJNf-j8svCGcdIXnuoAqTO0blm8o4VZ4FO_GC--BBMSe-44ORgZBkGT-6Zs-f=s4800-w400-h400"
+    },
+    {
+        "name": "Villa Verde Apartments",
+        "googleId": "ChIJp7HrlOwphYARxJJgsgg3LW8",
+        "location": {
+            "latitude": 38.542944299999995,
+            "longitude": -121.7455806
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=8011119822653919940",
+        "websiteUri": "",
+        "address": "200-298 University Ave, Davis, CA 95616, USA",
+        "shortAddress": "200-298 University Ave, Davis",
+        "phoneNumber": "",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq00Vf4YpGR6TvundObzj9HOUsy6frKM8GYSNc86ZumyQ3YHlg78SLXfERDC0yLmcenCL8YNJexW_btSrp7VaM6oC7lwGzgiMEjy6S1PHPGVeOWlXmuPmgfd1KqTbOgB8MZsvfPVvA=s4800-w400-h400"
+    },
+    {
+        "name": "Tremont Green",
+        "googleId": "ChIJYTKz5KArhYAR4Et_ZIXj5RA",
+        "location": {
+            "latitude": 38.552204200000006,
+            "longitude": -121.6764712
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1217629436329806816",
+        "websiteUri": "https://www.tremontgreenmutualhousing.com/",
+        "address": "5663 Marden St, Davis, CA 95618, USA",
+        "shortAddress": "5663 Marden St, Davis",
+        "phoneNumber": "(530) 747-0368",
+        "photo": ""
+    },
+    {
+        "name": "Pi\u00f1on",
+        "googleId": "ChIJzxE7PlMohYAR-uFZlhH_imA",
+        "location": {
+            "latitude": 38.5471408,
+            "longitude": -121.76661089999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=6956653025429152250",
+        "websiteUri": "https://www.tccproperties.net/property/pinon-apartments/",
+        "address": "555 Guava Ln, Davis, CA 95616, USA",
+        "shortAddress": "555 Guava Ln, Davis",
+        "phoneNumber": "(530) 753-7555",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq2ilaf5RfxDvf-TWGKCmVKC_iD_QrUn6UrrtU9DQ4kOPYshZLNXc1m_aFRE5pX39vD9vafIEovpbihEox2foV5eiGugVpAVaN4g_m3BRdWk5D5ye_TDu_27SwYoR1keoLg9nno9tg=s4800-w400-h400"
+    },
+    {
+        "name": "El Macero Apartments",
+        "googleId": "ChIJDZoKNrkrhYAR1HxBWuF_33E",
+        "location": {
+            "latitude": 38.549407099999996,
+            "longitude": -121.69275739999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=8205417651950943444",
+        "websiteUri": "https://www.liveatelmacero.com/?utm_source=apartmentseo&utm_medium=gmb&utm_campaign=organicmaplisting",
+        "address": "4735 Cowell Blvd, Davis, CA 95618, USA",
+        "shortAddress": "4735 Cowell Blvd, Davis",
+        "phoneNumber": "(530) 657-0375",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGpmnpg8PVxEPjHJ4S2Qw0flOFg5kr1t_Svn87UCBnxNSlVb6ZhUOCzKAI5WuOJU9_Szt2yoSf-hlegKX4H1ROYnY3iIA2IxQA=s4800-w400-h400"
+    },
+    {
+        "name": "Apartment",
+        "googleId": "ChIJR2ndRxcphYAR7MpQgz3VTQo",
+        "location": {
+            "latitude": 38.5413407,
+            "longitude": -121.77702049999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=742483973758831340",
+        "websiteUri": "",
+        "address": "2231 Jade St, Davis, CA 95616, USA",
+        "shortAddress": "2231 Jade St, Davis",
+        "phoneNumber": "",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq2ttguxFJJlpI6F_5heF4nL2ESClPgt1L2WBO8fBFrPTl16YZzyqLirT3jNLc-MNGBlm2c1LHjGQbwEpiOnpeB5fGiv8F4Q37RlYRPWi2O62m7QXwtodTVWO-_HDsXkQ8BoxIr1=s4800-w400-h400"
+    },
+    {
+        "name": "Sol at West Village",
+        "googleId": "ChIJwxvYcVYohYAR1jUlI_m1sqk",
+        "location": {
+            "latitude": 38.540895,
+            "longitude": -121.7711453
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=12228036019905443286",
+        "websiteUri": "https://www.solatwestvillage.com/?utm_source=GoogleMyBusiness&utm_medium=organic&utm_campaign=GMB",
+        "address": "1580 Jade St, Davis, CA 95616, USA",
+        "shortAddress": "University of California Davis West Village, 1580 Jade St, Davis",
+        "phoneNumber": "(888) 413-6053",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGX2N33OHlKGtBvQ5_iuQZx4wbW32TS00ZmQGgjp00Vp58RcDLI-s9Oj5jN52Y6I3NjCATsERratBqzOvPhO4AAewuQiKXNJu0=s4800-w400-h400"
+    },
+    {
+        "name": "gps",
+        "googleId": "ChIJU2dET7gphYARU4KZf_oAHHU",
+        "location": {
+            "latitude": 38.5428917,
+            "longitude": -121.73515289999997
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=8438620877668057683",
+        "websiteUri": "",
+        "address": "1220 Olive Dr apt 141, Davis, CA 95616, USA",
+        "shortAddress": "1220 Olive Dr apt 141, Davis",
+        "phoneNumber": "",
+        "photo": ""
+    },
+    {
+        "name": "Aspen Village",
+        "googleId": "ChIJLV7WpzgohYAR52Khg4WZ9Os",
+        "location": {
+            "latitude": 38.5554279,
+            "longitude": -121.78156020000002
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=17002383291948557031",
+        "websiteUri": "https://aspenvillage.yolopropertymanagement.com/",
+        "address": "2323 Shasta Dr, Davis, CA 95616, USA",
+        "shortAddress": "2323 Shasta Dr, Davis",
+        "phoneNumber": "(530) 758-2505",
+        "photo": ""
+    },
+    {
+        "name": "Adelante, a Mutual Housing Community for families with young children",
+        "googleId": "ChIJi7AjsgUphYARurQ0NIjrzig",
+        "location": {
+            "latitude": 38.548741,
+            "longitude": -121.72481119999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=2940546576943461562",
+        "websiteUri": "https://www.adelantemutualhousing.com/",
+        "address": "2050 5th St, Davis, CA 95618, USA",
+        "shortAddress": "2050 5th St, Davis",
+        "phoneNumber": "(530) 746-7957",
+        "photo": ""
+    },
+    {
+        "name": "\u5c71\u8475\u6751\uff08\u6234\u7ef4\u65af\u5206\u5e97\uff09",
+        "googleId": "ChIJC05NRwAphYARM6fcGYh_CnY",
+        "location": {
+            "latitude": 38.5375958,
+            "longitude": -121.72442219999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=8505751068768773939",
+        "websiteUri": "",
+        "address": "1701 Evergreen Ct, Davis, CA 95618, USA",
+        "shortAddress": "1701 Evergreen Ct, Davis",
+        "phoneNumber": "",
+        "photo": ""
+    },
+    {
+        "name": "Oxford Parkside",
+        "googleId": "ChIJ2_abKFMohYARKPW88Pn-Y24",
+        "location": {
+            "latitude": 38.5481607,
+            "longitude": -121.76569149999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=7954481716305655080",
+        "websiteUri": "",
+        "address": "1424 Wake Forest Dr, Davis, CA 95616, USA",
+        "shortAddress": "1424 Wake Forest Dr, Davis",
+        "phoneNumber": "(530) 758-3100",
+        "photo": ""
+    },
+    {
+        "name": "\u7ffb\u6597\u82b1\u56ed\u8d85\u7edd\u725b\u7237\u7237\u7684\u623f\u95f4",
+        "googleId": "ChIJMbVYBQAphYAR34H9gH5LM_U",
+        "location": {
+            "latitude": 38.5413318,
+            "longitude": -121.77594719999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=17668548769806647775",
+        "websiteUri": "",
+        "address": "2145 Jade St, Davis, CA 95616, USA",
+        "shortAddress": "University of California Davis West Village, 2145 Jade St, Davis",
+        "phoneNumber": "",
+        "photo": ""
+    },
+    {
+        "name": "Le Tournesol",
+        "googleId": "ChIJUWysgkQohYARlmV00WwHuPc",
+        "location": {
+            "latitude": 38.5473636,
+            "longitude": -121.78236779999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=17850025287034889622",
+        "websiteUri": "",
+        "address": "2640 Portage Bay E, Davis, CA 95616, USA",
+        "shortAddress": "2640 Portage Bay E, Davis",
+        "phoneNumber": "(530) 758-2462",
+        "photo": ""
+    },
+    {
+        "name": "Shauntel's",
+        "googleId": "ChIJJYJyT58phYAR2rHXqEpMm4E",
+        "location": {
+            "latitude": 38.5601604,
+            "longitude": -121.7786228
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=9339142135826854362",
+        "websiteUri": "",
+        "address": "2225 Glacier Dr, Davis, CA 95616, USA",
+        "shortAddress": "2225 Glacier Dr, Davis",
+        "phoneNumber": "",
+        "photo": ""
+    },
+    {
+        "name": "Primero Grove",
+        "googleId": "ChIJY37vFqgphYARYXs50LDjJ5E",
+        "location": {
+            "latitude": 38.5453778,
+            "longitude": -121.7558956
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=10459579008138443617",
+        "websiteUri": "https://housing.ucdavis.edu/apartments/primero-grove/",
+        "address": "Primero Grove, Davis, CA 95616, USA",
+        "shortAddress": "Primero Grove, Davis",
+        "phoneNumber": "(530) 754-8455",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq1UXkxF0wMxcSv6MF-dPermDopAaElQ9xlyjuHdmqDLshoUYf9TmIqMJNHhgE66r4WC94X9yGA69Zchhn9v2Xe6fCj8fkxSgCTLpwc6j2NfUl7HuYBe84Y_-48Mlzn0BkMAydYlQw=s4800-w400-h400"
+    },
+    {
+        "name": "\u201cThe Lofts\u201d",
+        "googleId": "ChIJvygaBykphYARFLPSeajr5AU",
+        "location": {
+            "latitude": 38.5423427,
+            "longitude": -121.74097440000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=424723373710553876",
+        "websiteUri": "",
+        "address": "105 E St, Davis, CA 95616, USA",
+        "shortAddress": "105 E St, Davis",
+        "phoneNumber": "",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq2WSd0lK9ZSzVfdeG9X84ntPJT6zw9UrunquBhAlC5IiM-XAivTLvBgiPli6fJbPwGL_lmeykQYaoqEBuS59cTfM6RQOwg2_9_IIGfNeMfJnm5swCB80MEuKBVMCnUemHDXlNJq=s4800-w400-h400"
+    },
+    {
+        "name": "Wake Forest",
+        "googleId": "ChIJDYgP3awphYAR0Zq08azU7Y4",
+        "location": {
+            "latitude": 38.548201399999996,
+            "longitude": -121.7634292
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=10299121762120800977",
+        "websiteUri": "https://www.wakeforestdavis.com/?utm_source=GMB&utm_medium=organic",
+        "address": "1313 Wake Forest Dr, Davis, CA 95616, USA",
+        "shortAddress": "1313 Wake Forest Dr, Davis",
+        "phoneNumber": "(530) 756-2555",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq2xChEdQYw3diUyaV7wy4EEbDJsMmeBy2xwDKtLPGIc_ihjAbpxu52DnowsTPYT3YBi6rhKhwjLvoa5_FdRqRQ_Ar0r_ugej24P41x89YerrlH7FhNjVeWFfjq5Sa-PQiUj2g8=s4800-w400-h400"
+    },
+    {
+        "name": "UC Davis Apartments",
+        "googleId": "ChIJJyRSafYphYARlr1GrskGpN4",
+        "location": {
+            "latitude": 38.540570699999996,
+            "longitude": -121.7768311
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=16042955235882614166",
+        "websiteUri": "https://housing.ucdavis.edu/apartments/the-green/",
+        "address": "187 Mint St, Davis, CA 95616, USA",
+        "shortAddress": "187 Mint St, Davis",
+        "phoneNumber": "(530) 752-2033",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq2ZpTGzzmjinlu6kr2EwX_0ClFcxzct9SgOjgKU96VA_3GFzAjVAcWLn_kQOhozPniufWQcu_N2YzK_rVVqR4_jGVPHD80oc-QInnm6rXOgTM4Jo0ZNRN3nnLMMD5jUqm2QrXoq=s4800-w400-h400"
+    },
+    {
+        "name": "Parkside Apartments",
+        "googleId": "ChIJ8ZuJT70phYARATCgBxyCKWQ",
+        "location": {
+            "latitude": 38.5580366,
+            "longitude": -121.7434179
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=7217442934736564225",
+        "websiteUri": "https://www.parkside-apartments.com/?rcstdid=Mg%3D%3D-YRjTEizZPgM%3D&utm_source=GMB&utm_medium=organic",
+        "address": "1420 F St, Davis, CA 95616, USA",
+        "shortAddress": "1420 F St, Davis",
+        "phoneNumber": "(833) 752-6201",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFNMs57WX6ZzIL5z7fBaHd-oNl8F0KPWMkR7iBWrpNlC60hyTb4ba0vuIgKo85q_DOPSBs6-MqFpilj9l9vAlKUK9o6f22pZvY=s4800-w400-h400"
+    },
+    {
+        "name": "Becerra Plaza",
+        "googleId": "ChIJ52e7BsUrhYARK30RdYzWWAI",
+        "location": {
+            "latitude": 38.5479512,
+            "longitude": -121.705486
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=169120884774239531",
+        "websiteUri": "http://www.accessiblespace.org/becerra-plaza-apartments",
+        "address": "326 Becerra Way, Davis, CA 95618, USA",
+        "shortAddress": "326 Becerra Way, Davis",
+        "phoneNumber": "(800) 466-7722",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFRne2VpH8DXAWYrSUjKj9qCnuWSAss0A2kCa_Su4qQ8WSR4dE8c2bbX3T218f4_BSfD8rH9WGSfI1-nbeEa_XMCcECj74upO4=s4800-w400-h400"
+    },
+    {
+        "name": "Aero Apartments",
+        "googleId": "ChIJidXngbYphYARi8JqrRY1Rv8",
+        "location": {
+            "latitude": 38.5594813,
+            "longitude": -121.7594912
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=18394448099556377227",
+        "websiteUri": "https://www.sterlingpointeapartments.com/",
+        "address": "1805 Anderson Rd, Davis, CA 95616, USA",
+        "shortAddress": "1805 Anderson Rd, Davis",
+        "phoneNumber": "(530) 564-0115",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGaOEdzDAem1iQq_Kx_r1R92MORxpL1dIMeqJLyx7g6vKGpWboA-oGtnK9lR_vu8bvpN1nbYczgSrTObVCM2Zfts_Uui4MEoAY=s4800-w400-h400"
+    },
+    {
+        "name": "Sequoia",
+        "googleId": "ChIJ01we0TQohYARHqqBUfBqD1U",
+        "location": {
+            "latitude": 38.5627462,
+            "longitude": -121.76589290000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=6129235198266681886",
+        "websiteUri": "http://www.sequoiaapartment.com/",
+        "address": "2255 Sycamore Ln, Davis, CA 95616, USA",
+        "shortAddress": "2255 Sycamore Ln, Davis",
+        "phoneNumber": "(530) 756-9592",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGkgO8W-IRJsunDmQ93isjMSsrxfRGodsvpmhUzg6d7-jgVl7yBJcKEggC1JzL_HbeF9h0rXYJFSqLiTYkJFht5S-bZfyVxCrg=s4800-w400-h400"
+    },
+    {
+        "name": "Mission Villas Community",
+        "googleId": "ChIJvWj1c3ophYARW-xR8Dh-l5c",
+        "location": {
+            "latitude": 38.5433331,
+            "longitude": -121.74484170000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=10923338204225596507",
+        "websiteUri": "",
+        "address": "225 B St, Davis, CA 95616, USA",
+        "shortAddress": "225 B St, Davis",
+        "phoneNumber": "",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq0HahrGlDDkQrq-xSQJfFdcfFfR5g_4yZBZcMVx6sc3xb7W0XkI8Hrj_NU9WCJI-YeSE03VaX_th-NNFolFGRs_7nyc_TmViJczeQpGYZQsZbo4iyUcxmKAdUF0qO3fOSwtaK3r=s4800-w400-h400"
+    },
+    {
+        "name": "Owendale Community",
+        "googleId": "ChIJhTds8NkrhYARKcRAhziJxLQ",
+        "location": {
+            "latitude": 38.5465051,
+            "longitude": -121.7143802
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=13025686898142659625",
+        "websiteUri": "https://www.owendalemutualhousing.com/",
+        "address": "3023 Albany Ave, Davis, CA 95618, USA",
+        "shortAddress": "3023 Albany Ave, Davis",
+        "phoneNumber": "(530) 753-2573",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq3D3BjQfxza7vVuIJz6PgJNmmmii9mDjxHSXo49VialrE-rsn5EXxBw9-YXEXZBjlE7jFrfN9hEm7MyNj6t8SVI9xsbVUSOMyN5Cm0juyrb4NuufjEsEAgzJzF51cWbaq2sI4H4=s4800-w400-h400"
+    },
+    {
+        "name": "Hanover Place Apartments",
+        "googleId": "ChIJH6PoxrYphYAR5uVqMi56PY4",
+        "location": {
+            "latitude": 38.5586421,
+            "longitude": -121.75724089999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=10249482665798067686",
+        "websiteUri": "http://hanoverplaceapts.com/",
+        "address": "1740 Hanover Dr, Davis, CA 95616, USA",
+        "shortAddress": "1740 Hanover Dr, Davis",
+        "phoneNumber": "(530) 758-7320",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqF4219u0KgE35E9ZiLVMbsMPlKOZ-EalOQryoklNBx-dKcg-5R1s7s5ylfUI_qJO02XjZcmlGwsxalJOZetOoNDBdbPFw0v6J0=s4800-w400-h400"
+    },
+    {
+        "name": "Kings & Queens Apartments",
+        "googleId": "ChIJN4T-a58phYARqWQy6lyj1WQ",
+        "location": {
+            "latitude": 38.5518175,
+            "longitude": -121.74125259999998
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=7265893193293653161",
+        "websiteUri": "https://www.simmonsre.net/newpage",
+        "address": "801 E 8th St, Davis, CA 95616, USA",
+        "shortAddress": "801 E 8th St, Davis",
+        "phoneNumber": "(530) 753-9609",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqEFt7IWMo0uKRbmMOtGER97plb6_S1pKQtnlcF50YCSINO4bAlyE14xzgXlKhpVQjSKdlVGLklPjclFw2S39zwJoaPjZ96eDfI=s4800-w400-h400"
+    },
+    {
+        "name": "Windmere Apartments",
+        "googleId": "ChIJZ3TMItIrhYARSBIXe_764js",
+        "location": {
+            "latitude": 38.553505,
+            "longitude": -121.7100136
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=4315287363868103240",
+        "websiteUri": "http://www.chochousing.org/windmere",
+        "address": "3100 5th St, Davis, CA 95618, USA",
+        "shortAddress": "3100 5th St, Davis",
+        "phoneNumber": "(530) 757-4438",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq0RcQp5NrVl34tp_o2ecstLF5NYcvEfq2xAVh_xTzaXT7B56d83uQpyT0RNB9ouMoW7Jp7lYgsG8ybHEDPDOtTjQ7SlTkWyTZDK0KNNK5AmVzEJNINOl7tuzTkjRctvCykKk-iK=s4800-w400-h400"
+    },
+    {
+        "name": "Woodside Apartments",
+        "googleId": "ChIJnwQLXp8phYARzleb14tQofo",
+        "location": {
+            "latitude": 38.552068399999996,
+            "longitude": -121.7419302
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=18059804542280357838",
+        "websiteUri": "https://www.tccproperties.net/property/woodside-apartments/",
+        "address": "808 F St, Davis, CA 95616, USA",
+        "shortAddress": "808 F St, Davis",
+        "phoneNumber": "(530) 400-8685",
+        "photo": ""
+    },
+    {
+        "name": "\u7eaf\u7231\u7518\u9732\u5bfa",
+        "googleId": "ChIJlXYhEgAphYAR8VgScZJSWl0",
+        "location": {
+            "latitude": 38.5386734,
+            "longitude": -121.77136859999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=6726779782346987761",
+        "websiteUri": "",
+        "address": "Hutchison & Sage (NB, Davis, CA 95616, USA",
+        "shortAddress": "Hutchison & Sage (NB, University of California Davis West Village, Davis",
+        "phoneNumber": "",
+        "photo": ""
+    },
+    {
+        "name": "Glide Terrace Apartments",
+        "googleId": "ChIJYe78qrsrhYART2S2XuISoqI",
+        "location": {
+            "latitude": 38.5526029,
+            "longitude": -121.68834799999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=11718949943832372303",
+        "websiteUri": "",
+        "address": "5101 Glide Dr, Davis, CA 95618, USA",
+        "shortAddress": "5101 Glide Dr, Davis",
+        "phoneNumber": "",
+        "photo": ""
+    },
+    {
+        "name": "184 Horizon",
+        "googleId": "ChIJD98rX00phYARGRoSFcTuxgo",
+        "location": {
+            "latitude": 38.5405844,
+            "longitude": -121.7786625
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=776570511702497817",
+        "websiteUri": "https://housing.ucdavis.edu/apartments/the-green/",
+        "address": "184 Horizon St, Davis, CA 95616, USA",
+        "shortAddress": "184 Horizon St, Davis",
+        "phoneNumber": "(530) 752-2033",
+        "photo": "https://lh3.googleusercontent.com/place-photos/ADOriq249g0T8zGxJ1Rsj46nyqQcQEUvOo1WRYOVcRE5oU1U_sv4IJBwRPfgfMj27FB9UbH0oVRVstNjyFh6B1fkNqdleZaCLtttpK6yLcQWMjTAG7O8mRIv24GE3NKUKCH3_WXjfeSH=s4800-w400-h400"
+    },
+    {
+        "name": "Parque Plaza",
+        "googleId": "ChIJp6z6F7YphYARG30IyGbg5P8",
+        "location": {
+            "latitude": 38.5614876,
+            "longitude": -121.7578088
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=18439109506408938779",
+        "websiteUri": "https://www.simmonsre.net/parque-plaza",
+        "address": "690 Alvarado Ave, Davis, CA 95616, USA",
+        "shortAddress": "690 Alvarado Ave, Davis",
+        "phoneNumber": "(530) 758-0690",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqGjeoMlZ-2V26Wg07ey-M0w3OnEJAO8DFD0kNCeymEGFgbd8J22KJdNKv8jbtsnDnd94HAo3lC637Hc4oISF9NEX2W-fKZSeQ=s4800-w400-h400"
+    },
+    {
+        "name": "Drake Apartments",
+        "googleId": "ChIJA27O17UphYAR2DQ6ud_s-fY",
+        "location": {
+            "latitude": 38.5603955,
+            "longitude": -121.76097340000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=17796515848160687320",
+        "websiteUri": "https://www.thedrakedavis.com/",
+        "address": "919 Drake Dr, Davis, CA 95616, USA",
+        "shortAddress": "919 Drake Dr, Davis",
+        "phoneNumber": "(530) 756-6465",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqEYEL-vylfAMwEo0mhKy06vGED2Nb1k4mawFiBN_tAa0KUdFMoVWSB9GWrOzUvecwfhk_-rmYJENZgkzfs8JGkgthbP18JTWek=s4800-w400-h400"
+    },
+    {
+        "name": "Tuscany Villas Apartments",
+        "googleId": "ChIJFQK57n8phYAR0txZeLRVBY8",
+        "location": {
+            "latitude": 38.554021,
+            "longitude": -121.72053299999997
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=10305737555908877522",
+        "websiteUri": "http://www.chochousing.org/tuscany-villas",
+        "address": "2526 E 8th St #203, Davis, CA 95618, USA",
+        "shortAddress": "2526 E 8th St #203, Davis",
+        "phoneNumber": "(530) 757-4443",
+        "photo": ""
+    },
+    {
+        "name": "Arrowhead",
+        "googleId": "ChIJdSnPZL4phYAR2MYiRzDjYBg",
+        "location": {
+            "latitude": 38.5623846,
+            "longitude": -121.74472050000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1756653651165890264",
+        "websiteUri": "",
+        "address": "Bueno Dr, Davis, CA 95616, USA",
+        "shortAddress": "Bueno Dr, Davis",
+        "phoneNumber": "",
+        "photo": ""
+    },
+    {
+        "name": "Dowling Properties",
+        "googleId": "ChIJw025TAsphYARr_bxEUUoFTs",
+        "location": {
+            "latitude": 38.544578099999995,
+            "longitude": -121.7423211
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=4257353299867596463",
+        "websiteUri": "https://davisca.com/",
+        "address": "503 3rd St, Davis, CA 95616, USA",
+        "shortAddress": "503 3rd St, Davis",
+        "phoneNumber": "(530) 753-1000",
+        "photo": "https://lh3.googleusercontent.com/places/ANXAkqFtke9cDHapuze62jAH0SD64wF_pKa9wsQ_phQXxcAG_y7cSYajrPrfi9UaVhvInksvzeFOouxF9H0YzLBLJJ7uy_Vse2qKYxo=s4800-w400-h400"
+    }
+]
