@@ -4,19 +4,27 @@
     top: var(--nav-bar-height);
     left: 0;
     /* width: var(--side-bar-width); */ 
-    width: 236px;
+    width: 220px;
     padding-left: 8px; /* Space between the nav bar and first link */
     padding-top: 34px; 
     padding-right: 8px; 
     height: 100vh;  /* Full height of the screen */
     border-right: 1px solid #ccc;  /* Adds a subtle grayish line to the right */
+    overflow-x: hidden;
+    transition: width 0.25s ease;
   }
   
 /* specifies styles when the side bar collapses */
 @media (max-width: 768px) {
-  .sidebar span {
-    display: none; /* Hide the text */
+  .sidebar {
+    width: 60px; /* Shrink width when text is hidden */
+    border-right: 1px solid #ccc; /* Still keep border, now aligned to new width */
   }
+
+  .sidebar span {
+    display: none;
+  }
+
   .sidebar > ul div {
     justify-content: center;
   }
