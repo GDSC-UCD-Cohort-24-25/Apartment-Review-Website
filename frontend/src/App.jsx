@@ -28,7 +28,7 @@ function MainContent() {
   return (
     <div className="page-container">
       {/* Conditionally render Sidebar (hide on login page) */}
-      {location.pathname !== "/login" && <Sidebar />} 
+      {location.pathname !== "/login" && location.pathname !== "/signup" && <Sidebar />} 
 
       <div className="content-container">
         <Routes>
