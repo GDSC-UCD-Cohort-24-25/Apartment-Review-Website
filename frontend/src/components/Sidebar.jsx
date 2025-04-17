@@ -7,6 +7,14 @@ const Sidebar = () => {
     <div className="sidebar">
       <ul>
         <li>
+          <Link to="/">
+          <div class = "test">
+            <img src="/home-icon.svg" alt="Home Page" className="icon" />
+            <span>Home</span>
+          </div>
+          </Link>
+        </li>
+        <li>
           <Link to="/listing">
           <div>
             <img src="/all-icon.svg" alt="All Listings" className="icon" />

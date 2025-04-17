@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Mapview.css';
 import ListingBox from '../components/ListingBox';
+<<<<<<< HEAD
 
 
 const propertyData = [
@@ -741,6 +742,8 @@ const propertyData = [
   }
 ];
 
+=======
+>>>>>>> main
 const Map = () => {
   const [liked, setLiked] = useState([]);
   
@@ -793,21 +796,30 @@ const Map = () => {
       <div className="map-listings">
         <h2>Map View</h2>
         <div className="listing-container">
+<<<<<<< HEAD
           {['apartments/thedrakeandanderson/the-drake-and-anderson-court-davis-ca-primary-photo.jpg',
             'apartments/almondwood/almondwood-apartments-20200519-064.jpg',
             'apartments/sycamorelane/RB209244_HDR_Edit(20220221215739348).jpg'
           ].map((image, index) => (
+=======
+        {['apartments/thedrakeandanderson/the-drake-and-anderson-court-davis-ca-primary-photo.jpg', 'apartments/almondwood/almondwood-apartments-20200519-064.jpg', 'apartments/sycamorelane/RB209244_HDR_Edit(20220221215739348).jpg'].map((image, index) => (
+>>>>>>> main
             <ListingBox
               key={index + 3}  // Offset index to avoid duplicate keys
               image={image}
               description={`Description of High Rated Image ${index + 1}`}
               liked={liked[index + 3]}
+<<<<<<< HEAD
               onLike={() => {
                 // TODO: Implement your handleLike logic here.
               }}
+=======
+              onLike={() => handleLike(index + 3)}
+>>>>>>> main
             />
           ))}
         </div>
+
       </div>
 
       {/* Google Map */}

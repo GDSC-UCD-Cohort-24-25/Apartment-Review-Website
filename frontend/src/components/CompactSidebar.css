@@ -1,0 +1,10 @@
+.collasped{
+    position: fixed;  /* Keep it fixed on the side */
+    padding-left: 20px; /* Space between the nav bar and first link */
+    padding-top: 44px; 
+    border-right: 0.5px solid #D2D2D9;
+    background: #FFF;
+    width: 64px;
+    height: 100vh;
+    flex-shrink: 0;
+}

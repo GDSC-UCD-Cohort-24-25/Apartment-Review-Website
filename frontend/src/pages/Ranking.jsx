@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import ListingBox from '../components/ListingBox'; // Ensure correct import
 import Sidebar from '../components/Sidebar'; // Optional: include if needed
@@ -116,6 +117,16 @@ const Ranking = () => {
           </>
         )}
       </main>
+=======
+import React from 'react';
+import './Ranking.css';
+
+
+const Ranking = () => {
+  return (
+    <div>
+      <h1>Ranking Page</h1>
+>>>>>>> main
     </div>
   );
 };

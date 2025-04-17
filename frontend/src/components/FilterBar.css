@@ -1,0 +1,13 @@
+
+  
+  /* FilterBar - Position it right next to the sidebar and below the navbar */
+  .filter-bar {
+    position: fixed;
+    width: 250px;
+    height: calc(100% - 60px); /* Adjust height to take full screen except navbar */
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  
