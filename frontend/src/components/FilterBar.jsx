@@ -3,12 +3,12 @@ import './FilterBar.css';
 
 const FilterBar = () => {
   const [filters, setFilters] = useState({
-    price: '',
-    housingType: '',
-    layout: '',
-    bathroom: '',
-    occupancy: '',
-    amenities: [],
+    price: [],
+    housingType: [],
+    layout: [],
+    bathroom: [],
+    occupancy: [],
+    features: [],
     features: [],
   });
 
@@ -22,14 +22,6 @@ const FilterBar = () => {
     });
   };
 
-  const handleRadioChange = (e, category) => {
-    const { value } = e.target;
-    setFilters(prevState => ({ ...prevState, [category]: value }));
-  };
-
-  const handlePriceChange = (e) => {
-    setFilters(prevState => ({ ...prevState, price: e.target.value }));
-  };
 
   return (
     <div className="filter-bar">
@@ -41,11 +33,10 @@ const FilterBar = () => {
         <div>
           <label>
             <input
-              type="radio"
-              name="price"
+              type="checkbox"
               value="under500"
-              checked={filters.price === 'under500'}
-              onChange={e => handlePriceChange(e)}
+              checked={filters.features.includes('under500')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             Under $500
           </label>
@@ -53,11 +44,10 @@ const FilterBar = () => {
         <div>
           <label>
             <input
-              type="radio"
-              name="price"
+              type="checkbox"
               value="500to650"
-              checked={filters.price === '500to650'}
-              onChange={e => handlePriceChange(e)}
+              checked={filters.features.includes('500to650')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             $500 to $650
           </label>
@@ -65,11 +55,10 @@ const FilterBar = () => {
         <div>
           <label>
             <input
-              type="radio"
-              name="price"
+              type="checkbox"
               value="650to800"
-              checked={filters.price === '650to800'}
-              onChange={e => handlePriceChange(e)}
+              checked={filters.features.includes('650to800')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             $650 to $800
           </label>
@@ -77,11 +66,10 @@ const FilterBar = () => {
         <div>
           <label>
             <input
-              type="radio"
-              name="price"
+              type="checkbox"
               value="800above"
-              checked={filters.price === '800above'}
-              onChange={e => handlePriceChange(e)}
+              checked={filters.features.includes('800above')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             $800 and above
           </label>
@@ -94,11 +82,10 @@ const FilterBar = () => {
         <div>
           <label>
             <input
-              type="radio"
-              name="housingType"
+              type="checkbox"
               value="apartment"
-              checked={filters.housingType === 'apartment'}
-              onChange={e => handleRadioChange(e, 'housingType')}
+              checked={filters.features.includes('apartment')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             Apartment
           </label>
@@ -106,11 +93,10 @@ const FilterBar = () => {
         <div>
           <label>
             <input
-              type="radio"
-              name="housingType"
+              type="checkbox"
               value="condo"
-              checked={filters.housingType === 'condo'}
-              onChange={e => handleRadioChange(e, 'housingType')}
+              checked={filters.features.includes('condo')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             Condo
           </label>
@@ -118,22 +104,20 @@ const FilterBar = () => {
         <div>
           <label>
             <input
-              type="radio"
-              name="housingType"
+              type="checkbox"
               value="house"
-              checked={filters.housingType === 'house'}
-              onChange={e => handleRadioChange(e, 'housingType')}
+              checked={filters.features.includes('house')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             House
           </label>
         </div><div>
           <label>
             <input
-              type="radio"
-              name="housingType"
+              type="checkbox"
               value="townhouse"
-              checked={filters.housingType === 'townhouse'}
-              onChange={e => handleRadioChange(e, 'housingType')}
+              checked={filters.features.includes('townhouse')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             Townhouse
           </label>
@@ -146,11 +130,10 @@ const FilterBar = () => {
         <div>
           <label>
             <input
-              type="radio"
-              name="layout"
+              type="checkbox"
               value="studio"
-              checked={filters.layout === 'studio'}
-              onChange={e => handleRadioChange(e, 'layout')}
+              checked={filters.features.includes('studio')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             Studio 
           </label>
@@ -158,11 +141,10 @@ const FilterBar = () => {
         <div>
           <label>
             <input
-              type="radio"
-              name="layout"
+              type="checkbox"
               value="loft"
-              checked={filters.layout === 'loft'}
-              onChange={e => handleRadioChange(e, 'layout')}
+              checked={filters.features.includes('loft')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             Loft 
           </label>
@@ -170,11 +152,10 @@ const FilterBar = () => {
         <div>
           <label>
             <input
-              type="radio"
-              name="layout"
+              type="checkbox"
               value="oneBedroom"
-              checked={filters.layout === 'oneBedroom'}
-              onChange={e => handleRadioChange(e, 'layout')}
+              checked={filters.features.includes('oneBedroom')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             One Bedroom
           </label>
@@ -182,11 +163,10 @@ const FilterBar = () => {
         <div>
           <label>
             <input
-              type="radio"
-              name="layout"
+              type="checkbox"
               value="twoBedroom"
-              checked={filters.layout === 'twoBedroom'}
-              onChange={e => handleRadioChange(e, 'layout')}
+              checked={filters.features.includes('twoBedroom')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             Two Bedroom 
           </label>
@@ -200,11 +180,10 @@ const FilterBar = () => {
         <div>
           <label>
             <input
-              type="radio"
-              name="bathroom"
+              type="checkbox"
               value="full"
-              checked={filters.bathroom === 'full'}
-              onChange={e => handleRadioChange(e, 'bathroom')}
+              checked={filters.features.includes('full')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             Full
           </label>
@@ -212,11 +191,10 @@ const FilterBar = () => {
         <div>
           <label>
             <input
-              type="radio"
-              name="bathroom"
+              type="checkbox"
               value="half"
-              checked={filters.bathroom === 'half'}
-              onChange={e => handleRadioChange(e, 'bathroom')}
+              checked={filters.features.includes('half')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             Half
           </label>
@@ -229,11 +207,10 @@ const FilterBar = () => {
         <div>
           <label>
             <input
-              type="radio"
-              name="occupancy"
+              type="checkbox"
               value="single"
-              checked={filters.occupancy === 'single'}
-              onChange={e => handleRadioChange(e, 'occupancy')}
+              checked={filters.features.includes('single')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             Single
           </label>
@@ -241,11 +218,10 @@ const FilterBar = () => {
         <div>
           <label>
             <input
-              type="radio"
-              name="occupancy"
+              type="checkbox"
               value="double"
-              checked={filters.occupancy === 'double'}
-              onChange={e => handleRadioChange(e, 'occupancy')}
+              checked={filters.features.includes('double')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             Double
           </label>
@@ -253,40 +229,72 @@ const FilterBar = () => {
         <div>
           <label>
             <input
-              type="radio"
-              name="occupancy"
+              type="checkbox"
               value="triple"
-              checked={filters.occupancy === 'triple'}
-              onChange={e => handleRadioChange(e, 'occupancy')}
+              checked={filters.features.includes('triple')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
             Triple
           </label>
         </div>
       </div>
 
-      {/* Amenities Filter */}
+      {/* features Filter */}
       <div className="filter-section">
         <h4>Amenities</h4>
         <div>
           <label>
             <input
               type="checkbox"
-              value="dryer"
-              checked={filters.amenities.includes('dryer')}
-              onChange={e => handleCheckboxChange(e, 'amenities')}
+              value="dryer-communal"
+              checked={filters.features.includes('dryer-communal')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
-            Dryer
+            Dryer (communal)
           </label>
         </div>
         <div>
           <label>
             <input
               type="checkbox"
-              value="washer"
-              checked={filters.amenities.includes('washer')}
-              onChange={e => handleCheckboxChange(e, 'amenities')}
+              value="dryer-inunit"
+              checked={filters.features.includes('dryer-inunit')}
+              onChange={e => handleCheckboxChange(e, 'features')}
             />
-            Washer
+            Dryer (in unit)
+          </label>
+        </div>
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              value="washer-communal"
+              checked={filters.features.includes('washer-communal')}
+              onChange={e => handleCheckboxChange(e, 'features')}
+            />
+            Washer (communal)
+          </label>
+        </div>
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              value="washer-inunit"
+              checked={filters.features.includes('washer-inunit')}
+              onChange={e => handleCheckboxChange(e, 'features')}
+            />
+            Washer (in unit)
+          </label>
+        </div>
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              value="wifi"
+              checked={filters.features.includes('wifi')}
+              onChange={e => handleCheckboxChange(e, 'features')}
+            />
+            Wifi
           </label>
         </div>
       </div>
@@ -305,6 +313,7 @@ const FilterBar = () => {
             Balcony
           </label>
         </div>
+  
         <div>
           <label>
             <input
@@ -314,6 +323,86 @@ const FilterBar = () => {
               onChange={e => handleCheckboxChange(e, 'features')}
             />
             Co-ed
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              value="furnished"
+              checked={filters.features.includes('furnished')}
+              onChange={e => handleCheckboxChange(e, 'features')}
+            />
+            Furnished
+          </label>
+        </div>
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              value="gym"
+              checked={filters.features.includes('gym')}
+              onChange={e => handleCheckboxChange(e, 'features')}
+            />
+            Gym
+          </label>
+        </div>
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              value="patio"
+              checked={filters.features.includes('patio')}
+              onChange={e => handleCheckboxChange(e, 'features')}
+            />
+            Patio
+          </label>
+        </div>
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              value="pet"
+              checked={filters.features.includes('pet')}
+              onChange={e => handleCheckboxChange(e, 'features')}
+            />
+            Pets Friendly
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              value="smoking"
+              checked={filters.features.includes('smoking')}
+              onChange={e => handleCheckboxChange(e, 'features')}
+            />
+            Smoking Allowed
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              value="storage"
+              checked={filters.features.includes('storage')}
+              onChange={e => handleCheckboxChange(e, 'features')}
+            />
+            Storage
+          </label>
+        </div>
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              value="unfurnished"
+              checked={filters.features.includes('unfurnished')}
+              onChange={e => handleCheckboxChange(e, 'features')}
+            />
+            Unfurnished
           </label>
         </div>
       </div>
