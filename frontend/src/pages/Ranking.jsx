@@ -27,10 +27,11 @@ const Ranking = () => {
 
   // Fetch the ranking data from the Python backend (/rankings endpoint)
   useEffect(() => {
-    fetch('http://127.0.0.1:5000/reviews')
+    // Note the updated URL endpoint:
+    fetch('http://127.0.0.1:5000/rankings')
       .then(response => response.json())
       .then(data => {
-        console.log("Fetched Rankings Data:", data);  // Check the fetched data in your console.
+        console.log("Fetched Rankings Data:", data);  // Debug: check fetched data in console
         if (!Array.isArray(data) || data.length === 0) {
           data = ['apt1', 'apt2', 'apt3'];
         }
