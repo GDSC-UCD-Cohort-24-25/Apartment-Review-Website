@@ -33,12 +33,9 @@ body {
 .page-container {
   margin-top: var(--nav-bar-height); 
   margin-left: var(--side-bar-width);
-  padding-left: 30px; /* padding of the main page content */
-  padding-right: 30px; /* padding of the main page content */
-
+  padding-left: 32px; /* padding of the main page content */
   padding-top: 44px; 
-  transition: all 0.1s ease;     /* ← this line */
-
+  padding-right: 64px; 
 }
 
 h2 {
