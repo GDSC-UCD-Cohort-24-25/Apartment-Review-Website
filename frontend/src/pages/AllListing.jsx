@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ListingBox from '../components/ListingBox'; // Import ListingBox component
 import FilterBar from '../components/FilterBar';  // Import FilterBar component
 import './AllListing.css';  // Ensure you have a Listing.css file for styling
 
 function Listing() {
   const [liked, setLiked] = useState([false, false, false]); // State to track liked status for each image
+  const [apartments, setApartments] = useState([]);
+
+  useEffect(() => {
+    fetch('http://127.0.0.1:5000/apartments')
+      .then(response => response.json())
+      .then(data => {
+        setApartments(data.apartments);
+        setLiked(new Array(data.apartments.length).fill(false));
+      })
+      .catch(error => console.error('Error fetching apartments:', error));
+  }, []);
 
   const handleLike = (index) => {
     setLiked((prevState) => {
@@ -27,15 +38,15 @@ function Listing() {
       </div> */}
       {/* Sample ListingBox */}
       <div className="listing-container">
-        {['apartments/thedrakeandanderson/the-drake-and-anderson-court-davis-ca-primary-photo.jpg', 
-          'apartments/almondwood/almondwood-apartments-20200519-064.jpg', 
-          'apartments/sycamorelane/RB209244_HDR_Edit(20220221215739348).jpg'].map((image, index) => (
+      {apartments.slice(0,15).map((apartment, index) => (
           <ListingBox
-            key={index}  // Ensure each ListingBox has a unique key
-            image={image}
-            description={`Description of Listing ${index + 1}`}
+            key={apartment.id}
+            image={apartment.photo}
+            description={apartment.name}
+            phone = {apartment.phoneNumber}
+            address = {apartment.shortAddress}
             liked={liked[index]}
-            onLike={() => handleLike(index)}  // Pass the correct index for each ListingBox
+            onLike={() => handleLike(index)}
           />
         ))}
       </div>

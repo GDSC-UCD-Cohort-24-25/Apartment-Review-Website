@@ -6,11 +6,16 @@
     width: 220px;
     height: calc(100% - 30px); 
     background-color: #ffffff;
+    top: 50px;
+    bottom: 0; /* NEW: this ensures the height fits from top to bottom */
+    width: 220px;
+    height: calc(100% - 30px); 
+    background-color: #ffffff;
     padding: 20px;
     z-index: 999;
     overflow-y: auto;
     margin-top: 20px;
-    margin-left: -18px;
+    margin-left: -15px;
   }
 
   .filter-bar::-webkit-scrollbar {
