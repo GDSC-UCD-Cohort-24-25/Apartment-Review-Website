@@ -9,6 +9,7 @@
   display: flex;
   border-bottom: 1px solid #ccc; /* Optional: Border at the bottom */
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow underneath */
+  background-color: white;
 }
 
 .accountText {
@@ -20,8 +21,6 @@
   font-weight: 400;
   line-height: normal;
 }
-
-
 
 .navbar-container {
   display: flex;
