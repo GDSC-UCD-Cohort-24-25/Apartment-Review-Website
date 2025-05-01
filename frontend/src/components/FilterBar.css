@@ -1,13 +1,69 @@
+.filter-bar {
+  
+    position: fixed;
+    top: 50px;
+    bottom: 0; /* NEW: this ensures the height fits from top to bottom */
+    width: 220px;
+    height: calc(100% - 30px); 
+    background-color: #ffffff;
+    top: 50px;
+    bottom: 0; /* NEW: this ensures the height fits from top to bottom */
+    width: 220px;
+    height: calc(100% - 30px); 
+    background-color: #ffffff;
+    padding: 20px;
+    z-index: 999;
+    overflow-y: auto;
+    margin-top: 20px;
+    margin-left: -15px;
+  }
+
+  .filter-bar::-webkit-scrollbar {
+    display: none;  /* For Chrome, Safari, and newer Edge */
+  }
+
+  .filter-bar h3 {
+    font-size: 24px;
+  }
+
+  .filter-section label {
+    display: flex;
+    align-items: center; /* Vertically center the checkbox and text */
+  }
+
+  .filter-section h4 {
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+  
+  .filter-section input[type="checkbox"] {
+    all: unset;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 30%;  /* This makes the box round */
+    background-color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin-right: 8px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+  }
+  
+  .filter-section input[type="checkbox"]:checked {
+    background-color: #313638;
+    border-color: #313638;
+  }
+  
+
+  .filter-bar::after {
+    content: '';
+    display: block;
+    height: 40px; /* fake padding at bottom */
+  }
+  
+  
 
   
-  /* FilterBar - Position it right next to the sidebar and below the navbar */
-  .filter-bar {
-    position: fixed;
-    width: 250px;
-    height: calc(100% - 60px); /* Adjust height to take full screen except navbar */
-    background-color: #f8f9fa;
-    padding: 20px;
-    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-  }
   

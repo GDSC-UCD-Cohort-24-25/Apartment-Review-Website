@@ -28,9 +28,13 @@ const Login = () => {
   return (
       <div className="Login-page">
         <div class = "frame"> 
-          <div class = "header">
+          <div class = "headerLI">
             <h1>Welcome</h1>
-            <button class = "largeButton">Sign Up</button>
+            <button class = "largeButton">
+            <Link to="/signup">
+              Sign up
+            </Link>
+            </button>
           </div>
           <form className="auth" onSubmit={handleSubmit}>
             <input class = "input"
@@ -47,17 +51,20 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)} 
               required
             />
-            <button class = "loginButton" type="submit"> Login </button>
-            {message && <span>{message}</span>}
-          </form>
 
-          <p className="">
-            Don't have an account?{" "}
-            <Link to="/signup">
-              Sign up
-            </Link>
-          </p>
+          </form> 
+        </div> 
+        <div class = "frame1">
+          <div class = "forgot">
+              <p> 
+                Forgot Password?
+              </p>
+          </div>
+      
+          <button class = "loginButton" type="submit"> Login </button>
+          {message && <span>{message}</span>}
         </div>
+            
       </div>
   );
 };
