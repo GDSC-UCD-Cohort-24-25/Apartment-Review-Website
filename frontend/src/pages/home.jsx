@@ -32,7 +32,9 @@ const Home = () => {
         <div className="listing-container">
         {apartments.slice(0,15).map((apartment, index) => (
           <ListingBox
-            key={apartment.id}
+          key={apartment.id}
+
+            id={apartment.id}
             image={apartment.photo}
             description={apartment.name}
             phone = {apartment.phoneNumber}
@@ -50,6 +52,7 @@ const Home = () => {
         {apartments.slice(0,15).map((apartment, index) => (
           <ListingBox
             key={apartment.id}
+            id={apartment.id}
             image={apartment.photo}
             description={apartment.name}
             phone = {apartment.phoneNumber}

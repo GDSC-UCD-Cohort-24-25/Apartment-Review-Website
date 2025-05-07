@@ -10,6 +10,7 @@ import Ranking from './pages/Ranking';
 import About from './pages/About';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
+import Apartment from './pages/Apartment';
 
 import './App.css';
 
@@ -56,6 +57,7 @@ function MainContent() {
           <Route path="/about" element={<About />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/profile/:userid" element={<Profile />} />
+          <Route path="/apartment/:id" element={<Apartment />} />
         </Routes>
       </div>
     </div>
