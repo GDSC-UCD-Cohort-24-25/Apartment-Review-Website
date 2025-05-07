@@ -1,5 +1,6 @@
 .profile-layout {
   display: flex;
+  overflow-y: auto;
   align-items: flex-start;
 }
 
@@ -24,6 +25,16 @@
   overflow: hidden;
   margin: 0;
   cursor: pointer;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px; /* adjust to your real navbar height */
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* optional */
 }
 
 .profile-info {
@@ -115,6 +126,7 @@ button.edit-profile-button:hover {
   box-sizing: border-box;
 }
 
+
 .image-overlay {
   position: absolute;
   top: 0;
@@ -144,6 +156,7 @@ button.edit-profile-button:hover {
 .profile-main {
   flex-grow: 1;
   display: flex;
+  min-width: 0;
   flex-direction: column;
   gap: 30px;
 }
@@ -153,59 +166,97 @@ button.edit-profile-button:hover {
   margin-bottom: 10px;
 }
 
-.apartment-list-horizontal-scroll {
-  display: flex;
-  gap: 10px;
+.listing-scroll-wrapper {
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
   padding-bottom: 10px;
 }
 
-.apartment-list-horizontal-scroll .apartment-card {
-  flex-shrink: 0;
-  width: 300px;
+.listing-container {
+  display: flex;
+  gap: 16px;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+  scroll-padding-left: 16px;
 }
 
+.image-card {
+  flex: 0 0 250px; /* fixed width */
+  scroll-snap-align: start;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+
+.apartment-list-horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 10px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+/* Add this to force consistent box size */
+
+
+.apartment-list-horizontal-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.apartment-list-horizontal-scroll::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.saved-apartments-container {
+  max-height: 400px; /* adjust as needed */
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fefefe;
+}
+.image-card {
+  flex: 0 0 250px; /* fixed width per card for horizontal scroll */
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.image-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 
 
 .apartment-vertical-grid {
   display: grid;
-  grid-template-columns: repeat(3, 300px); /* Explicitly set column width */
-  gap: 10px;
-  overflow-y: auto;
-  max-height: 500px;
-  padding-right: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px; /* was 16px */
 }
 
-.apartment-vertical-grid .apartment-card {
-  width: 300px; /* Ensure consistent width */
-}
-
-.apartment-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.apartment-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.apartment-card h4 {
+.image-card h4 {
   margin: 8px;
   font-size: 1em;
 }
 
-.apartment-card p {
+.image-card p {
   margin: 4px 8px;
   font-size: 0.8em;
   color: #555;
 }
 
-.apartment-card p:last-child {
+.image-card p:last-child {
   margin-bottom: 8px;
 }
