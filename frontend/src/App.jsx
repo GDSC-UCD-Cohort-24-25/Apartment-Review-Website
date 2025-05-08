@@ -55,7 +55,7 @@ function MainContent() {
           <Route path="/ranking" element={<Ranking />} />
           <Route path="/about" element={<About />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/profile/:userid" element={<Profile />} />
+          <Route path="/profile/:userId" element={<Profile />} />
         </Routes>
       </div>
     </div>
