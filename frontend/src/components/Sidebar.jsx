@@ -9,6 +9,7 @@ const navItems = [
   { to: "/map",     icon: "/map.svg",         label: "Map View" },
   { to: "/ranking", icon: "/ranking.svg",     label: "Ranking" },
   { to: "/about",   icon: "/about.svg", label: "About" },
+  { to: "/quiz", label: "Quiz"}
 ];
 
 export default function Sidebar() {

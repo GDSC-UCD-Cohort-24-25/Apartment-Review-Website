@@ -10,7 +10,6 @@ import Ranking from './pages/Ranking';
 import About from './pages/About';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
-
 import './App.css';
 
 const Layout = ({ children }) => {
