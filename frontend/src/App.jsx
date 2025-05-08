@@ -11,6 +11,7 @@ import About from './pages/About';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 import './App.css';
+import Quiz from './pages/Quiz';
 
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -55,6 +56,8 @@ function MainContent() {
           <Route path="/about" element={<About />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/profile/:userid" element={<Profile />} />
+          <Route path="/quiz" element={<Quiz />} />
+
         </Routes>
       </div>
     </div>
