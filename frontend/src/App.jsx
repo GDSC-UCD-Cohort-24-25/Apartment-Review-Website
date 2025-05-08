@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './pages/home';
+import Home from './pages/Home';
 import Login from './pages/Login';
 import Sidebar from './components/Sidebar';
 import Listing from './pages/AllListing'; 
@@ -10,6 +10,7 @@ import Ranking from './pages/Ranking';
 import About from './pages/About';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
+import WriteReview from './pages/writeReview';
 import Apartment from './pages/Apartment';
 
 import './App.css';
@@ -57,6 +58,8 @@ function MainContent() {
           <Route path="/about" element={<About />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/profile/:userid" element={<Profile />} />
+          <Route path="/write-review" element={<WriteReview />} />
+
           <Route path="/apartment/:id" element={<Apartment />} />
         </Routes>
       </div>
