@@ -5,7 +5,7 @@ import './Home.css';
 const Home = () => {
   const [liked, setLiked] = useState([false, false, false]);
   const [apartments, setApartments] = useState([]);
-
+  
   useEffect(() => {
     fetch('http://127.0.0.1:5000/apartments')
       .then(response => response.json())

@@ -175,12 +175,15 @@ button.edit-profile-button:hover {
 }
 
 .profile-page .listing-container {
-  display: flex;
+  
+  height: 500px;
   gap: 16px;
   padding-bottom: 8px;
   scroll-padding-left: 16px;
-}
-*/
+  overflow-x: auto;
+  white-space: nowrap;
+};
+
 .image-card {
   flex: 0 0 250px; /* fixed width */
   scroll-snap-align: start;
@@ -211,54 +214,4 @@ button.edit-profile-button:hover {
 .apartment-list-horizontal-scroll::-webkit-scrollbar-thumb {
   background-color: #ccc;
   border-radius: 4px;
-}
-
-.saved-apartments-container {
-  max-height: 400px; /* adjust as needed */
-  overflow-y: auto;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: #fefefe;
-}
-.image-card {
-  flex: 0 0 250px; /* fixed width per card for horizontal scroll */
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.image-card img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.image-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-
-.apartment-vertical-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px; /* was 16px */
-}
-
-.image-card h4 {
-  margin: 8px;
-  font-size: 1em;
-}
-
-.image-card p {
-  margin: 4px 8px;
-  font-size: 0.8em;
-  color: #555;
-}
-
-.image-card p:last-child {
-  margin-bottom: 8px;
 }

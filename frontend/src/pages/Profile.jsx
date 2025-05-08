@@ -177,36 +177,36 @@ const Profile = () => {
         <div className="profile-page">
           <h3>Your Matches</h3>
           <div className="listing-scroll-wrapper">
-            <div className="listing-container">
-              {apartments.map((apt, index) => (
-                <ListingBox
-                  key={index}
-                  image={apt.photo}
-                  description={apt.name}
-                  phone={apt.phoneNumber}
-                  address={apt.address}
-                  liked={false}
-                  onLike={() => {}}
-                />
-              ))}
+          <div className="listing-container">
+            {apartments.slice(0,15).map((apartment, index) => (
+              <ListingBox
+              key={apartment.id}
+
+                id={apartment.id}
+                image={apartment.photo}
+                description={apartment.name}
+                phone = {apartment.phoneNumber}
+                address = {apartment.shortAddress}
+                              />
+            ))}
             </div>
           </div>
 
           <h3>Saved Apartments</h3>
           <div className="saved-apartments-container">
-            <div className="listing-container">
-              {apartments.map((apt, index) => (
-                <ListingBox
-                  key={index}
-                  image={apt.photo}
-                  description={apt.name}
-                  phone={apt.phoneNumber}
-                  address={apt.address}
-                  liked={false}
-                  onLike={() => {}}
-                />
-              ))}
-            </div>
+          <div className="listing-container">
+          {apartments.slice(0,15).map((apartment, index) => (
+            <ListingBox
+            key={apartment.id}
+
+              id={apartment.id}
+              image={apartment.photo}
+              description={apartment.name}
+              phone = {apartment.phoneNumber}
+              address = {apartment.shortAddress}
+            />
+          ))}
+          </div>
           </div>
         </div>
       </div>
