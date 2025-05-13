@@ -36,8 +36,7 @@ const Signup = () => {
             <form className="auth" onSubmit={handleSubmit}>
               <input 
                 onChange = {(e) => setName(e.target.value)} 
-                value = {name}
-                type = "name"
+                type = "text"
                 placeholder = "Name"
                 required 
               /> 
