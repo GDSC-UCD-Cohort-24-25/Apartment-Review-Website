@@ -1,14 +1,16 @@
 // src/pages/Mapview.jsx
 
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Mapview.css';
 import ListingBox from '../components/ListingBox';
 
 const Map = () => {
   const [apartments, setApartments] = useState([]);
-  const [liked, setLiked]         = useState([]);
+  const [liked, setLiked] = useState([]);
+  const navigate = useNavigate();
 
-  // Fetch apartments from main.py
+  // Fetch apartments
   useEffect(() => {
     fetch('http://127.0.0.1:5000/apartments')
       .then(res => res.json())
@@ -19,9 +21,10 @@ const Map = () => {
       .catch(err => console.error('Failed to fetch apartments:', err));
   }, []);
 
-  // Initialize Google Map & place markers
+  // Initialize map and markers showing apartment names
   useEffect(() => {
     if (!apartments.length) return;
+
     const initMap = () => {
       const mapInstance = new window.google.maps.Map(
         document.getElementById('map'),
@@ -29,25 +32,31 @@ const Map = () => {
           center: { lat: 38.5449, lng: -121.7405 },
           zoom: 14,
           disableDefaultUI: true,
-          styles: []
         }
       );
 
       apartments.forEach(apt => {
-        if (apt.latitude && apt.longitude) {
-          new window.google.maps.Marker({
-            position: {
-              lat: apt.latitude,
-              lng: apt.longitude
-            },
-            map: mapInstance,
-            title: apt.name
-          });
-        }
+        // Validate coordinates
+        if (apt.latitude == null || apt.longitude == null) return;
+
+        // Create marker with name label
+        const marker = new window.google.maps.Marker({
+          position: { lat: apt.latitude, lng: apt.longitude },
+          map: mapInstance,
+          title: apt.name, // hover shows name
+          label: {
+            text: apt.name,
+            color: '#ffffff',
+            fontWeight: 'bold',
+            fontSize: '12px'
+          }
+        });
+
+        // Navigate on click
+        marker.addListener('click', () => navigate(`/apartments/${apt.id}`));
       });
     };
 
-    // Load Maps script if needed
     if (!window.google) {
       const script = document.createElement('script');
       script.src = `https://maps.googleapis.com/maps/api/js?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}&callback=initMap`;
@@ -58,7 +67,7 @@ const Map = () => {
     } else {
       initMap();
     }
-  }, [apartments]);
+  }, [apartments, navigate]);
 
   const handleLike = idx => {
     setLiked(prev => {
@@ -79,7 +88,6 @@ const Map = () => {
               key={apt.id}
               image={apt.photo}
               description={apt.name}
-              // if your DB has phoneNumber or shortAddress, swap in apt.phoneNumber / apt.shortAddress
               phone={apt.contact_phone}
               address={apt.website}
               liked={liked[idx]}

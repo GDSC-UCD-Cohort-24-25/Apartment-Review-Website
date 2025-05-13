@@ -29,7 +29,7 @@ const Ranking = () => {
         <div>
           <h2>Top Apartments</h2>
           <div className="listing-container">
-            {apartments.slice(0, 15).map((apt, idx) => (
+            {apartments.slice(0, 5).map((apt, idx) => (
               <ListingBox
                 key={apt.id}
                 image={apt.photo}
