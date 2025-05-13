@@ -10,8 +10,11 @@ import Ranking from './pages/Ranking';
 import About from './pages/About';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
+import WriteReview from './pages/writeReview';
+import Apartment from './pages/Apartment';
 
 import './App.css';
+import Quiz from './pages/Quiz';
 
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -44,7 +47,7 @@ function MainContent() {
   return (
     <div className="page-container">
       {/* Conditionally render Sidebar (hide on login page) */}
-      {location.pathname !== "/login" && <Sidebar />} 
+      {location.pathname !== "/login" && location.pathname !== "/signup" && <Sidebar />} 
 
       <div className="content-container">
         <Routes>
@@ -56,6 +59,9 @@ function MainContent() {
           <Route path="/about" element={<About />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/profile/:userid" element={<Profile />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/write-review" element={<WriteReview />} />
+          <Route path="/apartment/:id" element={<Apartment />} />
         </Routes>
       </div>
     </div>

@@ -17,21 +17,38 @@ def login ():
 
 @app.route("/apartments", methods=["GET"])
 def get_all_apartment():
-    response = supabase.table('apartments').select('*').execute()
+    # response = supabase.table('apartments').select('*').execute()
+
+    layout_response = supabase.table("layouts").select("apartment").execute()
+    apartment_ids = [layout["apartment"] for layout in layout_response.data]
+    if not apartment_ids:
+        return jsonify({"apartments": []})
+
+    response = (
+        supabase
+        .table("apartments")
+        .select("*")
+        .in_("id", apartment_ids)
+        .execute()
+    )
     return jsonify({"apartments": response.data})
 
 
 @app.route("/apartments/<int:apartment_id>", methods=["GET"])
 def get_apartment(apartment_id):
-    # Fetch the specific apartment by ID from the 'apartments' table
-    response = supabase.table('apartments').select('*').eq('id', apartment_id).execute()
+    # Fetch the specific apartment by ID
+    apartment_response = supabase.table('apartments').select('*').eq('id', apartment_id).execute()
 
-    if response.data:
-        # Return the apartment data as JSON
-        return jsonify({"apartment": response.data})
-    else:
-        # Return an error if the apartment with the specified ID was not found
+    if not apartment_response.data:
         return jsonify({"error": "Apartment not found"}), 404
+
+    # Fetch associated layouts from the layouts table
+    layouts_response = supabase.table('layouts').select('*').eq('apartment', apartment_id).execute()
+
+    return jsonify({
+        "apartment": apartment_response.data[0],
+        "layouts": layouts_response.data
+    })
 
 
 @app.route("/add_apartment", methods=["POST"])

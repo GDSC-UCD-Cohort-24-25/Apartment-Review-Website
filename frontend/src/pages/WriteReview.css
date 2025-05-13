@@ -1,0 +1,136 @@
+.writeReview-page {
+    display: flex ;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+.writeReview-page .star,
+.writeReview-page h2,
+.writeReview-page .description-box {
+  margin-bottom: 20px;
+}
+  
+  /* Main heading for About page only */
+  .writeReview-page h1{
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .star {
+    margin-top: 10px;
+    max-width: 100%;
+    width: 32px;
+    height: 32px;
+    color: #D2D2D9;
+    margin-right: 4px;
+  }
+
+  .star:hover{
+    cursor: pointer;
+  }
+
+.description-box {
+  min-width: 438px;
+  max-width: 438px;
+  height: 40px;
+  max-height: 100px;
+  border-radius: 8px;
+  border: 1px solid #D2D2D9;
+  font-size: 16px;
+  resize: vertical, horizontal;
+  box-sizing: border-box;
+  overflow: hidden;
+
+}
+
+.post-review {
+  width: 438px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1.3px solid #D2D2D9;
+  background-color: #D2D2D91A;
+}
+
+.post-review {
+  cursor: pointer;
+}
+
+.upload-section {
+  width: 45%;
+  margin-top: 50px;
+  margin-left: 80px;
+}
+
+.upload-section {
+  cursor: pointer;
+}
+
+.image-upload-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+  gap: 20px; /* Space between boxes */
+  margin-top: 10px;
+}
+
+.image-upload-box {
+  width: 200px;
+  height: 200px;
+  border: 2px dashed #3C959A; /* Dotted border for the image box */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f9f9f9;
+
+}
+
+.image-upload-label {
+  display: block; 
+  position: absolute;
+  font-size: 16px;
+  color: #333;
+  text-align: center; /* Align the label text to the center */
+}
+
+.image-input {
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Hides the input box */
+  cursor: pointer;
+}
+
+.image-upload-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Ensures the image fits within the box */
+}
+
+
+.suggested-tags {
+  margin-top: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tag-suggestion {
+  padding: 6px 12px;
+  background-color: #e6f0f0;
+  border: 1px solid #78b2a3;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.tag-suggestion:hover {
+  background-color: #d1eae8;
+}

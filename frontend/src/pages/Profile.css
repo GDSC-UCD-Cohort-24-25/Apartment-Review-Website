@@ -1,0 +1,217 @@
+.profile-layout {
+  display: flex;
+  overflow-y: auto;
+  align-items: flex-start;
+}
+
+.profile-sidebar {
+  align-items: flex-start;
+  padding-right: 2rem;
+  flex-shrink: 0;
+  width: 250px;
+}
+
+.profile-main {
+  flex-grow: 1;
+  padding-left: 0;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px; /* adjust to your real navbar height */
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* optional */
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.profile-info h2 {
+  margin-bottom: 0.25rem;
+  margin-top: 1rem;
+}
+
+.handle {
+  margin-top: 0;
+  color: #666;
+}
+
+/* Edit profile button */
+button.edit-profile-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 9999px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+button.edit-profile-button:hover {
+  background-color: #f3f3f3;
+}
+
+/* Form styling */
+.edit-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.profile-input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.save-button {
+  background-color: #007c8c;
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.save-button:hover {
+  background-color: #00697a;
+}
+
+.cancel-button {
+  background-color: rgb(233, 233, 233);
+  color: black;
+  font-weight: 500;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.profile-img-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will ensure the image fits and shrinks into the profile pic container */
+}
+
+.change-photo-text {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+
+.profile-main {
+  flex-grow: 1;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.profile-main h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.listing-scroll-wrapper {
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.profile-page .listing-container {
+  
+  height: 500px;
+  gap: 16px;
+  padding-bottom: 8px;
+  scroll-padding-left: 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+};
+
+.image-card {
+  flex: 0 0 250px; /* fixed width */
+  scroll-snap-align: start;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+
+.apartment-list-horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 10px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+/* Add this to force consistent box size */
+
+
+.apartment-list-horizontal-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.apartment-list-horizontal-scroll::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}

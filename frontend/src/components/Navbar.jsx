@@ -43,7 +43,7 @@ const Navbar = () => {
         {/* Home Icon linking to home page */}
         <Link to="/" className="navbar-icon">
           <img src="/house.svg" alt="logo" />
-          <span className="logo-name">davis housing</span>
+          <span className="logo-name">aggie housing</span>
         </Link>
 
         {/* Search Bar */}

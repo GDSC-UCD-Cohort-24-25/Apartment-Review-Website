@@ -1,58 +1,95 @@
-/* sidebar.css */
+/* Sidebar.css */
 .sidebar {
     position: fixed;  /* Keep it fixed on the side */
     top: var(--nav-bar-height);
     left: 0;
     /* width: var(--side-bar-width); */ 
-    width: 236px;
+    width: 220px;
     padding-left: 8px; /* Space between the nav bar and first link */
     padding-top: 34px; 
     padding-right: 8px; 
     height: 100vh;  /* Full height of the screen */
     border-right: 1px solid #ccc;  /* Adds a subtle grayish line to the right */
+    overflow-x: hidden;
+    transition: width 0.25s ease;
   }
   
 /* specifies styles when the side bar collapses */
 @media (max-width: 768px) {
-  .sidebar span {
-    display: none; /* Hide the text */
+  .sidebar {
+    width: 60px; /* Shrink width when text is hidden */
+    border-right: 1px solid #ccc; /* Still keep border, now aligned to new width */
   }
+
+  .sidebar span {
+    display: none;
+  }
+
   .sidebar > ul div {
     justify-content: center;
   }
 }
 
+
+
 .sidebar ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 24px; 
-  display: flex;
-  width: 140px;
-  align-items: flex-start;
-  padding: 10px; 
+  gap: 8px;
 }
-  
-.sidebar > ul div{
+.sidebar ul a {
+  color: inherit; /* blue colors for links too */
+
+  text-decoration: none; /* no underline */
+
+}
+
+
+
+
+
+.sidebar ul a div {
+  height: 48px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+.menu-item:hover {
+  transition: all .2s ease-out; /* ← animate any transform change */
+
+  background-color: hsla(191, 79%, 32%, 0.1);
+}
+
+.menu-item:hover .icon{
+  transition: all .1s ease-out; /* ← animate any transform change */
+
+  transform: scale(1.1);
+
+}
+
+
+.menu-item {
   display: flex;
   align-items: center;
-  gap: 8px; 
-}
-
-.sidebar a {
-  text-decoration: none; /* Remove underline */
-  color: var(--main-text-color);  /* Default text color */
-  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
-}
-
-/* .sidebar > ul div:hover {
-  display: flex;
-  width: 220px;
-  height: 34px;
-  padding: 10px 130.202px 10px 12px;
-  align-items: flex-start;
   gap: 8px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  background: rgba(120, 178, 163, 0.20);
+  border-radius: 10px;
+
+}
+
+.menu-item span {
+white-space: nowrap;
+overflow: hidden;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.active {
+  color: #118193;
+  background-color: hsla(191, 79%, 32%, 0.2);
 }
