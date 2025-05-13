@@ -9,7 +9,7 @@ const Ranking = () => {
   const [apartments, setApartments] = useState([]);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5001/rankings')
+    fetch('http://127.0.0.1:5000/rankings')
       .then(res => {
         console.log('FETCH /rankings status:', res.status);
         return res.json();
