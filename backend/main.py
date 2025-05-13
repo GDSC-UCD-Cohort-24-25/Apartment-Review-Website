@@ -45,10 +45,15 @@ def get_apartment(apartment_id):
     # Fetch associated layouts from the layouts table
     layouts_response = supabase.table('layouts').select('*').eq('apartment', apartment_id).execute()
 
+    # Fetch associated reviews from the reviews table
+    reviews_response = supabase.table('reviews').select('text_review, rating, author, apartment_id').eq('apartment_id', apartment_id).execute()
+
     return jsonify({
         "apartment": apartment_response.data[0],
-        "layouts": layouts_response.data
+        "layouts": layouts_response.data,
+        "reviews": reviews_response.data
     })
+
 
 
 @app.route("/add_apartment", methods=["POST"])

@@ -4,6 +4,17 @@ import ListingBox from '../components/ListingBox';
 const Map = () => {
   const [liked, setLiked] = useState([false, false]);
   const [map, setMap] = useState(null);
+  const [apartments, setApartments] = useState([]);
+  
+  useEffect(() => {
+    fetch('http://127.0.0.1:5000/apartments')
+      .then(response => response.json())
+      .then(data => {
+        setApartments(data.apartments);
+        setLiked(new Array(data.apartments.length).fill(false));
+      })
+      .catch(error => console.error('Error fetching apartments:', error));
+  }, []);
 
   useEffect(() => {
     const initMap = () => {
@@ -36,15 +47,19 @@ const Map = () => {
       <div className="map-listings">
         <h2>Map View</h2>
         <div className="listing-container">
-        {['apartments/thedrakeandanderson/the-drake-and-anderson-court-davis-ca-primary-photo.jpg', 'apartments/almondwood/almondwood-apartments-20200519-064.jpg', 'apartments/sycamorelane/RB209244_HDR_Edit(20220221215739348).jpg'].map((image, index) => (
-            <ListingBox
-              key={index + 3}  // Offset index to avoid duplicate keys
-              image={image}
-              description={`Description of High Rated Image ${index + 1}`}
-              liked={liked[index + 3]}
-              onLike={() => handleLike(index + 3)}
-            />
-          ))}
+        {apartments.slice(0,15).map((apartment, index) => (
+          <ListingBox
+          key={apartment.id}
+
+            id={apartment.id}
+            image={apartment.photo}
+            description={apartment.name}
+            phone = {apartment.phoneNumber}
+            address = {apartment.shortAddress}
+            liked={liked[index]}
+            onLike={() => handleLike(index)}
+          />
+        ))}
         </div>
 
       </div>

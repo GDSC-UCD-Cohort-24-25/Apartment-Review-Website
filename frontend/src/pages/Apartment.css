@@ -1,8 +1,154 @@
 .about-tab {
     display: grid;
+    padding-top: 5px;
+    gap:10px;
     grid-template-columns: 1fr 1fr;
 }
 
-.about-tab:last-child  img {
- width: 300px;
+
+.apartment-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.apartment-layouts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.layout-details {
+    font-size: 12px;
+}
+
+.layout-price {
+    display: flex;
+    align-items: center;
+}
+
+.layout-info {
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+}
+
+.layout-price img {
+    width: 20px;
+    margin-right: 3px;
+}
+
+.about-tab h2 {
+    margin-bottom: 10px;
+}
+
+.apartment-name {
+    margin-bottom: 20px;
+}
+
+.apartment-address {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.apartment-address p {
+    display: flex;
+    align-items: center;
+}
+
+.apartment-address p img{
+    width: 20px;
+    margin-right: 5px;
+}
+.contact-info {
+    display: flex;
+    word-break: break-all;  
+    flex-direction: column;
+    gap: 5px;
+}
+.contact-info p{
+display: flex;
+align-items: center;
+gap:5px
+}
+
+.tab-bar {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.tab-bar button{
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    border: 0;
+    font-size: 15px;
+
+
+}
+.tab-bar .nonactive {
+    background-color: white;
+}
+.tab-bar .active {
+    background-color: var(--);
+}
+
+
+/* review page styles  */
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 10px;
+}
+
+.review-card {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--card-border-radius);
+    padding:1rem;
+}
+.review-text {
+  margin-bottom: 0.5rem;
+   display: -webkit-box;
+   -webkit-line-clamp: 4; /* number of lines to show */
+           line-clamp: 4; 
+   -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all 0.3s;
+  font-size: 12px;
+}
+.author {
+    font-size: 15px;
+}
+.review-text.expanded {
+  -webkit-line-clamp: unset; /* number of lines to show */
+  line-clamp: unset;
+}
+
+.read-more {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  padding: 0;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.review-header img {
+    width: 40px;
+    border-radius: 20px;
+
+}
+
+.review-stars {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
