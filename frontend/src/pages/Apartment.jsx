@@ -123,7 +123,8 @@ function Apartment() {
                         <div className="apartment-address">
                         <p>
                            <img src="/location.svg" alt="price" className="icon" />
-                            {apartment.address}
+                           <a href={apartment.googleMapsUri} class="url" target="_blank" rel="noopener noreferrer">{apartment.address}</a>
+                            
                         </p>
                         </div>
 
@@ -131,7 +132,7 @@ function Apartment() {
                         <div className="contact-info">
                         <p>
                             <img src="/link.svg" alt="price" className="icon" />
-                            <a href={apartment.websiteUri} target="_blank" rel="noopener noreferrer">{apartment.websiteUri}</a></p>
+                            <a href={apartment.websiteUri} class="url" target="_blank" rel="noopener noreferrer">{apartment.websiteUri}</a></p>
                         <p>
                             <img src="/call.svg" alt="price" className="icon" />
                             {apartment.phoneNumber}</p>

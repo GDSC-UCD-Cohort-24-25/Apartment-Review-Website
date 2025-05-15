@@ -3,7 +3,6 @@
     justify-content: center;  /* Center horizontally */
     align-items: center;      /* Center vertically */
     padding-top: 78px; 
-    padding-right: 270px; 
     flex-direction: column;
 }
 
@@ -16,7 +15,6 @@
     font-weight: 400;
     line-height: normal;
 }
-
 
 .frame {
     display: flex;
@@ -35,30 +33,6 @@
     gap: 8px;
     align-items: center;
     padding-top: 8px; 
-}
-
-.input{
-  color: #59636E; /* Default text color */
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  padding-top: 16px; 
-  padding-bottom: 16px; 
-}
-
-input {
-    height: 40px;
-    width: 320px; 
-    /* align-self: stretch; */ 
-    align-self: center; 
-    border-radius: 5px;
-    border: 1px solid #D2D2D9;
-    background: #F8F8F8;
-    display: flex;
-    padding: 10px 16px;
-    gap: 8px;
 }
 
 .headerLI {

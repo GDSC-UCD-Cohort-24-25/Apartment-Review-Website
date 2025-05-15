@@ -61,15 +61,10 @@ const Navbar = () => {
           </div> 
         </form>
         <div className='user-info'>
-          {userId && (
-            <button onClick={handleLogout} className="signout-button">
-              Logout
-            </button>
-          )}
           {/* Login Icon linking to login page */}
-          <Link to={userId ? `/profile/${userId}` : "/login"} className="login-icon">
+          <Link to={userId ? `/profile` : "/login"} className="login-icon">
             <img src="/user.svg" alt="logo" />
-            <div class = "accountText">{userId ? 'Account' : 'Account'}</div>
+            <div class = "accountText">{userId ? 'Profile' : 'Login'}</div>
           </Link>
         </div>
       </div>

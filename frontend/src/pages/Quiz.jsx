@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import "./Quiz.css";
+import supabase from "../supabase-client";
 
 const Quiz = () => {
   const navigate = useNavigate(); // 👈 used to redirect
@@ -37,6 +38,16 @@ const Quiz = () => {
     const [answers, setAnswers] = useState({});
     const [message, setMessage] = useState("");
   
+    useEffect(() => {
+      const checkAuth = async () => {
+        const { data, error } = await supabase.auth.getUser();
+        if (error || !data?.user) {
+          navigate("/login"); // Redirect to main page if not signed in
+        }
+      };
+      checkAuth();
+    }, [navigate]);
+
     const handleOptionChange = (e) => {
       setAnswers({
         ...answers,
@@ -44,7 +55,7 @@ const Quiz = () => {
       });
     };
   
-    const handleNext = (e) => {
+    const handleNext = async (e) => {
       e.preventDefault();
       if (!answers[currentQuestion]) {
         setMessage("Please select an option.");
@@ -54,7 +65,12 @@ const Quiz = () => {
       if (currentQuestion < questions.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
       } else {
-        console.log("Quiz completed", answers);
+        const { data: userData, error: userError } = await supabase.auth.getUser();
+        const { error: updateError } = await supabase.auth.updateUser({
+          data: {
+            quiz_answers: answers
+          }
+        });        
         navigate("/profile"); 
       }
     };

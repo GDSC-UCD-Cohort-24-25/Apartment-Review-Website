@@ -33,6 +33,7 @@ const Home = () => {
         {apartments.slice(0,15).map((apartment, index) => (
           <ListingBox
             key={apartment.id}
+            neighborhood={apartment.neighborhood}
             image={apartment.photo}
             description={apartment.name}
             phone = {apartment.phoneNumber}

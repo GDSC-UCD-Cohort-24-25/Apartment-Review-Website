@@ -8,6 +8,9 @@ import { Link } from "react-router-dom";
 const Signup = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [name, setName] = useState('');
+    const [handle, setHandle] = useState('');
+
     const [message, setMessage] = useState("");
 
     const handleSubmit = async (event) => {
@@ -15,8 +18,19 @@ const Signup = () => {
         setMessage("");
         setEmail("");
         setPassword("");
+        setName("")
 
-        const { data, error } = await supabase.auth.signUp({email: email, password: password, });
+        const { data, error } = await supabase.auth.signUp({
+          email: email,
+          password: password,
+          options: {
+            data: {
+              name: name,
+              handle: handle,
+              avatar_url: ""
+            }
+          }
+        });
         if (error) { setMessage(error.message); return;}
         if (data) { setMessage("User account created!"); return; }
     };    
@@ -36,10 +50,18 @@ const Signup = () => {
             <form className="auth" onSubmit={handleSubmit}>
               <input 
                 onChange = {(e) => setName(e.target.value)} 
+                value={name}
                 type = "text"
                 placeholder = "Name"
                 required 
-              /> 
+              />
+              <input 
+                onChange={(e) => setHandle(e.target.value)} 
+                value={handle}
+                type="text"
+                placeholder="Preferred Username"
+                required
+              />
               <input
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
@@ -50,7 +72,7 @@ const Signup = () => {
               <input
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
-                type="new-password"
+                type="password"
                 placeholder="Password"
                 required
               />

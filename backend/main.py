@@ -15,44 +15,147 @@ def login ():
     else: 
         return jsonify({"error": "Only UC Davis emails are allowed"}), 403"""
 
+def compute_price_stats(layouts):
+    """
+    Given a list of layout dicts (each may have 'cost' and 'bed'),
+    returns per-person min/max/average price.
+    Any layout missing cost/bed is skipped.
+    If no valid layouts, all prices are zero.
+    """
+    per_person = []
+
+    for lt in layouts:
+        cost = lt.get("cost")
+        beds = lt.get("bed", 1)
+
+        # skip if no cost
+        if cost is None:
+            continue
+
+        # coerce and validate
+        try:
+            cost = float(cost)
+        except (TypeError, ValueError):
+            continue
+
+        try:
+            beds = int(beds)
+            if beds < 1:
+                beds = 1
+        except (TypeError, ValueError):
+            beds = 1
+
+        # compute per-person range
+        per_person.append((cost / (beds * 2), cost / beds))
+
+    if not per_person:
+        return {"min_price": 0.0, "max_price": 0.0, "average_price": 0.0}
+
+    mins, maxs = zip(*per_person)
+    overall_min = min(mins)
+    overall_max = max(maxs)
+    avg_mid = sum((mi + ma) / 2 for mi, ma in per_person) / len(per_person)
+
+    return {
+        "min_price": round(overall_min, 2),
+        "max_price": round(overall_max, 2),
+        "average_price": round(avg_mid, 2),
+    }
+
 @app.route("/apartments", methods=["GET"])
 def get_all_apartment():
-    # response = supabase.table('apartments').select('*').execute()
+    # 1) fetch all apartments (up to 5)
+    apt_resp = supabase.table("apartments")\
+                      .select("*")\
+                      .execute()
+    apartments = apt_resp.data or []
 
-    layout_response = supabase.table("layouts").select("apartment").execute()
-    apartment_ids = [layout["apartment"] for layout in layout_response.data]
-    if not apartment_ids:
-        return jsonify({"apartments": []})
+    # extract their IDs
+    apt_ids = [apt["id"] for apt in apartments]
 
-    response = (
-        supabase
-        .table("apartments")
-        .select("*")
-        .in_("id", apartment_ids)
-        .execute()
-    )
-    return jsonify({"apartments": response.data})
+    # 2) fetch all layouts for these apartments in one query
+    layouts_resp = supabase.table("layouts")\
+                           .select("*")\
+                           .in_("apartment", apt_ids)\
+                           .execute()
+    layouts_data = layouts_resp.data or []
 
+    # group layouts by apartment ID
+    layouts_by_apartment = {}
+    for layout in layouts_data:
+        layouts_by_apartment.setdefault(layout["apartment"], []).append(layout)
+
+    # 3) fetch all reviews for these apartments in one go
+    reviews_resp = supabase.table("reviews")\
+                           .select("text_review, rating, author, apartment_id")\
+                           .in_("apartment_id", apt_ids)\
+                           .execute()
+    reviews_data = reviews_resp.data or []
+
+    # group reviews by apartment ID
+    reviews_by_apartment = {}
+    for rev in reviews_data:
+        reviews_by_apartment.setdefault(rev["apartment_id"], []).append(rev)
+
+    # 4) assemble enriched payload
+    enriched = []
+    for apt in apartments:
+        aid = apt["id"]
+        layouts = layouts_by_apartment.get(aid, [])
+        reviews = reviews_by_apartment.get(aid, [])
+        price   = compute_price_stats(layouts)
+
+        enriched.append({
+            "apartment": apt,
+            "layouts":   layouts,
+            "reviews":   reviews,
+            "price":     price
+        })
+
+    # return only the first apartment for now
+    return jsonify({"apartments": enriched})
 
 @app.route("/apartments/<int:apartment_id>", methods=["GET"])
 def get_apartment(apartment_id):
-    # Fetch the specific apartment by ID
-    apartment_response = supabase.table('apartments').select('*').eq('id', apartment_id).execute()
-
-    if not apartment_response.data:
+    # 1) Fetch apartment
+    a_res = (
+        supabase.table("apartments")
+                .select("*")
+                .eq("id", apartment_id)
+                .execute()
+    )
+    if not a_res.data:
         return jsonify({"error": "Apartment not found"}), 404
+    apartment = a_res.data[0]
 
-    # Fetch associated layouts from the layouts table
-    layouts_response = supabase.table('layouts').select('*').eq('apartment', apartment_id).execute()
+    # 2) Fetch layouts
+    l_res = (
+        supabase.table("layouts")
+                .select("*")
+                .eq("apartment", apartment_id)
+                .execute()
+    )
+    layouts = l_res.data
 
-    # Fetch associated reviews from the reviews table
-    reviews_response = supabase.table('reviews').select('text_review, rating, author, apartment_id').eq('apartment_id', apartment_id).execute()
+    # 3) Fetch reviews
+    r_res = (
+        supabase.table("reviews")
+                .select("text_review, rating, author, apartment_id")
+                .eq("apartment_id", apartment_id)
+                .execute()
+    )
+    reviews = r_res.data
+
+    # 4) Compute price stats
+    price_stats = compute_price_stats(layouts)
 
     return jsonify({
-        "apartment": apartment_response.data[0],
-        "layouts": layouts_response.data,
-        "reviews": reviews_response.data
+        "apartment": apartment,
+        "layouts": layouts,
+        "reviews": reviews,
+        "price": price_stats
     })
+
 
 
 

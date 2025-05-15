@@ -19,6 +19,21 @@
   }
 }
 
+input {
+    height: 40px;
+    width: 320px; 
+    border-radius: 5px;
+    border: 1px solid #D2D2D9;
+    background: #F8F8F8;
+    padding: 10px 16px;
+    font-size: 16px;
+    gap: 8px;
+}
+
+input::placeholder {
+  color: #59636E;
+}
+
 body {
   color: var(--text-color);
 }
@@ -38,10 +53,52 @@ body {
   padding-right: 64px; 
 }
 
+a.url {
+  color: hsla(224, 93%, 61%, 1);
+}
+.page-container.no-sidebar {
+  margin-left: 0;
+}
+
+button.secondary{
+  height: 40px;
+  padding: 8px 24px;
+  border: 1px solid #D2D2D9;
+  background: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button.secondary:hover {
+  background: rgba(210, 210, 217, 0.50);
+}
+
+button.primary {
+  height: 40px;
+  padding: 8px 24px;
+  border: 1px solid #D2D2D9;
+  color: white;
+  background: hsla(188, 79%, 32%, 1);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+}
 h2 {
   color: #313638;
   font-family: Inter;
-  font-size: 24px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -50,16 +107,19 @@ h2 {
 h1 {
   color: #313638;
   font-family: Inter;
-  font-size: 28px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;  
 }
 
 h3 {
-  font-size: 18px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  color: #313638;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 input::placeholder {

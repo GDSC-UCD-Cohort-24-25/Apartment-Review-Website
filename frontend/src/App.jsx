@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
+import Home from './pages/home';
 import Login from './pages/Login';
 import Sidebar from './components/Sidebar';
 import Listing from './pages/AllListing'; 
@@ -42,12 +42,16 @@ function App() {
 }
 
 function MainContent() {
-  const location = useLocation(); // Get current route
+  const location = useLocation();
+
+  const sidebarHidden =
+    location.pathname === "/login" ||
+    location.pathname === "/signup" ||
+    location.pathname.startsWith("/profile");
 
   return (
-    <div className="page-container">
-      {/* Conditionally render Sidebar (hide on login page) */}
-      {location.pathname !== "/login" && location.pathname !== "/signup" && <Sidebar />} 
+    <div className={`page-container ${sidebarHidden ? 'no-sidebar' : ''}`}>
+      {!sidebarHidden && <Sidebar />}
 
       <div className="content-container">
         <Routes>
@@ -58,7 +62,7 @@ function MainContent() {
           <Route path="/ranking" element={<Ranking />} />
           <Route path="/about" element={<About />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/profile/:userid" element={<Profile />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/write-review" element={<WriteReview />} />
           <Route path="/apartment/:id" element={<Apartment />} />

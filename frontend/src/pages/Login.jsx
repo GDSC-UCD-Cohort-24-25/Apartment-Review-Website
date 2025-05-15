@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Login.css';
 import { useNavigate, Link } from 'react-router-dom';
 import supabase from "../supabase-client.js";
+import '../App.css'
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -20,7 +21,7 @@ const Login = () => {
       return;
     }
     if (data) {
-      navigate(`/profile/${data.session.user.id}`);
+      navigate(`/profile`);
     }
   };
 
@@ -36,7 +37,6 @@ const Login = () => {
 
         <form className="auth" onSubmit={handleSubmit}>
           <input 
-            className="input"
             type="email" 
             placeholder="Enter your email*" 
             value={email} 
@@ -44,7 +44,6 @@ const Login = () => {
             required
           />
           <input 
-            className="input"
             type="password" 
             placeholder="Password*" 
             value={password} 
@@ -56,7 +55,7 @@ const Login = () => {
             <p>Forgot Password?</p>
           </div>
 
-          <button className="loginButton" type="submit">Login</button>
+          <button className="primary" type="submit">Login</button>
           {message && <span>{message}</span>}
         </form> 
       </div>
