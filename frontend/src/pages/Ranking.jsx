@@ -5,7 +5,7 @@ import './Ranking.css';
 const Home = () => {
   const [liked, setLiked] = useState([false, false, false]);
   const [apartments, setApartments] = useState([]);
-
+  
   useEffect(() => {
     fetch('http://127.0.0.1:5000/apartments')
       .then(response => response.json())
@@ -15,6 +15,7 @@ const Home = () => {
       })
       .catch(error => console.error('Error fetching apartments:', error));
   }, []);
+
 
   const handleLike = (index) => {
     setLiked((prevState) => {
@@ -30,33 +31,46 @@ const Home = () => {
       <div>
         <h2>Featured</h2>  {/* Add "Featured" text */}
         <div className="listing-container">
-        {apartments.slice(0,15).map((apartment, index) => (
-          <ListingBox
-            key={apartment.id}
-            neighborhood={apartment.neighborhood}
-            image={apartment.photo}
-            description={apartment.name}
-            phone = {apartment.phoneNumber}
-            address = {apartment.shortAddress}
-            liked={liked[index]}
-            onLike={() => handleLike(index)}
-          />
-        ))}
+        {apartments.filter(item => item.apartment.neighborhood!==null).slice().map((item, index) => 
+          (
+            <ListingBox
+              key={item.apartment.id}
+              id={item.apartment.id}
+              neighborhood={item.apartment.neighborhood}
+              image={item.apartment.photo}
+              name={item.apartment.name}
+              phone={item.apartment.phoneNumber}
+              address={item.apartment.shortAddress}
+              liked={liked[index]}
+              pricemin={item.price?.min_price ?? "N/A"}
+              pricehigh={item.price?.max_price ?? "N/A"}
+              onLike={() => handleLike(index)}
+            />
+          )
+        )}        
         </div>
       </div>
       <div>
         {/* High Rated Section */}
         <h2>High Rated</h2>
         <div className="listing-container">
-        {['apartments/thedrakeandanderson/the-drake-and-anderson-court-davis-ca-primary-photo.jpg', 'apartments/almondwood/almondwood-apartments-20200519-064.jpg', 'apartments/sycamorelane/RB209244_HDR_Edit(20220221215739348).jpg'].map((image, index) => (
+        {apartments.filter(item => item.apartment.neighborhood!==null).slice().map((item, index) => 
+          (
             <ListingBox
-              key={index + 3}  // Offset index to avoid duplicate keys
-              image={image}
-              description={`Description of High Rated Image ${index + 1}`}
-              liked={liked[index + 3]}
-              onLike={() => handleLike(index + 3)}
+              key={item.apartment.id}
+              id={item.apartment.id}
+              neighborhood={item.apartment.neighborhood}
+              image={item.apartment.photo}
+              name={item.apartment.name}
+              phone={item.apartment.phoneNumber}
+              address={item.apartment.shortAddress}
+              liked={liked[index]}
+              pricemin={item.price?.min_price ?? "N/A"}
+              pricehigh={item.price?.max_price ?? "N/A"}
+              onLike={() => handleLike(index)}
             />
-          ))}
+          )
+        )}
         </div>
       </div>
       </main>

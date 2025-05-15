@@ -47,19 +47,24 @@ const Map = () => {
       <div className="map-listings">
         <h2>Map View</h2>
         <div className="listing-container">
-        {apartments.slice(0,15).map((apartment, index) => (
-          <ListingBox
-          key={apartment.id}
+        {apartments.filter(item => item.apartment.neighborhood!==null).map((item, index) => 
+          (
+            <ListingBox
+              key={item.apartment.id}
+              id={item.apartment.id}
+              neighborhood={item.apartment.neighborhood}
+              image={item.apartment.photo}
+              name={item.apartment.name}
+              phone={item.apartment.phoneNumber}
+              address={item.apartment.shortAddress}
+              liked={liked[index]}
+              pricemin={item.price?.min_price ?? "N/A"}
+              pricehigh={item.price?.max_price ?? "N/A"}
+              onLike={() => handleLike(index)}
+            />
+          )
+        )}        
 
-            id={apartment.id}
-            image={apartment.photo}
-            description={apartment.name}
-            phone = {apartment.phoneNumber}
-            address = {apartment.shortAddress}
-            liked={liked[index]}
-            onLike={() => handleLike(index)}
-          />
-        ))}
         </div>
 
       </div>
