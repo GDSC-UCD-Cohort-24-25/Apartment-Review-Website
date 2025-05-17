@@ -1,9 +1,9 @@
 import os
 from flask import request, jsonify
-import requests
 from config import app, supabase
-from dotenv import load_dotenv
-load_dotenv()
+from flask_cors import CORS
+CORS(app)
+
 
 """@app.route('/login', methods =["POST"])
 def login ():
@@ -204,6 +204,87 @@ def get_apartment_layouts(apartment_id):
     else:
         # Return an error if no layouts were found for the given apartment ID
         return jsonify({"error": "No layouts found for the specified apartment"}), 404
+    
+@app.route("/filter_apartments", methods=["POST"])
+def filter_apartments():
+    data = request.get_json()
+    features = data.get("features", [])
+
+    print("REceived features:", features)
+
+    price_filters = {
+        "under700": lambda cost: cost < 700,
+        "700to850": lambda cost: 700 <= cost <= 850,
+        "850to1000": lambda cost: 850 < cost <= 1000,
+        "1000above": lambda cost: cost > 1000,
+    }
+
+    # Get all apartments and layouts
+    apartments_response = supabase.table("apartments").select("*").execute()
+    layouts_response = supabase.table("layouts").select("id, apartment, cost, bedrooms").execute()
+
+    if not apartments_response.data or not layouts_response.data:
+        print("No data found in apartments")
+        return jsonify({"apartments": []})
+
+    layout_map = {}
+    for layout in layouts_response.data:
+        apt_id = layout["apartment"]
+        layout_map.setdefault(apt_id, []).append(layout)
+
+    filtered_apartments = []
+
+    for apt in apartments_response.data:
+        apt_id = apt["id"]
+        layouts = layout_map.get(apt_id, [])
+
+        if not features:  # No filters applied
+            filtered_apartments.append(apt)
+            continue
+
+        include = False
+        for layout in layouts:
+            cost = layout.get("cost")
+            if cost is None:
+                continue
+
+            for feature in features:
+                match_fn = price_filters.get(feature)
+                if match_fn and match_fn(cost):
+                    include = True
+                    break
+            if include:
+                break
+
+        if include:
+            filtered_apartments.append(apt)
+
+    print("Filtered apartments count:", len(filtered_apartments))  # 🔍
+
+
+    # Enrich filtered apartments with layouts, reviews, and price info
+    enriched = []
+    for apt in filtered_apartments:
+        aid = apt["id"]
+        layouts = layout_map.get(aid, [])
+
+        reviews_resp = supabase.table("reviews")\
+                               .select("text_review, rating, author, apartment_id")\
+                               .eq("apartment_id", aid)\
+                               .execute()
+        reviews = reviews_resp.data or []
+
+        price = compute_price_stats(layouts)
+
+        enriched.append({
+            "apartment": apt,
+            "layouts": layouts,
+            "reviews": reviews,
+            "price": price
+        })
+
+    return jsonify({"apartments": enriched})
+
 
 
 @app.route('/compute-route', methods=['POST'])

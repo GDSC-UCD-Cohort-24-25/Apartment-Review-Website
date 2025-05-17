@@ -1,16 +1,7 @@
 import React, { useState } from 'react';
 import './FilterBar.css';
 
-const FilterBar = () => {
-  const [filters, setFilters] = useState({
-    price: [],
-    housingType: [],
-    layout: [],
-    bathroom: [],
-    occupancy: [],
-    features: [],
-    features: [],
-  });
+const FilterBar = ({filters, setFilters}) => {
 
   const handleCheckboxChange = (e, category) => {
     const { value } = e.target;
@@ -34,45 +25,98 @@ const FilterBar = () => {
           <label>
             <input
               type="checkbox"
-              value="under500"
-              checked={filters.features.includes('under500')}
+              value="under700"
+              checked={filters.features.includes('under700')}
               onChange={e => handleCheckboxChange(e, 'features')}
             />
-            Under $500
+            Under $700
           </label>
         </div>
         <div>
           <label>
             <input
               type="checkbox"
-              value="500to650"
-              checked={filters.features.includes('500to650')}
+              value="700to850"
+              checked={filters.features.includes('700to850')}
               onChange={e => handleCheckboxChange(e, 'features')}
             />
-            $500 to $650
+            $700 to $850
           </label>
         </div>
         <div>
           <label>
             <input
               type="checkbox"
-              value="650to800"
-              checked={filters.features.includes('650to800')}
+              value="850to1000"
+              checked={filters.features.includes('850to1000')}
               onChange={e => handleCheckboxChange(e, 'features')}
             />
-            $650 to $800
+            $850 to $1000
           </label>
         </div>
         <div>
           <label>
             <input
               type="checkbox"
-              value="800above"
-              checked={filters.features.includes('800above')}
+              value="1000above"
+              checked={filters.features.includes('1000above')}
               onChange={e => handleCheckboxChange(e, 'features')}
             />
-            $800 and above
+            $1000 and above
           </label>
+        </div>
+      </div>
+
+      {/* Rooms */}
+      <div className="filter-section">
+        <h4>Rooms</h4>
+<div>
+          <label >
+            <input
+            type='checkbox'
+            value="loft"
+            checked={filters.features.includes('loft')}
+              onChange={e => handleCheckboxChange(e, 'features')}
+         />
+         Loft
+              </label>
+
+        </div>
+
+        <div>
+          <label>
+            <input 
+            type='checkbox'
+            value="onebedroom"
+            checked={filters.features.includes('onebedroom')}
+              onChange={e => handleCheckboxChange(e, 'features')}
+            />
+            One Bedroom
+          </label>
+        </div>
+        <div>
+          <label >
+            <input
+            type='checkbox'
+            value="twobedroom"
+            checked={filters.features.includes('twobedroom')}
+              onChange={e => handleCheckboxChange(e, 'features')}
+         />
+         Two Bedroom
+              </label>
+
+        </div>
+        <div>
+          <label >
+            <input
+            type='checkbox'
+            value="overthree"
+            checked={filters.features.includes('overthree')}
+              onChange={e => handleCheckboxChange(e, 'features')}
+         />
+         Over Three
+              </label>
+
         </div>
       </div>
 
