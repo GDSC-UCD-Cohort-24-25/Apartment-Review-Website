@@ -2,13 +2,14 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
 
 const ApartmentContext = createContext();
-
+const route = "https://apartment-review-website-production.up.railway.app/apartments"
+// const route = "http://127.0.0.1:5000/apartments"
 export const ApartmentProvider = ({ children }) => {
   const [apartments, setApartments] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/apartments")
+    fetch(route)
       .then((res) => res.json())
       .then((data) => {
         setApartments(data.apartments);
