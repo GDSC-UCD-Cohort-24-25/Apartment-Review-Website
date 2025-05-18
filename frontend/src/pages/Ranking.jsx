@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import RankingBox from '../components/RankingBox';
 import { useApartments } from "../ApartmentProvider";
 
-import './Home.css';    // brings in .listing-container, .image-card, etc.
 
 const Ranking = () => {
   const { apartments, loading } = useApartments();
