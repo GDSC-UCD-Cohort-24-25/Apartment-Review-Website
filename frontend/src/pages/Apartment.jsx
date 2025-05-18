@@ -1,8 +1,7 @@
-import React, { useEffect, useState , useRef} from 'react';
+import React, { useState ,useRef, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import './Apartment.css';
-
-
+import { useApartments } from "../ApartmentProvider";
 
 function ReviewCard({ review }) {
   const { author, rating, text_review, avatarUrl } = review;
@@ -59,108 +58,120 @@ function ReviewCard({ review }) {
   );
 }
 
-function Apartment() {
-    const { id } = useParams();
-    const [apartment, setApartment] = useState(null);
-    const [activeTab, setActiveTab] = useState('about');
+export default function Apartment() {
+  const { id } = useParams();
+  const { apartments, loading } = useApartments();
+  const [activeTab, setActiveTab] = useState('about');
 
-    useEffect(() => {
-        fetch(`http://127.0.0.1:5000/apartments/${id}`)
-            .then((res) => res.json())
-            .then((data) => {
-                setApartment({
-                    ...data.apartment,
-                    layouts: data.layouts,
-                    reviews: data.reviews
-                });
-            });
-    }, [id]);
+  // 1) pull out the one matching apartment-wrapper object:
+  const wrapper = apartments.find(
+    item => String(item.apartment.id) === String(id)
+  );
 
-    if (!apartment) return <div>Loading...</div>;
+  // 2) get your inner data (layouts, reviews, etc.) off of it:
+  const apartment = wrapper?.apartment;
+  const layouts   = wrapper?.layouts   || [];
+  const reviews   = wrapper?.reviews   || [];
 
-    return (
-        <div>
-            <h1 className='apartment-name'>{apartment.name}</h1>
+  // 3) handle loading / not-found early
+  if (loading) {
+    return <p>Loading apartment…</p>;
+  }
+  if (!apartment) {
+    return <p>Apartment not found.</p>;
+  }
 
-            <div className="tab-bar">
-            <button
-                className={activeTab === 'about' ? 'active' : 'nonactive'}
-                onClick={() => setActiveTab('about')}
-            >
-                About
-            </button>
-            <button
-                className={activeTab === 'review' ? 'active' : 'nonactive'}
-                onClick={() => setActiveTab('review')}
-            >
-                Review
-            </button>
-            </div>
-        
-            <div className="tab-content">
-            {activeTab === 'about' && 
-                <div  className='about-tab'>
-                    <div>   
-                        <h2>About the Property</h2>
-                        <div className='apartment-layouts'>
-                        {apartment.layouts && apartment.layouts.length > 0 ? (
-                        apartment.layouts.map((layout, index) => (
-                            <div key={index} className="layout-info">
-                            <p className='layout-price'>
-                                <img src="/dollar-square.svg" alt="price" className="icon" />
-                                {layout.cost ? `$${layout.cost}` : 'Price not listed'}</p>
-                            <p className='layout-details'>
-                                {layout.bedrooms} Bedroom • {layout.bathrooms} Bathroom • {layout.square_feet} sq. ft.
-                            </p>
-                            </div>
-                        
-                        ))
-                        ) : (
-                        <p>No layout information available</p>
-                        )}
-                        </div>
+  // 4) render normally, using those local variables
+  return (
+    <div>
+      <h1 className='apartment-page-name'>{apartment.name}</h1>
 
-                        <div className="apartment-address">
-                        <p>
-                           <img src="/location.svg" alt="price" className="icon" />
-                           <a href={apartment.googleMapsUri} class="url" target="_blank" rel="noopener noreferrer">{apartment.address}</a>
-                            
-                        </p>
-                        </div>
+      <div className="tab-bar">
+        <button
+          className={activeTab === 'about' ? 'active' : 'nonactive'}
+          onClick={() => setActiveTab('about')}
+        >
+          About
+        </button>
+        <button
+          className={activeTab === 'review' ? 'active' : 'nonactive'}
+          onClick={() => setActiveTab('review')}
+        >
+          Review
+        </button>
+      </div>
 
-                        <h2>Get in touch</h2>
-                        <div className="contact-info">
-                        <p>
-                            <img src="/link.svg" alt="price" className="icon" />
-                            <a href={apartment.websiteUri} class="url" target="_blank" rel="noopener noreferrer">{apartment.websiteUri}</a></p>
-                        <p>
-                            <img src="/call.svg" alt="price" className="icon" />
-                            {apartment.phoneNumber}</p>
-                        </div>
+      {activeTab === 'about' && (
+        <div className='about-tab'>
+          <div>
+            <h2>About the Property</h2>
+            <div className='apartment-layouts'>
+              {layouts.length > 0
+                ? layouts.map((layout, i) => (
+                    <div key={i} className="layout-info">
+                      <p className='layout-price'>
+                        <img src="/dollar-square.svg" alt="price" className="icon" />
+                        {layout.cost ? `$${layout.cost}` : 'Price not listed'}
+                      </p>
+                      <p className='layout-details'>
+                        {layout.bedrooms} Bedroom • {layout.bathrooms} Bathroom • {layout.square_feet} sq. ft.
+                      </p>
                     </div>
-                    <div>
-                        <img className="apartment-image" src={apartment.photo}></img>
-                    </div>
-                </div>
-            }
-            {activeTab === 'review' && 
-                <div>
-                    <h2>What other people say</h2>
-                <div className="reviews-grid">
-                {apartment?.reviews?.map((review, index) => (
-                    <ReviewCard key={index} review={review} />
-                ))}
-                </div>
-                </div>
-            }
+                  ))
+                : <p>No layout information available</p>
+              }
             </div>
+
+            <div className="apartment-address">
+              <p>
+                <img src="/location.svg" alt="location" className="icon" />
+                <a
+                  href={apartment.googleMapsUri}
+                  className="url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {apartment.address}
+                </a>
+              </p>
+            </div>
+
+            <h2>Get in touch</h2>
+            <div className="contact-info">
+              <p>
+                <img src="/link.svg" alt="website" className="icon" />
+                <a
+                  href={apartment.websiteUri}
+                  className="url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {apartment.websiteUri}
+                </a>
+              </p>
+              <p>
+                <img src="/call.svg" alt="phone" className="icon" />
+                {apartment.phoneNumber}
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <img className="apartment-image" src={apartment.photo} alt={apartment.name} />
+          </div>
         </div>
-    );
+      )}
+
+      {activeTab === 'review' && (
+        <div>
+          <h2>What other people say</h2>
+          <div className="reviews-grid">
+            {reviews.map((review, i) => (
+              <ReviewCard key={i} review={review} />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
-
-
-
-
-
-
-export default Apartment;

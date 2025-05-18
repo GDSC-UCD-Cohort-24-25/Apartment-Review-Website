@@ -3,8 +3,7 @@
     position: fixed;  /* Keep it fixed on the side */
     top: var(--nav-bar-height);
     left: 0;
-    /* width: var(--side-bar-width); */ 
-    width: 220px;
+    width: var(--side-bar-width); 
     padding-left: 8px; /* Space between the nav bar and first link */
     padding-top: 34px; 
     padding-right: 8px; 
@@ -14,21 +13,19 @@
     transition: width 0.25s ease;
   }
   
-/* specifies styles when the side bar collapses */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 60px; /* Shrink width when text is hidden */
-    border-right: 1px solid #ccc; /* Still keep border, now aligned to new width */
-  }
-
-  .sidebar span {
-    display: none;
-  }
-
-  .sidebar > ul div {
-    justify-content: center;
-  }
+.sidebar.collapsed {
+  width: 60px; /* Shrink width when text is hidden */
+  border-right: 1px solid #ccc; /* Still keep border, now aligned to new width */
 }
+
+.sidebar.collapsed span {
+  display: none;
+}
+
+.sidebar.collapsed > ul div {
+  justify-content: center;
+}
+
 
 
 

@@ -1,5 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { AuthProvider } from "./Auth";
+import { ApartmentProvider } from "./ApartmentProvider";
+
 import Navbar from './components/Navbar';
 import Home from './pages/home';
 import Login from './pages/Login';
@@ -12,45 +15,33 @@ import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 import WriteReview from './pages/writeReview';
 import Apartment from './pages/Apartment';
-
-import './App.css';
 import Quiz from './pages/Quiz';
 
-const Layout = ({ children }) => {
-  const location = useLocation();
-  const hideSidebar = location.pathname === '/listings'; // Hide sidebar on All Listings page
-
-  return (
-    <div className="app-container">
-      <Navbar />
-      <div className="main-content">
-        {!hideSidebar && <Sidebar />} {/* Sidebar only hides on /listings */}
-        <main className="content">{children}</main>
-      </div>
-    </div>
-  );
-};
+import './App.css';
 
 function App() {
-  
   return (
-    <Router>
-      <Navbar />
-      <MainContent />
-    </Router>
+    <AuthProvider>
+      <ApartmentProvider>
+        <Router>
+          <Navbar />
+          <MainContent />
+        </Router>
+      </ApartmentProvider>
+    </AuthProvider>
   );
 }
 
 function MainContent() {
   const location = useLocation();
+  const disablePadding = location.pathname === '/map';
 
   const sidebarHidden =
     location.pathname === "/login" ||
-    location.pathname === "/signup" ||
-    location.pathname.startsWith("/profile");
+    location.pathname === "/signup" 
 
   return (
-    <div className={`page-container ${sidebarHidden ? 'no-sidebar' : ''}`}>
+  <div className={`page-container ${sidebarHidden ? 'no-sidebar' : ''} ${disablePadding ? 'no-padding' : ''}`}>
       {!sidebarHidden && <Sidebar />}
 
       <div className="content-container">

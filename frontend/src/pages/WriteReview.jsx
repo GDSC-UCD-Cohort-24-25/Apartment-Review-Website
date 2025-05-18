@@ -59,22 +59,22 @@ function WriteReview() {
     <button className="post-review">Post Review</button>
     </div>
 
-    <div class="upload-section">
-        <div class="image-upload-container">
-        <div class="image-upload-box">
+    <div className="upload-section">
+        <div className="image-upload-container">
+        <div className="image-upload-box">
         <label htmlFor="image-upload-1" className="image-upload-label">
             Upload Media
         </label>
-        <input type="file" id="image-upload-1" accept="image/*" class="image-input" />
+        <input type="file" id="image-upload-1" accept="image/*" className="image-input" />
          </div>
-        <div class="image-upload-box">
-      <input type="file" id="image-upload-2" accept="image/*" class="image-input" />
+        <div className="image-upload-box">
+      <input type="file" id="image-upload-2" accept="image/*" className="image-input" />
         </div>
-        <div class="image-upload-box">
-        <input type="file" id="image-upload-3" accept="image/*" class="image-input" />
+        <div className="image-upload-box">
+        <input type="file" id="image-upload-3" accept="image/*" className="image-input" />
         </div>
-        <div class="image-upload-box">
-        <input type="file" id="image-upload-4" accept="image/*" class="image-input" />
+        <div className="image-upload-box">
+        <input type="file" id="image-upload-4" accept="image/*" className="image-input" />
         </div>
         </div>
         </div>

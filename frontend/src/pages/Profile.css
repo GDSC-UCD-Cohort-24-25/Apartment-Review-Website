@@ -5,13 +5,14 @@
 
 }
 
-
+.apartment-matches {
+  margin-bottom: 20px;
+}
 .profile-page {
   display: grid;
   gap: 30px;
   grid-template-columns: minmax(0, min(25%, 200px)) 1fr;
-  margin-left: 50px;
-}
+  }
 
 
 .handle {
@@ -86,6 +87,3 @@
   padding: 0px
 }
 
-.edit-buttons button {
-  padding:0px;
-}

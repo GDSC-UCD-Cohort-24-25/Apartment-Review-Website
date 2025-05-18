@@ -2,10 +2,10 @@ import React, { useEffect, useState, useRef } from 'react';
 import supabase from '../supabase-client';
 import { useParams , useNavigate} from 'react-router-dom';
 import ListingBox from '../components/ListingBox';
-import './Profile.css';
+import { useAuth } from "../Auth";
+import { useApartments } from "../ApartmentProvider";
 
-const getImageUrl = (filename) =>
-  `https://xyz.supabase.co/storage/v1/object/public/apartment_photos/${filename}`;
+import './Profile.css';
 
 const Profile = () => {
   const [username, setUsername] = useState('');
@@ -15,23 +15,19 @@ const Profile = () => {
   const [editingProfile, setEditingProfile] = useState(false);
   const [newUsername, setNewUsername] = useState('');
   const [newHandle, setNewHandle] = useState('');
-  const { userId } = useParams();
   const fileInputRef = useRef(null);
-  const [isLiked, setIsLiked] = useState(false);
+  const { user , loading: authLoading} = useAuth();
+  const { apartments, loading } = useApartments();
+
   const navigate = useNavigate();
 
-    const [apartments, setApartments] = useState([]);
-    
-    useEffect(() => {
-      fetch('http://127.0.0.1:5000/apartments')
-        .then(response => response.json())
-        .then(data => {
-          setApartments(data.apartments);
-          setLiked(new Array(data.apartments.length).fill(false));
-        })
-        .catch(error => console.error('Error fetching apartments:', error));
-    }, []);
-  
+  useEffect(() => {
+    if (!user) return;
+    setUsername(user.user_metadata.name);
+    setHandle(user.user_metadata.handle);
+    setProfileUrl(user.user_metadata.avatar_url);
+  }, [user]);
+ 
   useEffect(() => {
     if (editingProfile) {
       setNewUsername(username);
@@ -40,78 +36,53 @@ const Profile = () => {
   }, [editingProfile, username, handle]);
 
   useEffect(() => {
-
-    const fetchUser = async () => {
-      const { data, error } = await supabase.auth.getUser();
-      if (error || !data?.user) {
-        console.error("Error fetching user:", error);
-        return;
-      }
-
-      const user = data.user;
-      setUsername(user.user_metadata?.name || '');
-      setHandle(user.user_metadata?.handle || 'davisStudent');
-      if (user.user_metadata?.avatar_url) {
-        setProfileUrl(user.user_metadata.avatar_url);
-      }
-
-
-    };
-
-    fetchUser();
-  }, [userId]);
-
-
-
-
-const handleUpload = async (event) => {
-  try {
-    const file = event.target.files[0];
-    if (!file) return;
-
-    setUploading(true);
-
-    // Get current user info
-    const { data: userData, error: userError } = await supabase.auth.getUser();
-    if (userError || !userData?.user?.id) {
-      throw new Error("Failed to retrieve user.");
+    if (!authLoading && !user) {
+      navigate('/login');
     }
+  }, [authLoading, user, navigate]);
+  
+const handleUpload = async (event) => {
+  const file = event.target.files?.[0];
+  if (!file || !user) return;
 
-    const userId = userData.user.id;
-    const fileExt = file.name.split('.').pop();
-    const filePath = `avatars/${userId}.${fileExt}`; // store in a folder for cleanliness
+  setUploading(true);
+  try {
+    const userId = user.id;
+    const filePath = `avatars/${userId}.jpg`; // force .jpg for upsert
 
-    // Upload to Supabase Storage with upsert
-    const { data, error } = await supabase.storage
-      .from('profilepics')
-      .upload(filePath, file, {
-        cacheControl: '3600',
-        upsert: true
-      });
+    // 1. Upload
+    const { error: uploadError } = await supabase.storage
+      .from("profilepics")
+      .upload(filePath, file, { cacheControl: "3600", upsert: true });
+    if (uploadError) throw uploadError;
 
-    if (error) throw error;
-
-    // Get public URL
+    // 2. Get public URL
     const {
-      data: { publicUrl }
-    } = supabase.storage.from('profilepics').getPublicUrl(filePath);
+      data: { publicUrl },
+    } = supabase.storage.from("profilepics").getPublicUrl(filePath);
 
-    setProfileUrl(publicUrl);
+    // 3. Bust the cache by appending a timestamp
+    const urlWithBuster = `${publicUrl}?t=${Date.now()}`;
 
-    // Update user metadata
+    // 4. Immediately update local state so React re-renders
+    setProfileUrl(urlWithBuster);
+
+    // 5. Persist to Supabase auth metadata (so other sessions/components see it)
     const { error: updateError } = await supabase.auth.updateUser({
-      data: { avatar_url: publicUrl }
+      data: { avatar_url: publicUrl },
     });
+    if (updateError) console.error("Metadata update failed:", updateError);
 
-    if (updateError) console.error("Metadata update error:", updateError);
-  } catch (error) {
-    console.error('Error in upload process:', error);
-    alert(`Upload failed: ${error.message}`);
+    // 6. If your Auth context has a revalidation method, call it here:
+    //    e.g. await refreshUser(); 
+    //    so that useAuth() elsewhere picks up the new avatar_url
+  } catch (err) {
+    console.error("Upload error:", err);
+    alert(`Upload failed: ${err.message}`);
   } finally {
     setUploading(false);
   }
 };
-
 
   const handleEditPicture = () => {
     fileInputRef.current.click();
@@ -124,22 +95,26 @@ const handleUpload = async (event) => {
       data: { name: newUsername, handle: newHandle }
     })    
     setEditingProfile(false);
-
   };
-  
-  
+    
   const handleLogout = async () => {
-      const { error } = await supabase.auth.signOut()
-      navigate('/login')
+      await supabase.auth.signOut()
   };
 
-  
   return (
     <div className="profile-page">
-      <div class="profile-sidebar">
+      <div className="profile-sidebar">
       <h2>Welcome</h2>
-            <div className="profile-img-wrapper">
-              <img src={profileUrl==""? "https://ui-avatars.com/api/?background=random&name=" + username: profileUrl} alt="Profile" className="profile-img" />
+          <div className="profile-img-wrapper">
+            <img
+              src={
+                profileUrl
+                  ? profileUrl
+                  : `https://ui-avatars.com/api/?background=random&name=${encodeURIComponent(username)}`
+              }
+              alt="Profile"
+              className="profile-img"
+            />              
               <div className="image-overlay" onClick={handleEditPicture}>
                 <span className="change-photo-text">Change Photo</span>
               </div>
@@ -190,51 +165,28 @@ const handleUpload = async (event) => {
         </div>
       </div>
 
-        <div className="profile-apartment">
-          <h3>Your Matches</h3>
-          <div className="listing-scroll-wrapper">
-          <div className="listing-container">
-          {apartments.filter(item => item.apartment.neighborhood!==null).slice(0,5).map((item, index) => 
-            (
-              <ListingBox
-                key={item.apartment.id}
-                id={item.apartment.id}
-                neighborhood={item.apartment.neighborhood}
-                image={item.apartment.photo}
-                name={item.apartment.name}
-                phone={item.apartment.phoneNumber}
-                address={item.apartment.shortAddress}
-                pricemin={item.price?.min_price ?? "N/A"}
-                pricehigh={item.price?.max_price ?? "N/A"}
-                onLike={() => handleLike(index)}
-              />
-            )
-          )} 
-            </div>
-          </div>
-
-          <h3>Saved Apartments</h3>
-          <div className="saved-apartments-container">
-          <div className="listing-container">
-          {apartments.filter(item => item.apartment.neighborhood!==null).slice(0,5).map((item, index) => 
-            (
-              <ListingBox
-                key={item.apartment.id}
-                id={item.apartment.id}
-                neighborhood={item.apartment.neighborhood}
-                image={item.apartment.photo}
-                name={item.apartment.name}
-                phone={item.apartment.phoneNumber}
-                address={item.apartment.shortAddress}
-                pricemin={item.price?.min_price ?? "N/A"}
-                pricehigh={item.price?.max_price ?? "N/A"}
-                onLike={() => handleLike(index)}
-              />
-            )
-          )} 
-          </div>
+      <div className="profile-apartment">
+        <h3>Your Matches</h3>
+        <div className="listing-scroll-wrapper">
+        <div className="listing-container apartment-matches">
+          {loading ?
+            <p>Loading apartments...</p>:
+            apartments.filter(i=>i.apartment.neighborhood!==null).slice(0,5).map((item) => <ListingBox key={item.apartment.id} apt={item}/>)
+          }
           </div>
         </div>
+        <h3>Saved Apartments</h3>
+        <div className="saved-apartments-container">
+          <div className="listing-container">
+          {loading || authLoading?
+            <p>Loading apartments...</p>:
+            apartments.filter(i=>user.user_metadata.saved_apartments.includes(i.apartment.id)).map(
+              (item) => <ListingBox key={item.apartment.id} apt={item}/>
+            )
+          }
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

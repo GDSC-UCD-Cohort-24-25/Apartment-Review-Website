@@ -1,72 +1,60 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './ListingBox.css';  // Ensure you have a Listing.css file for styling
 import { Link } from 'react-router-dom';
 import supabase from '../supabase-client';
+import { useAuth } from "../Auth";
 
-const ListingBox = ({
-  id,
-  image,
-  name,
-  neighborhood,
-  phone,
-  address,
-  liked,
-  onLike,
-  pricemin,
-  pricehigh
-}) => {
+const ListingBox = ({ apt }) => {
+  const [liked, setLiked] = useState(false); // local state
+  const { user, loading } = useAuth();
 
+  useEffect(() => {
+    if (!loading && user) {
+      const saved = user.user_metadata?.saved_apartments || [];
+      setLiked(saved.includes(apt.apartment.id));
+    }
+  }, [loading, user, apt.apartment.id]);
 
-    const handleSaveApartment = async (e) => {
-    e.preventDefault(); // prevent Link navigation
+  const handleSaveApartment = async (e) => {
+    e.preventDefault();
+    if (loading) return;
+    
+    if (!user) {
+      alert("You must be logged in to save apartments.");
+      return;
+    }
+
+    const aptId = apt.apartment.id;
+    const currentSaved = user.user_metadata?.saved_apartments || [];
+
+    // Toggle logic: add if missing, remove if already there
+    const isSaved = currentSaved.includes(aptId);
+    const updatedSaved = isSaved
+      ? currentSaved.filter(id => id !== aptId)
+      : [...currentSaved, aptId];
 
     try {
-      const { data: userData, error: userError } = await supabase.auth.getUser();
-      if (userError || !userData?.user?.id) {
-        throw new Error("User not logged in.");
-      }
-
-      const userId = userData.user.id;
-
-      // Get current metadata
-      const currentSaved = userData.user.user_metadata?.saved_apartments || [];
-
-      // Avoid duplicates
-      const updatedSaved = currentSaved.includes(id)
-        ? currentSaved
-        : [...currentSaved, id];
-
       const { error: updateError } = await supabase.auth.updateUser({
         data: { saved_apartments: updatedSaved }
       });
 
-      if (updateError) {
-        console.error("Error updating user metadata:", updateError);
-      } else {
-        console.log("Apartment saved successfully!");
-        onLike(); // optional: update UI state
-      }
+      if (updateError) throw updateError;
+
+      setLiked(!isSaved);
     } catch (err) {
-      console.error("Error saving apartment:", err.message);
-      alert("You must be logged in to save apartments.");
+      console.error("Error updating saved apartments:", err);
+      alert("There was a problem saving this apartment.");
     }
   };
 
   return (
-    <Link to={`/apartment/${id}`} className="listing-link">
+    <Link to={`/apartment/${apt.apartment.id}`} className="listing-link">
       <div className="image-card">
         <div
           className="image-container"
-          style={{ backgroundImage: `url(${image})` }}
+          style={{ backgroundImage: `url(${apt.apartment.photo})` }}
         >
-          <div
-            className="icon-circle"
-            onClick={(e) => {
-              e.preventDefault(); // so you don’t navigate away
-              onLike();
-            }}
-          >
-   
+          <div className="icon-circle" onClick={handleSaveApartment}>
             <img
               src={liked ? "/bookmark-filled.svg" : "/bookmark.svg"}
               alt="Bookmark Icon"
@@ -76,28 +64,23 @@ const ListingBox = ({
         </div>
         <div className="card-text">
           <div className="card-title">
-            <div className="apartment-name">{name}</div>
+            <div className="apartment-name">{apt.apartment.name}</div>
             <div className="rating">
-              <img src="/star.svg" alt="rating" className="icon" /> 4.5
+              <img src="/star.svg" alt="rating" className="icon" />{apt.avg_rating===-1? "N/A":apt.avg_rating}
             </div>
           </div>
 
           <div className="location">
             <img src="/location.svg" alt="location" className="icon" />
-            {neighborhood}
+            {apt.apartment.neighborhood}
           </div>
 
           <div className="price">
             <img src="/dollar-square.svg" alt="Price" className="icon" />
-            ${pricemin} – ${pricehigh}
+            {apt.price.min_price===0 ? "N/A" : 
+              `${apt.price.min_price} – ${apt.price.max_price}`
+            }
           </div>
-{/* 
-          <div className="phone">
-            <img src="/phone.svg" alt="phone" className="icon" />
-            {phone}
-          </div>
-
-          <div className="address">{address}</div> */}
         </div>
       </div>
     </Link>

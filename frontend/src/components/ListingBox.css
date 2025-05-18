@@ -11,12 +11,19 @@
 }
 .card-title {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
 .apartment-name {
-  font-weight: bold;
+  font-weight: bold;  
+    display: flex;
+  align-items: center;
+  margin:0;
+  padding:0;
+
 }
+
 .image-container {
   border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
   background-repeat: no-repeat;  /* Prevents the image from repeating */
@@ -28,6 +35,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;  /* Ensure the image covers the container without distorting */
+}
+img.icon {
+  width: 18px;
 }
 
 .heart-icon {
@@ -95,10 +105,13 @@
 .rating{
   display: flex;
   align-items: center;
-
+  gap:3px
+  
 }
 
-
+.rating img {
+  width: 18px;
+}
 .icon-circle {
   position: absolute;
   top: 15px;

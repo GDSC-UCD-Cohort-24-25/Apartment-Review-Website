@@ -1,54 +1,31 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';  // Using Link for navigation
-import supabase from '../supabase-client';
+import { useAuth } from "../Auth";
+
 import './Navbar.css';
 
 const Navbar = () => {
-  const [searchQuery, setSearchQuery] = useState('');  // Manage search query state
-  const [userId, setUserId] = useState(null);
-
+  const [searchQuery, setSearchQuery] = useState('');  
+  const { user, loading } = useAuth();
   const handleSearchChange = (event) => {
-    setSearchQuery(event.target.value);  // Update search query
+    setSearchQuery(event.target.value); 
   };
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    console.log('Search Query:', searchQuery);  // You can implement search logic here
+    console.log('Search Query:', searchQuery);
   };
-  
-  const handleLogout = async () => {
-      const { error } = await supabase.auth.signOut()
-      console.log("Button clicked!");
-  };
-
-
-  useEffect(() => {
-    const fetchSession = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
-      setUserId(session?.user?.id || null);
-    };
-    fetchSession();
-
-    // Listen for auth state changes
-    const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
-      setUserId(session?.user?.id || null);
-    });
-
-    return () => { authListener.subscription.unsubscribe(); }; // Cleanup listener when component unmounts
-  }, []);
   
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Home Icon linking to home page */}
         <Link to="/" className="navbar-icon">
           <img src="/house.svg" alt="logo" />
           <span className="logo-name">aggie housing</span>
         </Link>
 
-        {/* Search Bar */}
         <form onSubmit={handleSearchSubmit} className="search-bar">
-          <div class = "contentsFrame">
+          <div className = "contentsFrame">
             <button type="submit">
             <img src="/search.svg" alt="logo" />
             </button>
@@ -61,10 +38,9 @@ const Navbar = () => {
           </div> 
         </form>
         <div className='user-info'>
-          {/* Login Icon linking to login page */}
-          <Link to={userId ? `/profile` : "/login"} className="login-icon">
+          <Link to={user ? `/profile` : "/login"} className="login-icon">
             <img src="/user.svg" alt="logo" />
-            <div class = "accountText">{userId ? 'Profile' : 'Login'}</div>
+            <div className = "accountText">{user ? 'Profile' : 'Login'}</div>
           </Link>
         </div>
       </div>

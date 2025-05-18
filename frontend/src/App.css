@@ -8,7 +8,7 @@
     --link-hover-color: #ff69b4;
 
     --nav-bar-height: 60px;
-    --side-bar-width: 236px;
+    --side-bar-width: 220px;
     --side-bar-closed-width: 50px; /* Smaller sidebar width for small screens */
     --card-border-radius: 16px;
 }
@@ -52,16 +52,19 @@ body {
   padding-top: 44px; 
   padding-right: 64px; 
 }
-
+.no-padding {
+  padding-right:0; 
+  padding-top:0;
+}
 a.url {
   color: hsla(224, 93%, 61%, 1);
 }
 .page-container.no-sidebar {
   margin-left: 0;
+
 }
 
 button.secondary{
-  height: 40px;
   padding: 8px 24px;
   border: 1px solid #D2D2D9;
   background: #FFF;
@@ -80,7 +83,6 @@ button.secondary:hover {
 }
 
 button.primary {
-  height: 40px;
   padding: 8px 24px;
   border: 1px solid #D2D2D9;
   color: white;

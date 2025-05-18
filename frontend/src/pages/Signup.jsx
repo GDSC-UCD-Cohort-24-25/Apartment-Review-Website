@@ -37,10 +37,10 @@ const Signup = () => {
   
     return (
       <div className="Signup-page">
-        <div class = "frame"> 
-          <div class = "header"> 
+        <div className = "frame"> 
+          <div className = "header"> 
             <h1>Welcome</h1>
-            <button class = "largeButton">
+            <button className = "largeButton">
               <Link to="/login" className="">
               Login
               </Link>
@@ -76,7 +76,7 @@ const Signup = () => {
                 placeholder="Password"
                 required
               />
-              <button class = "signinButton" type="submit">Create Account</button>
+              <button className = "signinButton" type="submit">Create Account</button>
                     
               </form> 
         </div>    

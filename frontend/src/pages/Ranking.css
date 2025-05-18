@@ -1,0 +1,63 @@
+/* Ranking.css */
+
+.ranking-container {
+  padding: 20px;
+}
+
+.ranking-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ranking-image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.ranking-listing-box {
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ranking-listing-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.ranking-heart-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.ranking-heart-icon:hover {
+  color: #ff7f7f;
+}
+
+.ranking-heart-icon.liked {
+  color: red;
+}
+
+.ranking-listing-description {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}

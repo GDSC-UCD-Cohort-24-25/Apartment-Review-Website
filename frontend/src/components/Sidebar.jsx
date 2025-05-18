@@ -13,24 +13,33 @@ const navItems = [
 ];
 
 export default function Sidebar() {
-  const [collapsed, setCollapsed] = useState(window.innerWidth < 768);
+  const [collapsed, setCollapsed] = useState(window.innerWidth < 800);
   const location = useLocation();
+  const alwaysCollapsedRoutes = ["/map", "/profile", "/apartment"];
 
   useEffect(() => {
-    const onResize = () => setCollapsed(window.innerWidth < 768);
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, []);
+    const updateCollapsed = () => {
+      if (alwaysCollapsedRoutes.includes(location.pathname)) {
+        setCollapsed(true);
+      } else {
+        setCollapsed(window.innerWidth < 800);
+      }
+    };
+
+    updateCollapsed(); // Call once on mount and whenever location changes
+    window.addEventListener("resize", updateCollapsed);
+    return () => window.removeEventListener("resize", updateCollapsed);
+  }, [location.pathname]);
 
   useEffect(() => {
     document.documentElement.style.setProperty(
       "--side-bar-width",
-      collapsed ? "64px" : "238px"
+      collapsed ? "64px" : "220px"
     );
   }, [collapsed]);
 
   return (
-    <div className="sidebar">
+  <div className={`sidebar${collapsed ? " collapsed" : ""}`}>
       <ul>
         {navItems.map(({ to, icon, label }) => {
           const isActive = location.pathname === to;
