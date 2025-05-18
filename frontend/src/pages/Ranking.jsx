@@ -1,7 +1,7 @@
 // src/pages/Ranking.jsx
 
 import React, { useState, useEffect } from 'react';
-import ListingBox from '../components/ListingBox';
+import RankingBox from '../components/RankingBox';
 import { useApartments } from "../ApartmentProvider";
 
 import './Home.css';    // brings in .listing-container, .image-card, etc.
@@ -14,12 +14,12 @@ const Ranking = () => {
       <main className="content">
       <div>
         <h2>Rankings</h2>
-        <div className="listing-container">
+        <div className="ranking-container">
         {apartments?.filter(item => item?.apartment?.neighborhood != null)
           .sort((a, b) => b.sentiment_score - a.sentiment_score) // highest sentiment first
           .slice()
-          .map((item) => 
-            <ListingBox key={item.apartment.id} apt={item}/>  
+          .map((item, key) => 
+            <RankingBox key={item.apartment.id} apt={item} ranking={key+1}/>  
         )}        
         </div>
       </div>

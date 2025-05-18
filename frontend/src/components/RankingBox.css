@@ -1,0 +1,20 @@
+.ranking-image-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 200px;
+}
+
+.ranking-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ranking-image-card .image-container {
+    border-radius: 16px;
+}
+
+.ranking-sentiment {
+    font-size: 14px;
+    font-weight: 500;
+}
