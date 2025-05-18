@@ -2,7 +2,7 @@ import React, { useState , useEffect } from 'react';
 import { useApartments } from "../ApartmentProvider";
 
 import ListingBox from '../components/ListingBox';
-import './Home.css';
+import './home.css';
 
 const Home = () => {
   const { apartments, loading } = useApartments();
