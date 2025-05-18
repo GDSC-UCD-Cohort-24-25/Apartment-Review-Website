@@ -13,7 +13,7 @@ import Ranking from './pages/Ranking';
 import About from './pages/About';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
-import WriteReview from './pages/writeReview';
+import WriteReview from './pages/WriteReview';
 import Apartment from './pages/Apartment';
 import Quiz from './pages/Quiz';
 
