@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { FaStar } from 'react-icons/fa'; // Import the star icon from react-icons
-import './writeReview.css';
+import './WriteReview.css';
 
 
 function WriteReview() {
