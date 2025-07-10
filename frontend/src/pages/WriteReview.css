@@ -1,105 +1,184 @@
 .writeReview-page {
-    display: flex ;
-    justify-content: space-between;
-    gap: 30px;
-    max-width: 900px;
-    margin: 0 auto;
-    margin-left: 70px;
-    margin-top: 20px;
-}
-
-.writeReview-page .star,
-.writeReview-page h2,
-.writeReview-page .description-box {
-  margin-bottom: 20px;
-}
-  
-  /* Main heading for About page only */
-  .writeReview-page h1{
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-  }
-
-  .star {
-    margin-top: 10px;
-    max-width: 100%;
-    width: 32px;
-    height: 32px;
-    color: #D2D2D9;
-    margin-right: 4px;
-  }
-
-  .star:hover{
-    cursor: pointer;
-  }
-
-.description-box {
-  min-width: 438px;
-  max-width: 438px;
-  height: 40px;
-  max-height: 100px;
-  border-radius: 8px;
-  border: 1px solid #D2D2D9;
-  font-size: 16px;
-  resize: vertical, horizontal;
+  display: flex;
+  justify-content: center; /* Center the entire content */
+  padding: 20px;
   box-sizing: border-box;
-  overflow: hidden;
-
+  min-height: calc(100vh - 80px); /* Adjust based on your header/footer height */
+  align-items: flex-start; /* Align content to the top */
 }
 
-.post-review {
-  width: 438px;
-  height: 40px;
-  border-radius: 8px;
-  border: 1.3px solid #D2D2D9;
-  background-color: #D2D2D91A;
+.review-content {
+  display: flex;
+  gap: 30px; /* Space between the form and upload section */
+  max-width: 900px; /* Overall max width for the content */
+  width: 100%;
 }
 
-.post-review {
+.review-form {
+  flex: 1; /* Allows the form to take available space */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form elements */
+}
+
+.review-form h1 {
+  font-size: 24px; /* Adjust font size to match design */
+  font-weight: 500; /* Adjust font weight */
+  color: #333;
+  margin-bottom: 20px; /* Space below the main heading */
+}
+
+.review-form h2 {
+  font-size: 16px; /* Font size for labels like 'Rating', 'Description' */
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0px; /* No margin below labels, handled by gap */
+}
+
+/* Star rating styles */
+.star-rating {
+  display: flex;
+  gap: 4px; /* Space between stars */
+  margin-bottom: 15px;
+}
+
+.star {
+  font-size: 32px; /* Size of the star icon */
   cursor: pointer;
+  color: #D2D2D9; /* Default star color */
 }
 
-.upload-section {
-  width: 45%;
-  margin-top: 50px;
-  margin-left: 80px;
+.star.active {
+  color: #78b2a3; /* Active star color (greenish) */
 }
 
-.upload-section {
+/* Text inputs (Description and Tags input) */
+.description-box {
+  width: 100%; /* Full width within its container */
+  min-height: 40px; /* Minimum height as per design */
+  padding: 8px 12px;
+  border: 1px solid #D2D2D9;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px;
+  resize: none; /* No manual resize */
+  box-sizing: border-box;
+  font-family: inherit; /* Inherit font from body */
+  overflow: hidden; /* Hide scrollbar if content overflows */
+}
+
+/* Tag suggestions */
+.add-tags-section {
+  margin-top: 5px; /* Space between "Add tags" label and input */
+}
+
+.suggested-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between tag buttons */
+  margin-top: 10px; /* Space between tags input and suggested tags */
+  margin-bottom: 20px; /* Space below suggested tags */
+}
+
+.tag-suggestion {
+  padding: 6px 12px;
+  background-color: #D2D2D91A; /* Light gray background */
+  border: 1.3px solid #D2D2D9; /* Border color */
+  border-radius: 16px; /* Pill shape */
   cursor: pointer;
+  font-size: 14px;
+  color: #333; /* Text color */
+  transition: background 0.3s ease;
+}
+
+.tag-suggestion.active {
+  background-color: #78b2a3; /* Active tag background */
+  color: white; /* Active tag text color */
+  border-color: #78b2a3; /* Active tag border */
+}
+
+.tag-suggestion:hover {
+  background-color: #c9c9d0; /* Slightly darker on hover */
+}
+
+/* Post Review Button */
+.post-review-button {
+  width: 438px; /* Fixed width from design */
+  height: 40px; /* Fixed height from design */
+  background-color: #D2D2D91A; /* Background from design */
+  border: 1.3px solid #D2D2D9; /* Border from design */
+  border-radius: 8px; /* Rounded corners */
+  color: #333; /* Text color */
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start; /* Align to the start of the flex container */
+  margin-top: 10px; /* Space above the button */
+}
+
+.post-review-button:hover {
+  background-color: #c9c9d0; /* Slightly darker on hover */
+}
+
+/* Image upload section */
+.upload-section {
+  flex: 0 0 450px; /* Fixed width for the upload section */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align the upload container to the right */
+  padding-top: 40px; /* Adjust padding to align with "Write a Review" heading */
 }
 
 .image-upload-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+  grid-template-columns: repeat(2, 200px); /* 2 columns, each 200px wide */
+  grid-template-rows: repeat(2, 200px); /* 2 rows, each 200px high */
   gap: 20px; /* Space between boxes */
-  margin-top: 10px;
 }
 
 .image-upload-box {
   width: 200px;
   height: 200px;
-  border: 2px dashed #3C959A; /* Dotted border for the image box */
-  border-radius: 10px;
+  border: 2px dashed #D2D2D9; /* Dashed border, light gray */
+  border-radius: 10px; /* Rounded corners */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; /* Light background */
+  cursor: pointer;
+  position: relative; /* For positioning the input */
+}
 
+.image-upload-box:nth-child(1) {
+  border-color: #D2D2D9; /* First box border */
+}
+
+/* This targets the last box to apply the blue border as in the design */
+.image-upload-box:nth-child(4) {
+  border-color: #3C959A; /* Blue border for the last box */
+}
+
+
+.image-upload-box .upload-icon {
+  font-size: 40px; /* Size of the upload icon */
+  color: #3C959A; /* Blue color for the icon */
+  margin-bottom: 5px; /* Space between icon and text */
 }
 
 .image-upload-label {
-  display: block; 
-  position: absolute;
+  display: block;
   font-size: 16px;
-  color: #333;
-  text-align: center; /* Align the label text to the center */
+  color: #3C959A; /* Blue color for text */
+  text-align: center;
+  font-weight: 500;
 }
 
 .image-input {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   opacity: 0; /* Hides the input box */
@@ -112,25 +191,45 @@
   object-fit: cover; /* Ensures the image fits within the box */
 }
 
+/* Responsive adjustments */
+@media (max-width: 960px) {
+  .review-content {
+      flex-direction: column; /* Stack columns on smaller screens */
+      align-items: center; /* Center items when stacked */
+      max-width: 600px; /* Adjust max width for smaller screens */
+  }
 
-.suggested-tags {
-  margin-top: -10px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 20px;
+  .review-form, .upload-section {
+      width: 100%;
+      align-items: center; /* Center items in the form */
+      padding-top: 0; /* Remove top padding for upload section */
+  }
+
+  .post-review-button {
+      width: 100%; /* Full width on smaller screens */
+  }
+
+  .image-upload-container {
+      grid-template-columns: repeat(2, 180px); /* Smaller boxes on smaller screens */
+      grid-template-rows: repeat(2, 180px);
+      gap: 15px;
+  }
+
+  .image-upload-box {
+      width: 180px;
+      height: 180px;
+  }
 }
 
-.tag-suggestion {
-  padding: 6px 12px;
-  background-color: #e6f0f0;
-  border: 1px solid #78b2a3;
-  border-radius: 16px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background 0.3s;
-}
+@media (max-width: 500px) {
+  .image-upload-container {
+      grid-template-columns: repeat(2, 140px);
+      grid-template-rows: repeat(2, 140px);
+      gap: 10px;
+  }
 
-.tag-suggestion:hover {
-  background-color: #d1eae8;
+  .image-upload-box {
+      width: 140px;
+      height: 140px;
+  }
 }

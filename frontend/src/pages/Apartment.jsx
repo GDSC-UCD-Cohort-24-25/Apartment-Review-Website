@@ -1,5 +1,5 @@
 import React, { useState ,useRef, useEffect} from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import './Apartment.css';
 import { useApartments } from "../ApartmentProvider";
 
@@ -60,6 +60,7 @@ function ReviewCard({ review }) {
 
 export default function Apartment() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const { apartments, loading } = useApartments();
   const [activeTab, setActiveTab] = useState('about');
 
@@ -73,6 +74,11 @@ export default function Apartment() {
   const layouts   = wrapper?.layouts   || [];
   const reviews   = wrapper?.reviews   || [];
 
+  // Handler for navigating to write review page
+  const handleWriteReview = () => {
+    navigate(`/write-review?id=${id}`);
+  };
+
   // 3) handle loading / not-found early
   if (loading) {
     return <p>Loading apartment…</p>;
@@ -84,7 +90,15 @@ export default function Apartment() {
   // 4) render normally, using those local variables
   return (
     <div>
-      <h1 className='apartment-page-name'>{apartment.name}</h1>
+      <div className="apartment-header">
+        <h1 className='apartment-page-name'>{apartment.name}</h1>
+        <button 
+          className="write-review-btn"
+          onClick={handleWriteReview}
+        >
+          Write a Review
+        </button>
+      </div>
 
       <div className="tab-bar">
         <button
