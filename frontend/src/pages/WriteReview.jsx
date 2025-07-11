@@ -16,10 +16,21 @@ function WriteReview() {
   const { apartments, addReview, loading } = useApartments();
 
   // State for review content
-  const [description, setDescription] = useState("");
-  const [tagsText, setTagsText] = useState("");
-  const [rating, setRating] = useState(0);
-  const [author] = useState("Anonymous"); // Set author to Anonymous as per design
+  const [description, setDescription] = useState("");  const [rating, setRating] = useState(0);
+
+  const [author, setAuthor] = useState("Anonymous");
+  useEffect(() => {
+    const fetchUser = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) {
+        const userName = user.user_metadata?.full_name || user.email || "Anonymous";
+        setAuthor(userName);
+      }
+    };
+
+    fetchUser();
+  }, []);
+
   const [uploadedImages, setUploadedImages] = useState([]); // State for uploaded images
   const [isSubmitting, setIsSubmitting] = useState(false); // New state for submission loading
 
@@ -53,14 +64,6 @@ function WriteReview() {
         ))}
       </div>
     );
-  };
-
-  const handleTagClick = (tag) => {
-    // Add tag to tagsText if not already present
-    const currentTags = tagsText.split(',').map(t => t.trim()).filter(t => t);
-    if (!currentTags.includes(tag)) {
-      setTagsText((prev) => prev.trim().length ? `${prev}, ${tag}` : tag);
-    }
   };
 
   const handleImageUpload = (e, index) => {
@@ -103,7 +106,6 @@ function WriteReview() {
         author, // Will be "Anonymous"
         rating,
         text_review: description,
-        tags: tagsText.split(',').map(tag => tag.trim()).filter(tag => tag),
         // In a real application, you'd handle image uploads to a server here
         // and send back URLs, not base64. For now, we'll just omit them from the review object
         // images: uploadedImages,
@@ -119,7 +121,7 @@ function WriteReview() {
     } catch (error) {
       // Handle any errors during submission (e.g., network error, server error)
       console.error("Failed to post review:", error);
-      alert("There was an error posting your review. Please try again later.", error);
+      alert(`There was an error posting your review:\n${error.message || error}`);
     } finally {
       setIsSubmitting(false); // Reset loading state regardless of success or failure
     }
@@ -150,25 +152,6 @@ function WriteReview() {
             onChange={handleDescriptionChange}
           ></textarea>
 
-          <h2 className="add-tags-section">Add tags:</h2>
-          <textarea
-            className="description-box"
-            placeholder="Tag (ex: Modern)"
-            value={tagsText}
-            onChange={(e) => setTagsText(e.target.value)}
-          ></textarea>
-
-          <div className="suggested-tags">
-            {["Modern", "Cleanliness", "Management", "Location", "Amenities", "Convenient"].map((tag) => (
-              <button
-                key={tag}
-                className={`tag-suggestion ${tagsText.split(',').map(t => t.trim()).includes(tag) ? 'active' : ''}`}
-                onClick={() => handleTagClick(tag)}
-              >
-                {tag}
-              </button>
-            ))}
-          </div>
 
           <button
             className="post-review-button"

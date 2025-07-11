@@ -2,7 +2,7 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
 import supabase from './supabase-client';
 const ApartmentContext = createContext();
-const route = "http://127.0.0.1:5000/apartments"
+const route = "http://127.0.0.1:5001/apartments"
 export const ApartmentProvider = ({ children }) => {
   const [apartments, setApartments] = useState([]);
   const [loading, setLoading] = useState(true);

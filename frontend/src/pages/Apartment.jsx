@@ -4,11 +4,10 @@ import './Apartment.css';
 import { useApartments } from "../ApartmentProvider";
 
 function ReviewCard({ review }) {
-  const { author, rating, text_review, avatarUrl } = review;
+  const { author, rating, text_review, tags = [] } = review;
   const [expanded, setExpanded] = useState(false);
   const [needsToggle, setNeedsToggle] = useState(false);
   const textRef = useRef(null);
-  const charLimit = 300; // Character threshold for truncation
 
   useEffect(() => {
     const el = textRef.current;
@@ -20,12 +19,8 @@ function ReviewCard({ review }) {
   return (
     <div className="review-card">
       <div className="review-header">
-        <img
-          src={"https://ui-avatars.com/api/?background=random&name=" + author}
-          alt={author}
-          className="review-avatar"
-        />
-        <h4 className='author'>{author}</h4>
+        <div className="avatar">{author[0]?.toUpperCase()}</div>
+        <h4 className="author">{author}</h4>
       </div>
 
       <div className="review-stars">
@@ -39,24 +34,29 @@ function ReviewCard({ review }) {
         ))}
       </div>
 
-      <p
-        ref={textRef}
-        className={`review-text ${expanded ? 'expanded' : ''}`}
-      >
-        {text_review || "No Text"}
+      <p ref={textRef} className={`review-text ${expanded ? "expanded" : ""}`}>
+        {text_review || "No text provided."}
       </p>
 
       {needsToggle && (
-        <button
-          className="read-more"
-          onClick={() => setExpanded(!expanded)}
-        >
-          {expanded ? 'Show Less' : 'Read More'}
+        <button className="read-more" onClick={() => setExpanded(!expanded)}>
+          {expanded ? "Show Less" : "Read More"}
         </button>
+      )}
+
+      {tags.length > 0 && (
+        <div className="review-tags">
+          {tags.map((tag, i) => (
+            <span className="review-tag" key={i}>
+              {tag}
+            </span>
+          ))}
+        </div>
       )}
     </div>
   );
 }
+
 
 export default function Apartment() {
   const { id } = useParams();

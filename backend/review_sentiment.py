@@ -90,4 +90,4 @@ def apartment_sentiment() -> list[dict]:
         for aid, score in sorted_items
     ]
 
-print(apartment_sentiment())
+# print(apartment_sentiment())

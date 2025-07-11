@@ -113,7 +113,8 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   align-self: flex-start; /* Align to the start of the flex container */
-  margin-top: 10px; /* Space above the button */
+  margin-top: 5px; /* Space above the button */
+  margin-right: 5px;
 }
 
 .post-review-button:hover {
@@ -207,6 +208,7 @@
 
   .post-review-button {
       width: 100%; /* Full width on smaller screens */
+      
   }
 
   .image-upload-container {

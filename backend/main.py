@@ -102,71 +102,86 @@ def compute_price_stats(layouts):
 
 @app.route("/apartments", methods=["GET"])
 def get_all_apartment():
-    # 1) Fetch all apartments
-    apt_resp = supabase.table("apartments")\
-                      .select("*")\
-                      .execute()
-    apartments = apt_resp.data or []
+    try:
+        print("=== DEBUG: Starting apartments endpoint ===")
+        
+        # 1) Fetch all apartments
+        print("Fetching apartments from Supabase...")
+        apt_resp = supabase.table("apartments").select("*").execute()
+        apartments = apt_resp.data or []
+        print(f"Found {len(apartments)} apartments")
 
-    apt_ids = [apt["id"] for apt in apartments]
+        apt_ids = [apt["id"] for apt in apartments]
+        print(f"Apartment IDs: {apt_ids}")
 
-    # 2) Fetch layouts
-    layouts_resp = supabase.table("layouts")\
-                           .select("*")\
-                           .in_("apartment", apt_ids)\
-                           .execute()
-    layouts_data = layouts_resp.data or []
+        # 2) Fetch layouts
+        print("Fetching layouts...")
+        layouts_resp = supabase.table("layouts").select("*").in_("apartment", apt_ids).execute()
+        layouts_data = layouts_resp.data or []
+        print(f"Found {len(layouts_data)} layouts")
 
-    layouts_by_apartment = {}
-    for layout in layouts_data:
-        layouts_by_apartment.setdefault(layout["apartment"], []).append(layout)
+        layouts_by_apartment = {}
+        for layout in layouts_data:
+            layouts_by_apartment.setdefault(layout["apartment"], []).append(layout)
 
-    # 3) Fetch reviews
-    reviews_resp = supabase.table("reviews")\
-                           .select("text_review, rating, author, apartment_id")\
-                           .in_("apartment_id", apt_ids)\
-                           .execute()
-    reviews_data = reviews_resp.data or []
+        # 3) Fetch reviews
+        print("Fetching reviews...")
+        reviews_resp = supabase.table("reviews").select("text_review, rating, author, apartment_id").in_("apartment_id", apt_ids).execute()
+        reviews_data = reviews_resp.data or []
+        print(f"Found {len(reviews_data)} reviews")
 
-    reviews_by_apartment = {}
-    avg_rating_map = {}
-    for rev in reviews_data:
-        aid = rev["apartment_id"]
-        reviews_by_apartment.setdefault(aid, []).append(rev)
+        reviews_by_apartment = {}
+        avg_rating_map = {}
+        for rev in reviews_data:
+            aid = rev["apartment_id"]
+            reviews_by_apartment.setdefault(aid, []).append(rev)
 
-    # Compute average rating for each apartment
-    for aid, revs in reviews_by_apartment.items():
-        ratings = [r["rating"] for r in revs if isinstance(r.get("rating"), (int, float))]
-        avg_rating = round(sum(ratings) / len(ratings), 2) if ratings else -1
-        avg_rating_map[aid] = avg_rating
+        # Compute average rating for each apartment
+        for aid, revs in reviews_by_apartment.items():
+            ratings = [r["rating"] for r in revs if isinstance(r.get("rating"), (int, float))]
+            avg_rating = round(sum(ratings) / len(ratings), 2) if ratings else -1
+            avg_rating_map[aid] = avg_rating
 
-    # 4) Get sentiment scores
-    sentiment_list = review_sentiment.apartment_sentiment()
-    sentiment_map = {
-        entry["apartment_id"]: entry["sentiment_score"]
-        for entry in sentiment_list
-    }
+        # 4) Get sentiment scores - THIS MIGHT BE CAUSING THE ERROR
+        print("Getting sentiment scores...")
+        try:
+            sentiment_list = review_sentiment.apartment_sentiment()
+            sentiment_map = {
+                entry["apartment_id"]: entry["sentiment_score"]
+                for entry in sentiment_list
+            }
+        except Exception as e:
+            print(f"Error getting sentiment scores: {e}")
+            sentiment_map = {}  # Use empty dict if sentiment fails
 
-    # 5) Final enriched payload
-    enriched = []
-    for apt in apartments:
-        aid = apt["id"]
-        layouts = layouts_by_apartment.get(aid, [])
-        reviews = reviews_by_apartment.get(aid, [])
-        price = compute_price_stats(layouts)
-        sentiment_score = sentiment_map.get(aid, 0.0)
-        avg_rating = avg_rating_map.get(aid, -1)
+        # 5) Final enriched payload
+        print("Building final response...")
+        enriched = []
+        for apt in apartments:
+            aid = apt["id"]
+            layouts = layouts_by_apartment.get(aid, [])
+            reviews = reviews_by_apartment.get(aid, [])
+            price = compute_price_stats(layouts)
+            sentiment_score = sentiment_map.get(aid, 0.0)
+            avg_rating = avg_rating_map.get(aid, -1)
 
-        enriched.append({
-            "apartment": apt,
-            "layouts": layouts,
-            "reviews": reviews,
-            "price": price,
-            "sentiment_score": sentiment_score,
-            "avg_rating": avg_rating
-        })
+            enriched.append({
+                "apartment": apt,
+                "layouts": layouts,
+                "reviews": reviews,
+                "price": price,
+                "sentiment_score": sentiment_score,
+                "avg_rating": avg_rating
+            })
 
-    return jsonify({"apartments": enriched})
+        print(f"=== DEBUG: Returning {len(enriched)} enriched apartments ===")
+        return jsonify({"apartments": enriched})
+
+    except Exception as e:
+        print(f"ERROR in get_all_apartment: {e}")
+        import traceback
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
 
 @app.route("/apartments/<int:apartment_id>", methods=["GET"])
 def get_apartment(apartment_id):
@@ -248,6 +263,10 @@ def get_apartment_layouts(apartment_id):
     else:
         return jsonify({"error": "No layouts found for the specified apartment"}), 404
 
+@app.route("/test", methods=["GET"])
+def test():
+    return jsonify({"message": "Backend is working!"})
+
 @app.route('/compute-route', methods=['POST'])
 def compute_route():
     # ... existing compute route code remains unchanged ...
@@ -305,6 +324,10 @@ def login():
 
 if __name__ == "__main__":
     import os
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 5001))
+    print(f"Starting Flask app on port {port}")
+    print(f"Available routes:")
+    for rule in app.url_map.iter_rules():
+        print(f"  {rule.rule} -> {rule.endpoint}")
     # Listen on 0.0.0.0 so Railway can route traffic in
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=port, debug=True)  # Added debug=True
