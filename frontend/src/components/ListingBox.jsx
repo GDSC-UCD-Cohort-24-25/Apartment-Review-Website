@@ -15,6 +15,7 @@ const ListingBox = ({ apt }) => {
     }
   }, [loading, user, apt.apartment.id]);
 
+  
   const handleSaveApartment = async (e) => {
     e.preventDefault();
     if (loading) return;

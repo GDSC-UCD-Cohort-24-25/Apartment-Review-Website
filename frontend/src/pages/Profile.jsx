@@ -5,6 +5,8 @@ import ListingBox from '../components/ListingBox';
 import { useAuth } from "../Auth";
 import { useApartments } from "../ApartmentProvider";
 
+// 1. Import the default profile image
+import defaultProfileImage from './default.png';
 import './Profile.css';
 
 const Profile = () => {
@@ -20,6 +22,7 @@ const Profile = () => {
   const { apartments, loading } = useApartments();
 
   const navigate = useNavigate();
+
 
   useEffect(() => {
     if (!user) return;
@@ -109,8 +112,9 @@ const handleUpload = async (event) => {
             <img
               src={
                 profileUrl
+                  // 2. Use the imported defaultProfileImage if profileUrl is falsy
                   ? profileUrl
-                  : `https://ui-avatars.com/api/?background=random&name=${encodeURIComponent(username)}`
+                  : defaultProfileImage
               }
               alt="Profile"
               className="profile-img"

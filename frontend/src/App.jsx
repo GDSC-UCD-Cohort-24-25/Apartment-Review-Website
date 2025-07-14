@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { AuthProvider } from "./Auth";
 import { ApartmentProvider } from "./ApartmentProvider";
@@ -20,37 +20,38 @@ import Quiz from './pages/Quiz';
 import './App.css';
 
 function App() {
+  const [filteredResults, setFilteredResults] = useState([]);
+
   return (
     <AuthProvider>
       <ApartmentProvider>
         <Router>
-          <Navbar />
-          <MainContent />
+          <Navbar onSearchResults={setFilteredResults} />
+          <MainContent filteredResults={filteredResults} />
         </Router>
       </ApartmentProvider>
     </AuthProvider>
   );
 }
 
-function MainContent() {
+function MainContent({ filteredResults }) {
   const location = useLocation();
   const disablePadding = location.pathname === '/map';
 
   const sidebarHidden =
     location.pathname === "/login" ||
-    location.pathname === "/signup" 
+    location.pathname === "/signup";
 
   return (
-  <div className={`page-container ${sidebarHidden ? 'no-sidebar' : ''} ${disablePadding ? 'no-padding' : ''}`}>
+    <div className={`page-container ${sidebarHidden ? 'no-sidebar' : ''} ${disablePadding ? 'no-padding' : ''}`}>
       {!sidebarHidden && <Sidebar />}
-
       <div className="content-container">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home filteredResults={filteredResults} />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/listing" element={<Listing />} />
-          <Route path="/map" element={<Map />} />
-          <Route path="/ranking" element={<Ranking />} />
+          <Route path="/listing" element={<Listing filteredResults={filteredResults}/>} />
+          <Route path="/map" element={<Map filteredResults={filteredResults}/>} />
+          <Route path="/ranking" element={<Ranking filteredResults={filteredResults}/>} />
           <Route path="/about" element={<About />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/profile" element={<Profile />} />

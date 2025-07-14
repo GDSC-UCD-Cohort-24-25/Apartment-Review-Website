@@ -45,6 +45,29 @@
 }
 
 
+.profile-img-wrapper {
+  position: relative;
+  width: 120px; /* Adjust as needed for your desired size */
+  height: 120px; /* Should be equal to width for a perfect circle */
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px auto; /* Center the image and add some bottom margin */
+  cursor: pointer;
+  border: 2px solid #eee; /* Optional: Add a subtle border */
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* Ensures the image behaves as a block element */
+}
+
+/* Add this to make the overlay visible on hover */
+.profile-img-wrapper:hover .image-overlay {
+  opacity: 1;
+}
+
 .image-overlay {
   position: absolute;
   top: 0;
@@ -56,22 +79,12 @@
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s ease; /* Added ease for smoother transition */
+  pointer-events: none; /* Allows clicks to pass through when not hovered */
 }
-
-.profile-img-wrapper {
-  position: relative;
-  width: 100%;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0;
-  cursor: pointer;
-}
-
-.profile-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* This will ensure the image fits and shrinks into the profile pic container */
+.profile-img-wrapper:hover .image-overlay {
+  opacity: 1;
+  pointer-events: auto; /* Re-enable pointer events on hover */
 }
 
 .change-photo-text {
