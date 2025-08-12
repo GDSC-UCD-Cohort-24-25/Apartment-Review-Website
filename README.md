@@ -1,4 +1,4 @@
-Access our Website at: https://apartment-review-website-7ou5.vercel.app/
+Access our Website's Frontend at: https://apartment-review-website-7ou5.vercel.app/
 
 # Setup up Back End
  Navigate to the backend directory and run the following command
