@@ -1,4 +1,14 @@
 Access our Website at: https://apartment-review-website-7ou5.vercel.app/
+
+# Setup up Back End
+ Navigate to the backend directory and run the following command
+
+ ```
+python main.py
+
+```
+
+
 # Setup up Front End
 
 - Naviate to the frontend directory and run the following command to start dependencies
