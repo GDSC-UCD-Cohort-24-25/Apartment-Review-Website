@@ -1,5 +1,3 @@
-Access our Website's Frontend at: https://apartment-review-website-7ou5.vercel.app/
-
 # Setup up Back End
  Navigate to the backend directory and run the following command
 
@@ -7,7 +5,6 @@ Access our Website's Frontend at: https://apartment-review-website-7ou5.vercel.a
 python main.py
 
 ```
-
 
 # Setup up Front End
 
@@ -20,4 +17,5 @@ python main.py
 npm run dev
 ```
 - To visit website open the provided url in the terminal
-
+Below is a demo of our product!
+[AggieHousing.mp4.zip](https://github.com/user-attachments/files/24461772/AggieHousing.mp4.zip)
