@@ -17,6 +17,7 @@ python main.py
 npm run dev
 ```
 - To visit website open the provided url in the terminal
-Below is a demo of our product!
 
-[AggieHousing.mp4.zip](https://github.com/user-attachments/files/24461772/AggieHousing.mp4.zip)
+# Below is a demo of our product!
+
+- [AggieHousing.mp4.zip](https://github.com/user-attachments/files/24461772/AggieHousing.mp4.zip)
